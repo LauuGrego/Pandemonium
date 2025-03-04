@@ -1,35 +1,32 @@
-const apiKey = '6e2795d88a584b7e9a9f1e6533b85cc4'; // Reemplaza con tu clave de API
+const apiKey = '5b2a14b929e141abc003c8744ac61723'; // Reemplaza con tu clave de API de GNews
 const noticiasContainer = document.getElementById('noticias-container');
 
-// Función para obtener y mostrar noticias en español
+// Función para obtener y mostrar noticias argentinas
 async function fetchNoticias() {
-    // Modificamos la URL para buscar noticias en español de varios temas
-    const url = `https://newsapi.org/v2/everything?q=musica&q=deporte&q=tecnologia&q=politica&language=es&pageSize=10&sortBy=publishedAt&apiKey=${apiKey}&_=${Date.now()}`;
+    const url = `https://gnews.io/api/v4/top-headlines?country=ar&lang=es&max=10&token=${apiKey}`;
 
     try {
-        console.log("Haciendo solicitud a la API...");
+        console.log("Haciendo solicitud a GNews...");
         const response = await fetch(url);
 
         if (!response.ok) {
-            const errorData = await response.json();
-            console.error("Error en la respuesta de la API:", errorData);
+            console.error("Error en la respuesta de GNews:", await response.json());
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
 
         const data = await response.json();
-        console.log("Respuesta de la API:", data);
+        console.log("Noticias obtenidas:", data);
 
-        if (data.status === "ok" && data.articles.length > 0) {
-            noticiasContainer.innerHTML = ''; // Limpiar el contenedor
+        if (data.articles.length > 0) {
+            noticiasContainer.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevas noticias
 
-            // Mostrar las noticias más recientes
             data.articles.forEach(noticia => {
                 const noticiaItem = document.createElement('a');
                 noticiaItem.classList.add('main__noticia-item', 'animate__animated', 'animate__fadeInRight');
                 noticiaItem.href = noticia.url;
                 noticiaItem.target = "_blank";
                 noticiaItem.innerHTML = `
-                    <div class="main__noticia-imagen" style="background-image: url('${noticia.urlToImage || './images/placeholder.jpg'}');"></div>
+                    <div class="main__noticia-imagen" style="background-image: url('${noticia.image || './images/placeholder.jpg'}');"></div>
                     <div class="main__noticia-contenido">
                         <h3 class="main__noticia-titulo">${noticia.title}</h3>
                         <p class="main__noticia-descripcion">${noticia.description || 'Descripción no disponible.'}</p>
@@ -38,7 +35,7 @@ async function fetchNoticias() {
                 noticiasContainer.appendChild(noticiaItem);
             });
         } else {
-            console.error("No se encontraron noticias.");
+            console.warn("No se encontraron noticias.");
             noticiasContainer.innerHTML = '<p class="main__text">No se encontraron noticias.</p>';
         }
     } catch (error) {

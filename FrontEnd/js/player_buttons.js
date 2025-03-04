@@ -1,13 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const playButton = document.getElementById('play-button');
-    const pauseButton = document.getElementById('pause-button');
-    const audio = new Audio('./audio/sample.mp3'); // Ruta del archivo de audio
+ // Forzamos la precarga del audio al cargar la página
+ window.addEventListener("load", () => {
+    const radio = document.getElementById("radio");
+    radio.load(); // Inicia la precarga del stream
+  });
 
-    playButton.addEventListener('click', function() {
-        audio.play();
-    });
+  // Obtener el elemento de audio
+  const radio = document.getElementById("radio");
 
-    pauseButton.addEventListener('click', function() {
-        audio.pause();
-    });
-});
+  // Al hacer clic en "Play" se inicia la reproducción
+  document.getElementById("play-button").addEventListener("click", function() {
+    radio.play().catch(error => console.error("Error al reproducir:", error));
+  });
+
+  // Al hacer clic en "Stop" se pausa y reinicia el audio
+  document.getElementById("stop-button").addEventListener("click", function() {
+    radio.pause();
+    radio.currentTime = 0;
+  });
