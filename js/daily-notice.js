@@ -1,10 +1,23 @@
-// Reemplaza estas claves con las tuyas
-const apiKeyGNews = '5b2a14b929e141abc003c8744ac61723'; // Tu API key de GNews
+// Claves de API
+const apiKeyGNews = '5b2a14b929e141abc003c8744ac61723';
 const apiKeyNewsAPI = '6e2795d88a584b7e9a9f1e6533b85cc4';
-const apiKeyCurrents = 'Cf-8WHSYrw3I2JWGYfXff-HoS6z21uhy8U6NYuBLwA-OiSiG';
+const apiKeyCurrents = 'Cf-8WHSYrw3I2JWGYfXff-HoS6z21uhy8U6NYuBLwA-OiSiG'; // API de Currents
 
-// Contenedor donde se mostrarán las noticias
+// Contenedor de noticias
 const noticiasContainer = document.getElementById('noticias-container');
+
+// Lista de palabras clave para filtrar noticias relevantes
+const palabrasClave = ["Argentina", "Mundial", "Crisis", "Economía", "Guerra", "Tecnología", "Fútbol", "Copa", "EE.UU", "Europa"];
+const paisesNoDeseados = ["Perú", "Ecuador", "Bolivia", "Venezuela", "Guatemala", "Honduras","Lima"];
+
+// Función para filtrar noticias relevantes
+function filtrarNoticias(articles) {
+  return articles.filter(article => {
+    const texto = `${article.title} ${article.description}`.toLowerCase();
+    return palabrasClave.some(palabra => texto.includes(palabra.toLowerCase())) &&
+           !paisesNoDeseados.some(pais => texto.includes(pais.toLowerCase()));
+  });
+}
 
 // Función para renderizar las noticias
 function renderNoticias(articles) {
@@ -25,95 +38,73 @@ function renderNoticias(articles) {
   });
 }
 
-/* Funciones para cada API */
-
 // 1. NewsAPI
 async function fetchNoticiasNewsAPI() {
-  // Filtramos por país: puedes omitir 'country' para noticias globales, pero al filtrar por idioma se obtienen artículos en español.
   const url = `https://newsapi.org/v2/top-headlines?language=es&pageSize=10&apiKey=${apiKeyNewsAPI}`;
-  console.log("Solicitando noticias desde NewsAPI...");
-  const response = await fetch(url);
-  if (!response.ok) {
-    const errorData = await response.json();
-    console.error("Error en NewsAPI:", errorData);
-    throw new Error(`NewsAPI: ${response.status} ${response.statusText}`);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return [];
+    const data = await response.json();
+    return filtrarNoticias(data.articles.map(article => ({
+      title: article.title,
+      description: article.description,
+      url: article.url,
+      image: article.urlToImage
+    })));
+  } catch (error) {
+    console.error("Error en NewsAPI:", error);
+    return [];
   }
-  const data = await response.json();
-  // Adaptamos la respuesta
-  const articles = data.articles.map(article => ({
-    title: article.title,
-    description: article.description,
-    url: article.url,
-    image: article.urlToImage
-  }));
-  return articles;
 }
 
 // 2. GNews API
 async function fetchNoticiasGNews() {
-  // GNews permite filtrar por idioma con lang=es y no se define país, por lo que serán noticias globales en español.
   const url = `https://gnews.io/api/v4/top-headlines?lang=es&max=10&token=${apiKeyGNews}`;
-  console.log("Solicitando noticias desde GNews...");
-  const response = await fetch(url);
-  if (!response.ok) {
-    const errorData = await response.json();
-    console.error("Error en GNews:", errorData);
-    throw new Error(`GNews: ${response.status} ${response.statusText}`);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return [];
+    const data = await response.json();
+    return filtrarNoticias(data.articles);
+  } catch (error) {
+    console.error("Error en GNews:", error);
+    return [];
   }
-  const data = await response.json();
-  // La estructura de GNews ya contiene las propiedades necesarias
-  return data.articles;
 }
 
 // 3. Currents API
 async function fetchNoticiasCurrents() {
-  // Endpoint de Currents API para noticias recientes; se filtra por idioma (language=es)
   const url = `https://api.currentsapi.services/v1/latest-news?apiKey=${apiKeyCurrents}&language=es&limit=10`;
-  console.log("Solicitando noticias desde Currents API...");
-  const response = await fetch(url);
-  if (!response.ok) {
-    const errorData = await response.json();
-    console.error("Error en Currents API:", errorData);
-    throw new Error(`Currents API: ${response.status} ${response.statusText}`);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return [];
+    const data = await response.json();
+    return filtrarNoticias(data.news.map(article => ({
+      title: article.title,
+      description: article.description,
+      url: article.url,
+      image: article.image
+    })));
+  } catch (error) {
+    console.error("Error en Currents API:", error);
+    return [];
   }
-  const data = await response.json();
-  // Adaptamos la respuesta al formato común
-  const articles = data.news.map(article => ({
-    title: article.title,
-    description: article.description,
-    url: article.url,
-    image: article.image
-  }));
-  return articles;
 }
 
-// Función principal que recorre las APIs en orden hasta obtener resultados
+// Función principal que obtiene noticias de las APIs
 async function fetchNoticias() {
-  const apis = [
-    { name: 'NewsAPI',   fetchFn: fetchNoticiasNewsAPI },
-    { name: 'GNews',     fetchFn: fetchNoticiasGNews },
-    { name: 'Currents',  fetchFn: fetchNoticiasCurrents }
-  ];
+  const noticias = await Promise.all([
+    fetchNoticiasNewsAPI(),
+    fetchNoticiasGNews(),
+    fetchNoticiasCurrents()
+  ]);
 
-  for (let i = 0; i < apis.length; i++) {
-    const { name, fetchFn } = apis[i];
-    try {
-      console.log(`Intentando obtener noticias desde ${name}...`);
-      const articles = await fetchFn();
-      if (articles && articles.length > 0) {
-        console.log(`Noticias obtenidas desde ${name}:`, articles);
-        renderNoticias(articles);
-        return; // Salimos si obtenemos noticias
-      } else {
-        console.warn(`No se encontraron noticias en ${name}.`);
-      }
-    } catch (error) {
-      console.error(`Error al obtener noticias desde ${name}:`, error);
-    }
+  const noticiasFiltradas = noticias.flat(); // Unir resultados
+  if (noticiasFiltradas.length > 0) {
+    renderNoticias(noticiasFiltradas);
+  } else {
+    noticiasContainer.innerHTML = '<p class="main__text">No se encontraron noticias relevantes.</p>';
   }
-  // Si ninguna API devolvió resultados:
-  noticiasContainer.innerHTML = '<p class="main__text">No se pudieron cargar las noticias. Inténtalo de nuevo más tarde.</p>';
 }
 
-// Cargar noticias al cargar la página
+// Cargar noticias al iniciar
 fetchNoticias();

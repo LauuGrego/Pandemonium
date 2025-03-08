@@ -75,13 +75,14 @@ body {
 .header__logo {
   display: flex;
   justify-content: center;
-  margin: 70px 0;
+  margin:  0;
 }
 
 .header__logo-image {
     height: 300px;
     filter: drop-shadow(0 0 5px var(--color-secondary));
     justify-content: center;
+    margin-top: 70px;
 }
 
 
