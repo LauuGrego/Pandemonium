@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pandemoniumradio.netlify.app/sitemap.xml
