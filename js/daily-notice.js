@@ -7,22 +7,25 @@ const apiKeyCurrents = 'Cf-8WHSYrw3I2JWGYfXff-HoS6z21uhy8U6NYuBLwA-OiSiG'; // AP
 const noticiasContainer = document.getElementById('noticias-container');
 
 // Lista de palabras clave para filtrar noticias relevantes
-const palabrasClave = ["Argentina", "Mundial", "Crisis", "Economía", "Guerra", "Tecnología", "Fútbol", "Copa", "EE.UU", "Europa"];
-const paisesNoDeseados = ["Perú", "Ecuador", "Bolivia", "Venezuela", "Guatemala", "Honduras","Lima"];
+const palabrasClave = ["Argentina", "Mundial", "Crisis", "Economía", "Guerra", "Tecnología", "Fútbol", "Copa", "EE.UU", "Europa", "Medicina", "Innovación", "Covid", "Vacuna", "Pandemia", "Coronavirus", "Vacunación", "Salud", "Ciencia", "Investigación", "Cultura", "Arte", "Música", "Cine", "Literatura", "Teatro", "Deporte", "Juegos", "Olimpiadas", "Atletismo", "Natación", "Tenis", "Baloncesto", "Fútbol", "Ciclismo", "Voleibol", "Golf", "Rugby", "Boxeo", "Automovilismo", "Fórmula 1", "MotoGP", "Tecnología", "Informática", "Internet", "Redes", "Programación", "Desarrollo", "Software", "Hardware", "Videojuegos", "Consolas", "Móviles", "Aplicaciones", "Sistemas", "Ciberseguridad", "Hacking", "Economía", "Finanzas", "Bolsa", "Mercados", "Inversión", "Empresas", "Negocios"];
 
 // Función para filtrar noticias relevantes
 function filtrarNoticias(articles) {
+  const unMesAtras = new Date();
+  unMesAtras.setMonth(unMesAtras.getMonth() - 1);
+
   return articles.filter(article => {
     const texto = `${article.title} ${article.description}`.toLowerCase();
+    const fechaPublicacion = new Date(article.publishedAt);
     return palabrasClave.some(palabra => texto.includes(palabra.toLowerCase())) &&
-           !paisesNoDeseados.some(pais => texto.includes(pais.toLowerCase()));
+           fechaPublicacion >= unMesAtras;
   });
 }
 
 // Función para renderizar las noticias
 function renderNoticias(articles) {
   noticiasContainer.innerHTML = ''; // Limpiar el contenedor
-  articles.forEach(noticia => {
+  articles.slice(0, 5).forEach(noticia => { // Asegura que se muestren al menos 5 noticias
     const noticiaItem = document.createElement('a');
     noticiaItem.classList.add('main__noticia-item', 'animate__animated', 'animate__fadeInRight');
     noticiaItem.href = noticia.url;
@@ -49,7 +52,8 @@ async function fetchNoticiasNewsAPI() {
       title: article.title,
       description: article.description,
       url: article.url,
-      image: article.urlToImage
+      image: article.urlToImage,
+      publishedAt: article.publishedAt
     })));
   } catch (error) {
     console.error("Error en NewsAPI:", error);
@@ -64,7 +68,13 @@ async function fetchNoticiasGNews() {
     const response = await fetch(url);
     if (!response.ok) return [];
     const data = await response.json();
-    return filtrarNoticias(data.articles);
+    return filtrarNoticias(data.articles.map(article => ({
+      title: article.title,
+      description: article.description,
+      url: article.url,
+      image: article.image,
+      publishedAt: article.publishedAt
+    })));
   } catch (error) {
     console.error("Error en GNews:", error);
     return [];
@@ -82,7 +92,8 @@ async function fetchNoticiasCurrents() {
       title: article.title,
       description: article.description,
       url: article.url,
-      image: article.image
+      image: article.image,
+      publishedAt: article.published
     })));
   } catch (error) {
     console.error("Error en Currents API:", error);

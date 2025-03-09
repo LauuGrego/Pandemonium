@@ -13,41 +13,36 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="header__content">
-     
-      <nav class="header__nav" aria-label="Navegación principal">
-        <ul class="header__nav-list animate__animated animate__fadeInRight">
-          <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
-          <li class="header__nav-item"><a href="#noticias" class="header__nav-link">Noticias</a></li>
-          <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="header__nav" aria-label="Navegación principal">
+      <ul class="header__nav-list animate__animated animate__fadeInRight">
+        <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
+        <li class="header__nav-item"><a href="#noticias" class="header__nav-link">Noticias</a></li>
+        <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main Content -->
   <main class="main">
     <!-- Inicio Section -->
-    <section  class="main__section">
-      <div class="header__logo">
+    <section class="main__section">
+      <div class="animate__animated animate__fadeIn header__logo">
         <img id="inicio" src="./images/logo-pandemonium.png" alt="Logo de Pandemonium" class="animate__animated animate__pulse animate__infinite animate_slower header__logo-image">
       </div>
       <p class="main__description animate__animated animate__fadeInUp">Siente la energía, vive la música.</p>
-      <!-- <p class="main__description animate__animated animate__fadeInUp">¡Haz click para escuchar!</p> -->
       <div class="player-container">
-         <div class="player">
-           <div class="player__controls">
-             <button class="player__button" id="play-button" aria-label="Reproducir">
-               <i class="fas fa-play-circle player__icon"></i>
-             </button>
-             <button class="player__button" id="stop-button" aria-label="Detener">
-               <i class="fas fa-stop-circle player__icon"></i>
-             </button>
-           </div>
-         </div>
+        <div class="player">
+          <div class="player__controls">
+            <button class="player__button" id="play-button" aria-label="Reproducir">
+              <i class="fas fa-play-circle player__icon"></i>
+            </button>
+            <button class="player__button" id="stop-button" aria-label="Detener">
+              <i class="fas fa-stop-circle player__icon"></i>
+            </button>
+          </div>
         </div>
-        <audio id="radio" src="https://stream-176.zeno.fm/9kymcedhbbrtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5a3ltY2VkaGJicnR2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjAyam1sT2xNU1Y2NEFXLTNtbEZnakEiLCJpYXQiOjE3NDEwNjg2ODMsImV4cCI6MTc0MTA2ODc0M30.t-tRC4c3_nYa-CiW-hbWmnC_iAc9-jb43PEiCv5xKpM&fbclid=PAZXh0bgNhZW0CMTEAAaZu_IIujarKleHmt9ituokHviu8BvXqZ5TTbA4Teb0ONBh-Zqgoi04qTp8_aem_BgaP1BYCt1HUqSSE-X8cZA" preload="auto"></audio>
-
+      </div>
+      <audio id="radio" src="https://stream-176.zeno.fm/9kymcedhbbrtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5a3ltY2VkaGJicnR2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjAyam1sT2xNU1Y2NEFXLTNtbEZnakEiLCJpYXQiOjE3NDEwNjg2ODMsImV4cCI6MTc0MTA2ODc0M30.t-tRC4c3_nYa-CiW-hbWmnC_iAc9-jb43PEiCv5xKpM&fbclid=PAZXh0bgNhZW0CMTEAAaZu_IIujarKleHmt9ituokHviu8BvXqZ5TTbA4Teb0ONBh-Zqgoi04qTp8_aem_BgaP1BYCt1HUqSSE-X8cZA" preload="auto"></audio>
     </section>
 
     <!-- Sección Historia -->
@@ -57,9 +52,6 @@
         <p class="main__text animate__animated animate__fadeInRight">
           Pandemonium nació en 2025 con la misión de llevar la mejor música y contenido a todos los rincones del mundo. Somos una comunidad apasionada por la música, la cultura y la innovación. ¡Únete a nosotros y descubre un mundo de sonidos únicos!
         </p>
-       <!-- <div class="animated-image">
-          <img src="images/headphones.png" alt="Audio image">
-        </div> -->
       </div>
     </section>
 
@@ -81,19 +73,18 @@
           ¿Tienes alguna pregunta o sugerencia? ¡Contáctanos!
         </p>
         <ul class="main__contacto-list">
-            <li class="main__contacto-item animate__animated animate__fadeInRight">
-                <i class="fas fa-envelope main__contacto-icon"></i>
-                Email: <a href="mailto:contacto@pandemonium.com.ar" class="main__contacto-link" target="_blank" rel="noopener noreferrer">pandemoniumbasso@gmail.com</a>
-              </li>
-              <li class="main__contacto-item animate__animated animate__fadeInRight">
-                <i class="fas fa-phone main__contacto-icon"></i>
-                Whatsapp: <a href="https://wa.me/543445434959" class="main__contacto-link" target="_blank" rel="noopener noreferrer">3445434959</a>
-              </li>
-              <li class="main__contacto-item animate__animated animate__fadeInRight">
-                <i class="fab fa-instagram main__contacto-icon"></i>
-                Instagram: <a href="https://www.instagram.com/pandemonium_radio/" class="main__contacto-link" target="_blank" rel="noopener noreferrer">Pandemonium_Radio</a>
-              </li>
-              
+          <li class="main__contacto-item animate__animated animate__fadeInRight">
+            <i class="fas fa-envelope main__contacto-icon"></i>
+            Email: <a href="mailto:contacto@pandemonium.com.ar" class="main__contacto-link" target="_blank" rel="noopener noreferrer">pandemoniumbasso@gmail.com</a>
+          </li>
+          <li class="main__contacto-item animate__animated animate__fadeInRight">
+            <i class="fas fa-phone main__contacto-icon"></i>
+            Whatsapp: <a href="https://wa.me/543445434959" class="main__contacto-link" target="_blank" rel="noopener noreferrer">3445434959</a>
+          </li>
+          <li class="main__contacto-item animate__animated animate__fadeInRight">
+            <i class="fab fa-instagram main__contacto-icon"></i>
+            Instagram: <a href="https://www.instagram.com/pandemonium_radio/" class="main__contacto-link" target="_blank" rel="noopener noreferrer">Pandemonium_Radio</a>
+          </li>
         </ul>
       </div>
     </section>
@@ -103,7 +94,6 @@
   <footer class="footer" aria-label="Pie de página">
     <p class="footer__text">&copy;2025 GregoLauDesigns. Todos los derechos reservados.</p>
   </footer>
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
   <script src="js/daily-notice.js"></script>
