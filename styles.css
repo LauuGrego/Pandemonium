@@ -405,11 +405,11 @@ body {
     }
 
     .main__subheading {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .main__text {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 0 30px;
     }
 }
@@ -462,11 +462,11 @@ body {
     }
 
     .main__subheading {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .main__text {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin: 0 20px;
     }
 
