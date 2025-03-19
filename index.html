@@ -20,6 +20,11 @@
         <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
         <li class="header__nav-item"><a href="#noticias" class="header__nav-link">Noticias</a></li>
         <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link" id="login-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -91,7 +96,34 @@
         </ul>
       </div>
     </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="main__section" style="display: none;">
+      <div class="main__content">
+        <h2 class="main__subheading animate__animated animate__fadeInLeft">Subir Archivo</h2>
+        <form id="upload-form" class="main__form animate__animated animate__fadeInRight" enctype="multipart/form-data">
+          <label for="audio">Seleccionar archivo de audio:</label>
+          <input type="file" id="audio" name="audio" accept="audio/*" required>
+          <button type="submit" class="main__form-button">Subir</button>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="modal__subheading">Iniciar Sesión</h2>
+      <form id="login-form" class="main__form">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="main__form-button">Ingresar</button>
+      </form>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer" aria-label="Pie de página">
@@ -102,5 +134,54 @@
   <script src="js/daily-notice.js"></script>
   <script src="js/player_buttons.js"></script>
   <script src="js/navbar_mobile.js"></script>
+  <script>
+    // Modal login
+    const modal = document.getElementById("login-modal");
+    const loginIcon = document.getElementById("login-icon");
+    const closeModal = document.getElementsByClassName("close")[0];
+
+    loginIcon.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    closeModal.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Simulación de autenticación
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username === 'admin' && password === 'password') {
+        modal.style.display = "none";
+        document.getElementById('upload').style.display = 'block';
+      } else {
+        alert('Usuario o contraseña incorrectos');
+      }
+    });
+
+    document.getElementById('upload-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      fetch('/upload', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
 </body>
 </html>
