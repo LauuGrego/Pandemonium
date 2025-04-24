@@ -1,4 +1,4 @@
- // Forzamos la precarga del audio al cargar la página
+// Forzamos la precarga del audio al cargar la página
  window.addEventListener("load", () => {
     const radio = document.getElementById("radio");
     radio.load(); // Inicia la precarga del stream
