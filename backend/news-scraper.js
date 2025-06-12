@@ -26,7 +26,7 @@ const newsSources = [
   },
 ];
 
-// Function to fetch news from GNews API
+// GNews
 async function fetchGNews() {
   try {
     const response = await axios.get(`https://gnews.io/api/v4/top-headlines?token=${apiKeyGNews}&lang=es`);
@@ -43,7 +43,7 @@ async function fetchGNews() {
   }
 }
 
-// Function to fetch news from NewsAPI
+// NewsAPI
 async function fetchNewsAPI() {
   try {
     const response = await axios.get(`https://newsapi.org/v2/top-headlines?apiKey=${apiKeyNewsAPI}&language=es`);
@@ -60,7 +60,7 @@ async function fetchNewsAPI() {
   }
 }
 
-// Function to fetch news from Currents API
+// CurrentsAPI
 async function fetchCurrentsAPI() {
   try {
     const response = await axios.get(`https://api.currentsapi.services/v1/latest-news?apiKey=${apiKeyCurrents}&language=es`);
@@ -77,7 +77,7 @@ async function fetchCurrentsAPI() {
   }
 }
 
-// Function to scrape news from a single source
+// Scraping individual source
 async function scrapeNews(source) {
   try {
     const response = await axios.get(source.url);
@@ -102,11 +102,9 @@ async function scrapeNews(source) {
   }
 }
 
-// Function to scrape news from all sources
+// All sources
 async function fetchAllNews() {
-  const scrapedNews = await Promise.all(
-    newsSources.map(source => scrapeNews(source))
-  );
+  const scrapedNews = await Promise.all(newsSources.map(source => scrapeNews(source)));
   const gNews = await fetchGNews();
   const newsAPI = await fetchNewsAPI();
   const currentsAPI = await fetchCurrentsAPI();
@@ -114,17 +112,41 @@ async function fetchAllNews() {
   return [...scrapedNews.flat(), ...gNews, ...newsAPI, ...currentsAPI];
 }
 
-// Function to filter news based on keywords
+// Filtro de keywords + solo internacional excepto Argentina
 function filterNewsByKeywords(articles) {
-  const keywords = ["Argentina", "Mundial", "Crisis", "Economía", "Guerra", "Tecnología", "Fútbol", "Copa", "EE.UU", "Europa", "Medicina", "Innovación", "Covid", "Vacuna", "Pandemia", "Coronavirus", "Vacunación", "Salud", "Ciencia", "Investigación", "Cultura", "Arte", "Música", "Cine", "Literatura", "Teatro", "Deporte", "Juegos", "Olimpiadas", "Atletismo", "Natación", "Tenis", "Baloncesto", "Fútbol", "Ciclismo", "Voleibol", "Golf", "Rugby", "Boxeo", "Automovilismo", "Fórmula 1", "MotoGP", "Tecnología", "Informática", "Internet", "Redes", "Programación", "Desarrollo", "Software", "Hardware", "Videojuegos", "Consolas", "Móviles", "Aplicaciones", "Sistemas", "Ciberseguridad", "Hacking", "Economía", "Finanzas", "Bolsa", "Mercados", "Inversión", "Empresas", "Negocios"];
+  const keywords = [
+    "Argentina", "Mundial", "Crisis", "Economía", "Guerra", "Tecnología", "Fútbol", "Copa", "EE.UU", "Europa", "Medicina",
+    "Innovación", "Covid", "Vacuna", "Pandemia", "Coronavirus", "Vacunación", "Salud", "Ciencia", "Investigación",
+    "Cultura", "Arte", "Música", "Cine", "Literatura", "Teatro", "Deporte", "Juegos", "Olimpiadas", "Atletismo",
+    "Natación", "Tenis", "Baloncesto", "Ciclismo", "Voleibol", "Golf", "Rugby", "Boxeo", "Automovilismo", "Fórmula 1",
+    "MotoGP", "Informática", "Internet", "Redes", "Programación", "Desarrollo", "Software", "Hardware", "Videojuegos",
+    "Consolas", "Móviles", "Aplicaciones", "Sistemas", "Ciberseguridad", "Hacking", "Finanzas", "Bolsa", "Mercados",
+    "Inversión", "Empresas", "Negocios"
+  ];
 
   return articles.filter(article => {
     const text = `${article.title} ${article.description || ''}`.toLowerCase();
-    return keywords.some(keyword => text.includes(keyword.toLowerCase()));
+    const url = article.url?.toLowerCase() || '';
+
+    const isArgentinian =
+      url.includes('clarin') ||
+      url.includes('lanacion') ||
+      url.includes('pagina12') ||
+      url.includes('infobae.com/argentina') ||
+      url.includes('.ar');
+
+    const mentionsArgentina = text.includes('argentina');
+
+    const isInternational = !url.includes('.ar') && !isArgentinian && !mentionsArgentina;
+
+    return (
+      keywords.some(keyword => text.includes(keyword.toLowerCase())) &&
+      (isInternational || isArgentinian || mentionsArgentina)
+    );
   });
 }
 
-// Function to remove duplicate articles based on title
+// Eliminar duplicados por título
 function removeDuplicates(articles) {
   const seenTitles = new Set();
   return articles.filter(article => {
@@ -136,15 +158,15 @@ function removeDuplicates(articles) {
   });
 }
 
-// Function to sort articles by publication date (most recent first)
+// Ordenar por fecha
 function sortByDate(articles) {
   return articles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 }
 
-// Update fetchAndProcessNews to include keyword filtering
+// Función principal
 async function fetchAndProcessNews() {
   const allNews = await fetchAllNews();
-  const filteredNews = filterNewsByKeywords(allNews); // Apply keyword filtering
+  const filteredNews = filterNewsByKeywords(allNews);
   const uniqueNews = removeDuplicates(filteredNews);
   return sortByDate(uniqueNews);
 }
