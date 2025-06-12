@@ -28,7 +28,7 @@ function renderNoticias(articles) {
 // Simplify fetchNoticias
 async function fetchNoticias() {
   try {
-    const response = await fetch('https://pandemonium-production.up.railway.app/news');
+    const response = await fetch('https://pandemonium-290d.onrender.com/news');
     if (!response.ok) throw new Error('Error fetching news from backend');
     const noticias = await response.json();
 
