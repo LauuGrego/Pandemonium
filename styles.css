@@ -50,16 +50,22 @@ body {
     padding: 0 10px;
     z-index: 1000;
     box-shadow: 0 4px 10px var(--vintage-shadow); /* Sombra más intensa */
-    transition: var(--nav-transition);
 }
 
-.header__logo-image {
+.header__logo img {
     height: 300px;
     filter: drop-shadow(0 0 10px var(--color-text)); /* Sombra dorada */
     border-radius: 50%; /* Forma circular para un toque retro */
+    margin-top: 20px;
     transition: var(--nav-transition);
-    margin-top: 0px;
+    animation: spin 6s linear infinite;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
 
 .header__nav-list {
     display: flex;
@@ -593,3 +599,7 @@ body {
         margin: auto;
     }
 }
+    .main__contacto-item {
+        width: 80%;
+        margin: auto;
+    }
