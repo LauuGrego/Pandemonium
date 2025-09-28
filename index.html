@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pandemonium</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,93 +15,113 @@
 
   <!-- Header -->
   <header class="header">
-    <button class="header__nav-toggle">☰</button>
-    <div class="menu-overlay"></div>
-    <nav class="header__nav" aria-label="Navegación principal">
-      <ul class="header__nav-list animate__animated animate__fadeInRight">
-        <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
-        <li class="header__nav-item"><a href="#noticias" class="header__nav-link">Noticias</a></li>
-        <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#inicio">
+          <img src="./images/logo-pandemonium.png" alt="Logo de Pandemonium" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#noticias">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-
   <!-- Main Content -->
-  <main class="main">
-    <!-- Inicio Section -->
-    <section class="main__section">
-      <div class="animate__animated animate__fadeIn header__logo">
-        <img id="inicio" src="./images/logo-pandemonium.png" alt="Logo de Pandemonium" class="animate__animated animate__pulse animate__infinite animate_slower header__logo-image">
-      </div>
-      <div class="player-container">
-        <div class="player">
-          <div class="player__controls">
-            <button class="player__button" id="play-button" aria-label="Reproducir">
-              <i class="fas fa-play-circle player__icon"></i>
-            </button>
-            <button class="player__button" id="stop-button" aria-label="Detener">
-              <i class="fas fa-stop-circle player__icon"></i>
-            </button>
+  <main class="main pt-5 mt-5">
+    <div class="container-fluid">
+      <!-- Inicio Section -->
+      <section class="text-center py-5">
+             <img id="inicio" src="./images/logo-pandemonium.png" alt="Logo de Pandemonium" class="logo-vibrate animate__animated animate__fadeIn" style="height: 300px; border-radius: 50%;">
+   <div class="player-container mt-4">
+          <div class="player">
+            <div class="player__controls">
+              <button class="player__button" id="play-button" aria-label="Reproducir">
+                <i class="fas fa-play-circle player__icon"></i>
+              </button>
+              <button class="player__button" id="stop-button" aria-label="Detener">
+                <i class="fas fa-stop-circle player__icon"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <audio id="radio" src="https://stream-176.zeno.fm/9kymcedhbbrtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5a3ltY2VkaGJicnR2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Inl2X1lPQ1pyUkptc29oZDFFYWg3ZGciLCJpYXQiOjE3NDE2MTQ3MDAsImV4cCI6MTc0MTYxNDc2MH0.VOtW-6guEd3UCjbTJ0nloI_7LGs5ndFJalXleUb5vs4" preload="auto"></audio>
-    </section>
+        <audio id="radio" src="https://stream-176.zeno.fm/9kymcedhbbrtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5a3ltY2VkaGJicnR2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Inl2X1lPQ1pyUkptc29oZDFFYWg3ZGciLCJpYXQiOjE3NDE2MTQ3MDAsImV4cCI6MTc0MTYxNDc2MH0.VOtW-6guEd3UCjbTJ0nloI_7LGs5ndFJalXleUb5vs4" preload="auto"></audio>
+      </section>
 
-    <!-- Sección Historia -->
-    <section class="main__section">
-      <div class="main__content">
-        <h2 class="main__subheading animate__animated animate__fadeInLeft">Nuestra Historia</h2>
-        <p class="main__text animate__animated animate__fadeInRight">
-          Pandemonium nació en abril de 2024 con la misión de llevar la mejor música y contenido a todos los rincones del mundo. Somos una comunidad apasionada por la música, la cultura y la innovación. ¡Únete a nosotros y descubre un mundo de sonidos únicos!
-        </p>
-      </div>
-    </section>
-
-    <!-- Noticias Section -->
-    <section id="noticias" class="main__section">
-      <div class="main__content">
-        <h2 class="main__subheading animate__animated animate__fadeInLeft">Últimas Noticias</h2>
-        <div id="noticias-container" class="main__noticias-container">
-          <!-- Las noticias se cargarán aquí dinámicamente -->
+      <!-- Sección Historia -->
+      <section class="py-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            <h2 class="main__subheading animate__animated animate__fadeInLeft">Nuestra Historia</h2>
+            <p class="main__text animate__animated animate__fadeInRight">
+              Pandemonium nació en abril de 2024 con la misión de llevar la mejor música y contenido a todos los rincones del mundo. Somos una comunidad apasionada por la música, la cultura y la innovación. ¡Únete a nosotros y descubre un mundo de sonidos únicos!
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contacto Section -->
-   <section id="contacto" class="main__section">
-      <div class="main__content">
-        <h2 class="main__subheading animate__animated animate__fadeInLeft">Contacto</h2>
-        <p class="main__text animate__animated animate__fadeInRight">
-          ¿Tienes alguna pregunta o sugerencia? ¡Contáctanos!
-        </p>
-        <ul class="main__contacto-list">
-          <li class="main__contacto-item animate__animated animate__fadeInRight">
-            <i class="fas fa-envelope main__contacto-icon"></i>
-            Email: <a href="mailto:contacto@pandemonium.com.ar" class="main__contacto-link" target="_blank" rel="noopener noreferrer">pandemoniumbasso@gmail.com</a>
-          </li>
-          <li class="main__contacto-item animate__animated animate__fadeInRight">
-            <i class="fas fa-phone main__contacto-icon"></i>
-            Whatsapp: <a href="https://wa.me/543445434959" class="main__contacto-link" target="_blank" rel="noopener noreferrer">3445434959</a>
-          </li>
-          <li class="main__contacto-item animate__animated animate__fadeInRight">
-            <i class="fab fa-instagram main__contacto-icon"></i>
-            Instagram: <a href="https://www.instagram.com/pandemonium_radio/" class="main__contacto-link" target="_blank" rel="noopener noreferrer">Pandemonium_Radio</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <!-- Noticias Section -->
+      <section id="noticias" class="py-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            <h2 class="main__subheading animate__animated animate__fadeInLeft">Últimas Noticias</h2>
+            <div id="noticias-container" class="main__noticias-container mt-4">
+              <!-- Las noticias se cargarán aquí dinámicamente -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto Section -->
+      <section id="contacto" class="py-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            <h2 class="main__subheading animate__animated animate__fadeInLeft">Contacto</h2>
+            <p class="main__text animate__animated animate__fadeInRight">
+              ¿Tienes alguna pregunta o sugerencia? ¡Contáctanos!
+            </p>
+            <ul class="list-unstyled mt-4">
+              <li class="animate__animated animate__fadeInRight mb-3">
+                <i class="fas fa-envelope main__contacto-icon"></i>
+                Email: <a href="mailto:contacto@pandemonium.com.ar" class="main__contacto-link" target="_blank" rel="noopener noreferrer">pandemoniumbasso@gmail.com</a>
+              </li>
+              <li class="animate__animated animate__fadeInRight mb-3">
+                <i class="fas fa-phone main__contacto-icon"></i>
+                Whatsapp: <a href="https://wa.me/543445434959" class="main__contacto-link" target="_blank" rel="noopener noreferrer">3445434959</a>
+              </li>
+              <li class="animate__animated animate__fadeInRight">
+                <i class="fab fa-instagram main__contacto-icon"></i>
+                Instagram: <a href="https://www.instagram.com/pandemonium_radio/" class="main__contacto-link" target="_blank" rel="noopener noreferrer">Pandemonium_Radio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer" aria-label="Pie de página">
-    <p class="footer__text">&copy;2025 Lautaro Gregoraschuk. Todos los derechos reservados.</p>
+  <footer class="footer bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy;2025 Lautaro Gregoraschuk. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
   <script src="js/daily-notice.js"></script>
   <script src="js/player_buttons.js"></script>
-  <script src="js/navbar_mobile.js"></script>
 </body>
 </html>

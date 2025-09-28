@@ -7,11 +7,6 @@
     --color-text: #f5ecd7; /* Beige claro */
     --vintage-border: #c69749; /* Dorado para bordes vintage */
     --vintage-shadow: rgba(60, 40, 10, 0.5); /* Sombra marrón suave */
-    --header-height: 70px;
-    --nav-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --header-gradient-start: #735f32; /* Marrón */
-    --header-gradient-middle: #18120b; /* Negro vintage */
-    --header-gradient-end: #c69749; /* Dorado */
 }
 
 /* Importar fuente personalizada */
@@ -27,69 +22,29 @@ html {
 /* Reset básico */
 body {
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    text-align: center;
     background: linear-gradient(to left, #735f32, #18120b); /* Fondo degradado vintage */
     color: var(--color-text);
+    overflow-x: hidden;
 }
 
-/* Header - Estilos base para desktop */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--header-height);
-    background: var(--color-background);
+/* Navbar */
+.navbar {
     border-bottom: 4px solid var(--color-secondary); /* Borde dorado */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    z-index: 1000;
     box-shadow: 0 4px 10px var(--vintage-shadow); /* Sombra más intensa */
 }
 
-.header__logo img {
-    height: 300px;
-    filter: drop-shadow(0 0 10px var(--color-text)); /* Sombra dorada */
-    border-radius: 50%; /* Forma circular para un toque retro */
-    margin-top: 20px;
-    transition: var(--nav-transition);
-    animation: spin 6s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-}
-
-
-.header__nav-list {
-    display: flex;
-    gap: 40px;
-    padding: 0;
-    margin-left: 165%;
-    list-style: none;
-}
-
-.header__nav-link {
-    color: var(--color-text); /* Beige claro */
-    text-decoration: none;
+.nav-link {
+    color: var(--color-text) !important; /* Beige claro */
     font-weight: bold;
     font-size: 1.1em;
     position: relative;
     padding: 5px 0;
-    justify-content: center;
-    align-items: center;
-    transition: var(--nav-transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: 'Courier New', Courier, monospace; /* Fuente retro */
     text-transform: uppercase; /* Estilo vintage */
 }
 
-.header__nav-link::after {
+.nav-link::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -97,24 +52,27 @@ body {
     width: 0;
     height: 2px;
     background: var(--color-secondary); /* Dorado */
-    transition: var(--nav-transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__nav-link:hover::after {
+.nav-link:hover::after {
     width: 100%;
 }
 
-/* Menú Hamburguesa (Oculto en desktop) */
-.header__nav-toggle,
-.menu-overlay {
-    display: none;
+.logo-vibrate {
+    animation: zoom-vibrate 1s linear infinite;
 }
+
+@keyframes zoom-vibrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 
 /* Contenido principal */
 .main {
     position: relative;
-    padding-top: 120px;
-    margin-top: 60px;
     z-index: 10;
     color: var(--color-text);
     background: url('./images/vinilo.jpg') center fixed no-repeat, 
@@ -160,7 +118,6 @@ body {
     font-size: 2.5em;
     font-family: 'Title', sans-serif;
     line-height: 1.6;
-    margin: 10px 200px;
     color: var(--color-primary); /* Marrón */
 }
 
@@ -168,7 +125,6 @@ body {
     font-size: 1.7em;
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
-    margin: 30px 170px;
 }
 
 /* Reproductor */
@@ -226,8 +182,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .main__noticia-item {
@@ -243,13 +197,10 @@ body {
     border-radius: 10px;
     flex-direction: column;
     text-align: center;
-    width: 80%;
-    margin: auto;
     border: 3px dashed var(--color-secondary); /* Borde dorado retro */
 }
 
 .main__noticia-item:hover {
-    transform: translateX(15px);
     border: 3px dashed var(--color-primary); /* Borde marrón retro */
 }
 
@@ -288,35 +239,6 @@ body {
 }
 
 /* Contacto */
-.main__contacto-list {
-    list-style: none;
-    padding: 0;
-    margin: 30px auto ;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 450px;
-
-}
-
-.main__contacto-item {
-    background-color: rgba(115, 95, 50, 0.3); /* Marrón translúcido */
-    padding: 15px;
-    border-radius: 10px;
-    border-left: 4px solid var(--color-secondary); /* Borde dorado */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2em;
-    flex-wrap: wrap;
-}
-
-.main__contacto-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px var(--color-secondary);
-}
-
 .main__contacto-link {
     color: var(--color-secondary);
     text-decoration: none;
@@ -339,267 +261,6 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--color-background);
-    color: var(--color-secondary); /* Dorado */
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 10;
     border-top: 4px solid var(--color-primary); /* Borde marrón */
     font-family: 'Courier New', Courier, monospace; /* Fuente retro */
 }
-
-.footer__text {
-    margin: 0;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Scroll Down Indicator */
-.scroll-down-indicator {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    z-index: 1000;
-    top: 450px;
-}
-
-.scroll-down-indicator.left {
-    left: 20%;
-}
-
-.scroll-down-indicator.right {
-    right: 20%;
-}
-
-.scroll-down-indicator span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-primary); /* Marrón */
-    border-radius: 50%;
-    animation: scroll-down 1s infinite;
-    opacity: 0.8;
-}
-
-.scroll-down-indicator span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.scroll-down-indicator span:nth-child(1) {
-    animation-delay: 0.4s;
-}
-
-@keyframes scroll-down {
-    0%, 20% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(15px);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-}
-
-/* Estilos para pantallas hasta 768px */
-@media (max-width: 768px) {
-    .header {
-        height: 50px;
-        padding: 0 20px;
-        justify-content: space-between;
-    }
-
-    .header__logo-image {
-        height: 300px;
-        margin-top: 100px;
-    }
-
-    /* Menú Hamburguesa */
-    .header__nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--color-text);
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 1001;
-        transition: transform 0.3s ease;
-    }
-
-    .header__nav-toggle.active {
-        color: var(--color-accent);
-        transform: rotate(90deg);
-    }
-
-    /* Navegación móvil */
-    .header__nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background: var(--color-background);
-        box-shadow: -5px 0 15px var(--vintage-shadow);
-        transition: right 0.3s ease-in-out;
-        padding-top: 20px;
-        overflow-y: auto;
-        z-index: 999;
-    }
-
-    .header__nav.active {
-        right: 0;
-    }
-
-    .header__nav-list {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        padding: 20px;
-        margin: 0;
-    }
-
-    .header__nav-item {
-        width: 100%;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .header__nav-link {
-        font-size: 1.5rem;
-        padding: 10px;
-        display: block;
-        transition: color 0.3s, transform 0.3s;
-    }
-
-    .header__nav-link:hover {
-        transform: translateX(10px);
-        color: var(--color-secondary);
-    }
-
-    /* Overlay del menú */
-    .menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 998;
-    }
-
-    .menu-overlay.active {
-        display: block;
-        z-index: 998;
-    }
-
-    /* Ajustes del contenido principal */
-    .main {
-        padding-top: 120px;
-    }
-
-    .main__heading {
-        font-size: 2.5rem;
-    }
-
-    .main__subheading {
-        font-size: 1.3rem;
-    }
-
-    .main__text {
-        font-size: 1rem;
-        margin: 0 30px;
-    }
-}
-
-/* Estilos para pantallas hasta 480px */
-@media (max-width: 480px) {
-    .header {
-        flex-direction: row;
-        padding: 10px;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .header__logo-image {
-        height: 300px;
-        margin-top: -60px;
-    }
-
-    .header__nav {
-        right: -100%;
-        width: 80%;
-    }
-
-    .header__nav.active {
-        right: 0;
-    }
-
-    .header__nav-toggle {
-        font-size: 1.5em;
-        color: var(--color-secondary);
-    }
-
-    .header__nav-list {
-        gap: 10px;
-        padding: 10px;
-        width: 100%;
-        margin: 0;
-    }
-
-    .header__nav-link {
-        font-size: 1.2em;
-        padding: 10px;
-        text-align: left;
-    }
-
-    .main {
-        padding-top: 100px;
-    }
-
-    .main__heading {
-        font-size: 2rem;
-    }
-
-    .main__subheading {
-        font-size: 2.5rem;
-    }
-
-    .main__text {
-        font-size: 1.5rem;
-        margin: 0 20px;
-    }
-
-    .main__description {
-        margin: 20px 50px;
-    }
-
-    .main__noticia-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .main__noticia-imagen {
-        height: auto;
-        max-width: 100%;
-        min-height: 200px;
-        margin-bottom: 10px;
-    }
-
-    .main__contacto-item {
-        width: 80%;
-        margin: auto;
-    }
-}
-    .main__contacto-item {
-        width: 80%;
-        margin: auto;
-    }
