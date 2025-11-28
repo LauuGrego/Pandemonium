@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node backend/server.js"
+    "build:news": "node scripts/generate-news.js",
+    "watch:news": "node scripts/watch-news.js"
   }
 }
