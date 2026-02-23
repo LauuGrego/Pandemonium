@@ -88,7 +88,20 @@ async function fetchCurrentsAPI() {
 // Scraping individual source
 async function scrapeNews(source) {
   try {
-    const response = await axios.get(source.url);
+    const response = await axios.get(source.url, {
+      timeout: 10000,
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "es-ES,es;q=0.9",
+      }
+    });
+
+    if (response.status !== 200) {
+      console.warn(`[WARNING] Failed to scrape ${source.name} - Status code: ${response.status}`);
+      return [];
+    }
+
     const $ = cheerio.load(response.data);
     const articles = [];
 
@@ -98,116 +111,90 @@ async function scrapeNews(source) {
       if (title && link) {
         articles.push({
           title,
+          description: "Noticia de portada seleccionada.",
           url: source.baseUrl ? `${source.baseUrl}${link}` : link,
+          image: null,
+          publishedAt: new Date().toISOString()
         });
       }
     });
 
+    console.log(`[INFO] Successfully scraped ${articles.length} articles from ${source.name}`);
     return articles;
   } catch (error) {
-    console.error(`Error scraping ${source.name}:`, error);
+    console.error(`[ERROR] Scraping ${source.name} failed:`, error.message);
     return [];
   }
 }
 
 // All sources
 async function fetchAllNews() {
-  const scrapedNews = await Promise.all(
-    newsSources.map((source) => scrapeNews(source))
-  );
-  const gNews = await fetchGNews();
-  const newsAPI = await fetchNewsAPI();
-  const currentsAPI = await fetchCurrentsAPI();
+  const scrapingPromises = newsSources.map((source) => scrapeNews(source));
+  
+  const results = await Promise.allSettled([
+    ...scrapingPromises,
+    fetchGNews(),
+    fetchNewsAPI(),
+    fetchCurrentsAPI()
+  ]);
 
-  return [...scrapedNews.flat(), ...gNews, ...newsAPI, ...currentsAPI];
+  const allArticles = [];
+  results.forEach((result, index) => {
+    if (result.status === 'fulfilled') {
+      allArticles.push(...result.value);
+    } else {
+      console.error(`[ERROR] A data source failed at index ${index}:`, result.reason);
+    }
+  });
+
+  return allArticles;
 }
 
-// Filtro de keywords + solo internacional excepto Argentina
-function filterNewsByKeywords(articles) {
-  const keywords = [
-    "Argentina",
-    "Mundial",
-    "Crisis",
-    "Economía",
-    "Guerra",
-    "Tecnología",
-    "Fútbol",
-    "Copa",
-    "EE.UU",
-    "Europa",
-    "Medicina",
-    "Innovación",
-    "Covid",
-    "Vacuna",
-    "Pandemia",
-    "Coronavirus",
-    "Vacunación",
-    "Salud",
-    "Ciencia",
-    "Investigación",
-    "Cultura",
-    "Arte",
-    "Música",
-    "Cine",
-    "Literatura",
-    "Teatro",
-    "Deporte",
-    "Juegos",
-    "Olimpiadas",
-    "Atletismo",
-    "Natación",
-    "Tenis",
-    "Baloncesto",
-    "Ciclismo",
-    "Voleibol",
-    "Golf",
-    "Rugby",
-    "Boxeo",
-    "Automovilismo",
-    "Fórmula 1",
-    "MotoGP",
-    "Informática",
-    "Internet",
-    "Redes",
-    "Programación",
-    "Desarrollo",
-    "Software",
-    "Hardware",
-    "Videojuegos",
-    "Consolas",
-    "Móviles",
-    "Aplicaciones",
-    "Sistemas",
-    "Ciberseguridad",
-    "Hacking",
-    "Finanzas",
-    "Bolsa",
-    "Mercados",
-    "Inversión",
-    "Empresas",
-    "Negocios",
+// Filtro de noticias globales y de Argentina (excluyendo noticias locales de otros países)
+function filterRelevantNews(articles) {
+  // Palabras y dominios a excluir (noticias locales de otros países)
+  const excludedKeywords = [
+    "perú", "peru", "peruano", "peruana", "lima",
+    "chile", "chileno", "chilena", "santiago de chile",
+    "colombia", "colombiano", "colombiana", "bogotá", "bogota",
+    "méxico", "mexico", "mexicano", "mexicana",
+    "ecuador", "ecuatoriano", "ecuatoriana", "quito",
+    "bolivia", "boliviano", "boliviana", "la paz",
+    "paraguay", "paraguayo", "paraguaya", "asunción", "asuncion",
+    "uruguay", "uruguayo", "uruguaya", "montevideo",
+    "venezuela", "venezolano", "venezolana", "caracas"
   ];
+  
+  const excludedDomains = [".pe", ".cl", ".co", ".mx", ".ec", ".bo", ".py", ".uy", ".ve"];
 
   return articles.filter((article) => {
-    const text = `${article.title} ${article.description || ""}`.toLowerCase();
-    const url = article.url?.toLowerCase() || "";
+    // Sanitizar texto
+    const title = article.title ? article.title.trim() : "";
+    const description = article.description ? article.description.trim() : "";
+    
+    // Ignoramos articulos sin título o sin URL
+    if (!title || title.length < 5 || !article.url) return false;
 
-    const isArgentinian =
-      url.includes("clarin") ||
-      url.includes("lanacion") ||
-      url.includes("pagina12") ||
-      url.includes("infobae.com/argentina") ||
-      url.includes(".ar");
+    const text = `${title} ${description}`.toLowerCase();
+    const url = article.url.toLowerCase();
 
-    const mentionsArgentina = text.includes("argentina");
+    // Comprobar si proviene de un dominio excluido (ej. peru.com, elcomercio.pe)
+    const hasExcludedDomain = excludedDomains.some(domain => url.includes(domain + "/") || url.endsWith(domain));
+    
+    // Comprobar si menciona países excluidos como tema principal
+    // Usamos límites de palabra (\b) para no excluir palabras que contengan esas letras por accidente
+    const mentionsExcludedCountry = excludedKeywords.some(keyword => {
+      // Regex que busca la palabra exacta
+      const regex = new RegExp(`\\b${keyword}\\b`, "i");
+      return regex.test(text);
+    });
 
-    const isInternational =
-      !url.includes(".ar") && !isArgentinian && !mentionsArgentina;
+    if (hasExcludedDomain || mentionsExcludedCountry) {
+      return false; // Se descarta la noticia
+    }
 
-    return (
-      keywords.some((keyword) => text.includes(keyword.toLowerCase())) &&
-      (isInternational || isArgentinian || mentionsArgentina)
-    );
+    // Conservamos el resto (Mundial y Argentina)
+    return true;
   });
 }
 
@@ -234,7 +221,7 @@ function sortByDate(articles) {
 async function generateNews() {
   console.log("Fetching news...");
   const allNews = await fetchAllNews();
-  const filteredNews = filterNewsByKeywords(allNews);
+  const filteredNews = filterRelevantNews(allNews);
   const uniqueNews = removeDuplicates(filteredNews);
   const sortedNews = sortByDate(uniqueNews);
 

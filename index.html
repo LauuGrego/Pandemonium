@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pandemonium</title>
+  <title>Pandemonium - La Mejor Radio Online</title>
+  <!-- Google Fonts: Inter and Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -11,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="./images/logo-pandemonium.png">
 </head>
-<body>
+<body class="dark-theme">
 
   <!-- Header -->
   <header class="header">
@@ -44,17 +48,27 @@
   <main class="main pt-5 mt-5">
     <div class="container-fluid">
       <!-- Inicio Section -->
-      <section class="text-center py-5">
-             <img id="inicio" src="./images/logo-pandemonium.png" alt="Logo de Pandemonium" class="logo-vibrate animate__animated animate__fadeIn" style="height: 300px; border-radius: 50%;">
-   <div class="player-container mt-4">
-          <div class="player">
-            <div class="player__controls">
-              <button class="player__button" id="play-button" aria-label="Reproducir">
-                <i class="fas fa-play-circle player__icon"></i>
-              </button>
-              <button class="player__button" id="stop-button" aria-label="Detener">
-                <i class="fas fa-stop-circle player__icon"></i>
-              </button>
+      <section class="text-center py-5 hero-section">
+        <div class="hero-content">
+             <img id="inicio" src="./images/logo-pandemonium.png" alt="Logo de Pandemonium" class="logo-spin" style="height: 300px; border-radius: 50%;">
+           <h1 class="main__heading animate__animated animate__fadeInUp mt-4">PANDEMONIUM</h1>
+           <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Tu portal de sonidos.</p>
+           <div class="player-container glassmorphism mt-5 animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="player">
+              <div class="player__controls">
+                <button class="player__button" id="play-button" aria-label="Reproducir">
+                  <i class="fas fa-play player__icon"></i>
+                </button>
+                <div class="player__status">
+                  <span class="live-indicator">EN VIVO</span>
+                  <div class="equalizer">
+                     <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                  </div>
+                </div>
+                <button class="player__button" id="stop-button" aria-label="Detener">
+                  <i class="fas fa-stop player__icon"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -86,27 +100,27 @@
       </section>
 
       <!-- Contacto Section -->
-      <section id="contacto" class="py-5">
-        <div class="row">
+      <section id="contacto" class="py-5 contact-section relative">
+        <div class="row relative z-10">
           <div class="col-md-8 offset-md-2 text-center">
             <h2 class="main__subheading animate__animated animate__fadeInLeft">Contacto</h2>
-            <p class="main__text animate__animated animate__fadeInRight">
-              ¿Tienes alguna pregunta o sugerencia? ¡Contáctanos!
+            <p class="main__text  animate__animated animate__fadeInRight">
+              ¿Tienes alguna pregunta o sugerencia? ¡Escríbenos en nuestras redes!
             </p>
-            <ul class="list-unstyled mt-4">
-              <li class="animate__animated animate__fadeInRight mb-3">
-                <i class="fas fa-envelope main__contacto-icon"></i>
-                Email: <a href="mailto:contacto@pandemonium.com.ar" class="main__contacto-link" target="_blank" rel="noopener noreferrer">pandemoniumbasso@gmail.com</a>
-              </li>
-              <li class="animate__animated animate__fadeInRight mb-3">
-                <i class="fas fa-phone main__contacto-icon"></i>
-                Whatsapp: <a href="https://wa.me/543445434959" class="main__contacto-link" target="_blank" rel="noopener noreferrer">3445434959</a>
-              </li>
-              <li class="animate__animated animate__fadeInRight">
-                <i class="fab fa-instagram main__contacto-icon"></i>
-                Instagram: <a href="https://www.instagram.com/pandemonium_radio/" class="main__contacto-link" target="_blank" rel="noopener noreferrer">Pandemonium_Radio</a>
-              </li>
-            </ul>
+            <div class="contact-links mt-5 d-flex justify-content-center gap-4 flex-wrap">
+              <a href="mailto:pandemoniumbasso@gmail.com" class="contact-card glassmorphism animate__animated animate__zoomIn" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </a>
+              <a href="https://wa.me/543445434959" class="contact-card glassmorphism animate__animated animate__zoomIn animate__delay-1s" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.instagram.com/pandemonium_radio/" class="contact-card glassmorphism animate__animated animate__zoomIn animate__delay-2s" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
