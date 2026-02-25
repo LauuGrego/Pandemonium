@@ -1,7 +1,8 @@
-// Claves de API (usados directamente en frontend)
-const apiKeyGNews = "5b2a14b929e141abc003c8744ac61723";
-const apiKeyNewsAPI = "6e2795d88a584b7e9a9f1e6533b85cc4";
-const apiKeyCurrents = "Cf-8WHSYrw3I2JWGYfXff-HoS6z21uhy8U6NYuBLwA-OiSiG";
+const rssFeeds = [
+  "https://feeds.bbci.co.uk/mundo/rss.xml", // BBC Mundo
+  "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml", // Infobae
+  "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada" // El País
+];
 
 // Contenedor de noticias
 const noticiasContainer = document.getElementById("noticias-container");
@@ -13,7 +14,6 @@ function filterRelevantNews(articles) {
     "peru",
     "peruano",
     "peruana",
-    "lima",
     "chile",
     "chileno",
     "chilena",
@@ -34,12 +34,9 @@ function filterRelevantNews(articles) {
     "bolivia",
     "boliviano",
     "boliviana",
-    "la paz",
     "paraguay",
     "paraguayo",
     "paraguaya",
-    "asunción",
-    "asuncion",
     "uruguay",
     "uruguayo",
     "uruguaya",
@@ -49,6 +46,31 @@ function filterRelevantNews(articles) {
     "venezolana",
     "caracas",
   ];
+
+  const europeanCountries = [
+    "españa", "espana", "español", "espanol", "española", "espanola", "madrid", "barcelona", "andalucía", "andalucia", "cataluña", "catalunya",
+    "francia", "francés", "francesa", "parís", "paris",
+    "alemania", "alemán", "alemana", "berlín", "berlin",
+    "italia", "italiano", "italiana", "roma",
+    "reino unido", "inglaterra", "británico", "británica", "londres",
+    "portugal", "portugués", "portuguesa", "lisboa"
+  ];
+
+  const gossipKeywords = [
+  ];
+
+  const unwantedSections = [
+    "/agencias/"
+  ];
+
+  const globalImpactKeywords = [
+    "mundial", "global", "internacional", "guerra", "paz", "crisis",
+    "pandemia", "virus", "oms", "onu", "otan", "eeuu", "estados unidos",
+    "rusia", "putin", "china", "histórico", "alarma", "colapso",
+    "mercado", "economía global", "cambio climático", "catástrofe",
+    "atentado", "terrorismo"
+  ];
+
   const excludedDomains = [
     ".pe",
     ".cl",
@@ -73,12 +95,41 @@ function filterRelevantNews(articles) {
     const hasExcludedDomain = excludedDomains.some(
       (domain) => url.includes(domain + "/") || url.endsWith(domain),
     );
+    
+    const isSpanishSectionURL = url.includes("/espana/") || url.includes("/espanya/") || url.includes("/espana");
+
+    const isUnwantedSectionURL = unwantedSections.some(section => url.includes(section));
+
+    const normalizedText = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
     const mentionsExcludedCountry = excludedKeywords.some((keyword) => {
-      const regex = new RegExp(`\\b${keyword}\\b`, "i");
-      return regex.test(text);
+      const kw = keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const regex = new RegExp(`\\b${kw}\\b`, "i");
+      return regex.test(normalizedText) || regex.test(text);
     });
 
-    if (hasExcludedDomain || mentionsExcludedCountry) return false;
+    const mentionsEuropeanCountry = europeanCountries.some((keyword) => {
+      const kw = keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const regex = new RegExp(`\\b${kw}\\b`, "i");
+      return regex.test(normalizedText) || regex.test(text);
+    });
+
+    const hasGlobalImpact = globalImpactKeywords.some((keyword) => {
+      const kw = keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const regex = new RegExp(`\\b${kw}\\b`, "i");
+      return regex.test(normalizedText) || regex.test(text);
+    });
+
+    const isGossip = gossipKeywords.some((keyword) => {
+      const kw = keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const regex = new RegExp(`\\b${kw}\\b`, "i");
+      return regex.test(normalizedText) || regex.test(text);
+    });
+
+    if (hasExcludedDomain || isSpanishSectionURL || isUnwantedSectionURL || isGossip || mentionsExcludedCountry) return false;
+    
+    if (mentionsEuropeanCountry && !hasGlobalImpact) return false;
+    
     return true;
   });
 }
@@ -154,87 +205,67 @@ function renderNoticias(articles) {
   noticiasContainer.appendChild(row);
 }
 
-// APIs
-async function fetchGNews() {
+// Función estandarizada para leer un feed RSS y convertirlo a JSON
+async function fetchRSS(rssUrl) {
   try {
+    // Usamos rss2json, una API pública y gratuita que no requiere keys
     const response = await fetch(
-      `https://gnews.io/api/v4/top-headlines?token=${apiKeyGNews}&lang=es`,
+      `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`
     );
     const data = await response.json();
-    return (data.articles || []).map((article) => ({
-      title: article.title,
-      description: article.description,
-      url: article.url,
-      image: article.image,
-      publishedAt: article.publishedAt,
-    }));
-  } catch (error) {
-    console.error("Error GNews:", error);
-    return [];
-  }
-}
+    
+    if (data.status !== "ok") return [];
 
-async function fetchNewsAPI() {
-  try {
-    const response = await fetch(
-      `https://newsapi.org/v2/top-headlines?apiKey=${apiKeyNewsAPI}&language=es`,
-    );
-    const data = await response.json();
-    return (data.articles || []).map((article) => ({
-      title: article.title,
-      description: article.description,
-      url: article.url,
-      image: article.urlToImage,
-      publishedAt: article.publishedAt,
-    }));
-  } catch (error) {
-    console.error("Error NewsAPI:", error);
-    return [];
-  }
-}
+    return (data.items || []).map((item) => {
+      let cleanDescription = (item.description || "").replace(/(<([^>]+)>)/gi, "").trim();
+      if (cleanDescription.length > 250) {
+        cleanDescription = cleanDescription.substring(0, 247) + "...";
+      }
 
-async function fetchCurrentsAPI() {
-  try {
-    const response = await fetch(
-      `https://api.currentsapi.services/v1/latest-news?apiKey=${apiKeyCurrents}&language=es`,
-    );
-    const data = await response.json();
-    return (data.news || []).map((article) => ({
-      title: article.title,
-      description: article.description,
-      url: article.url,
-      image: article.image,
-      publishedAt: article.published,
-    }));
+      return {
+        title: item.title,
+        description: cleanDescription,
+        url: item.link,
+        image: item.thumbnail || (item.enclosure && item.enclosure.link) || null,
+        publishedAt: item.pubDate,
+      };
+    });
   } catch (error) {
-    console.error("Error CurrentsAPI:", error);
+    console.error("Error fetching RSS:", rssUrl, error);
     return [];
   }
 }
 
 async function fetchNoticias() {
   try {
-    // Show a loading state
     if (noticiasContainer.innerHTML.trim() === "") {
       noticiasContainer.innerHTML =
         '<p class="main__text text-center"><i class="fas fa-spinner fa-spin"></i> Cargando noticias...</p>';
     }
 
-    const [gNews, newsApi, currentsApi] = await Promise.all([
-      fetchGNews(),
-      fetchNewsAPI(),
-      fetchCurrentsAPI(),
-    ]);
+    const feedPromises = rssFeeds.map(url => fetchRSS(url));
+    const results = await Promise.all(feedPromises);
 
-    let allArticles = [...gNews, ...newsApi, ...currentsApi];
-    allArticles = filterRelevantNews(allArticles);
+    let allArticles = results.flat();
     allArticles = removeDuplicates(allArticles);
-    allArticles.sort(
+    
+    let filteredArticles = filterRelevantNews(allArticles);
+    
+    if (filteredArticles.length < 3) {
+      for (const article of allArticles) {
+        if (!filteredArticles.includes(article)) {
+          filteredArticles.push(article);
+        }
+        if (filteredArticles.length >= 3) break;
+      }
+    }
+    
+    filteredArticles.sort(
       (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt),
     );
 
-    if (allArticles.length > 0) {
-      renderNoticias(allArticles);
+    if (filteredArticles.length > 0) {
+      renderNoticias(filteredArticles);
     } else {
       noticiasContainer.innerHTML =
         '<p class="main__text text-center">No se encontraron noticias relevantes.</p>';
@@ -246,7 +277,6 @@ async function fetchNoticias() {
   }
 }
 
-// Cargar noticias al iniciar
 fetchNoticias();
 
 // Actualizar cada 10 minutos (600,000 ms)
