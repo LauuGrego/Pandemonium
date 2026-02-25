@@ -56,9 +56,6 @@ function filterRelevantNews(articles) {
     "portugal", "portugués", "portuguesa", "lisboa"
   ];
 
-  const gossipKeywords = [
-  ];
-
   const unwantedSections = [
     "/agencias/"
   ];
@@ -120,13 +117,7 @@ function filterRelevantNews(articles) {
       return regex.test(normalizedText) || regex.test(text);
     });
 
-    const isGossip = gossipKeywords.some((keyword) => {
-      const kw = keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      const regex = new RegExp(`\\b${kw}\\b`, "i");
-      return regex.test(normalizedText) || regex.test(text);
-    });
-
-    if (hasExcludedDomain || isSpanishSectionURL || isUnwantedSectionURL || isGossip || mentionsExcludedCountry) return false;
+    if (hasExcludedDomain || isSpanishSectionURL || isUnwantedSectionURL || mentionsExcludedCountry) return false;
     
     if (mentionsEuropeanCountry && !hasGlobalImpact) return false;
     
