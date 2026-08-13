@@ -639,3 +639,17 @@ body::before {
         font-size: 0.8rem;
     }
 }
+
+/* Accessibility Focus States & High Contrast */
+:focus-visible {
+    outline: 2px solid var(--color-primary) !important;
+    outline-offset: 3px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-primary) !important;
+    outline-offset: 4px !important;
+    box-shadow: 0 0 10px var(--color-primary-glow) !important;
+}
