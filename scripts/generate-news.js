@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { filterRelevantNews, removeDuplicates } = require("../js/filter.js");
 
 // API keys
 const apiKeyGNews = "5b2a14b929e141abc003c8744ac61723";
@@ -28,6 +29,77 @@ const newsSources = [
   },
 ];
 
+// SerpApi Google News Integration
+async function fetchSerpApiGoogleNews() {
+  const apiKey = process.env.SERPAPI_KEY || process.env.SERAPI_KEY;
+  if (!apiKey) {
+    console.warn("[INFO] SERPAPI_KEY no enviada en variables de entorno. Omitiendo SerpApi.");
+    return [];
+  }
+
+  try {
+    const url = `https://serpapi.com/search.json?engine=google_news&q=Argentina+noticias&gl=ar&hl=es&api_key=${apiKey}`;
+    const response = await axios.get(url, { timeout: 10000 });
+    
+    const newsResults = response.data.news_results || [];
+    const articles = [];
+
+    newsResults.forEach((item) => {
+      if (item.title && item.link) {
+        articles.push({
+          title: item.title,
+          description: item.snippet || item.title,
+          url: item.link,
+          image: item.thumbnail || (item.source && item.source.icon) || null,
+          publishedAt: parseSerpApiDate(item.date),
+        });
+      }
+
+      if (Array.isArray(item.stories)) {
+        item.stories.forEach((sub) => {
+          if (sub.title && sub.link) {
+            articles.push({
+              title: sub.title,
+              description: sub.snippet || sub.title,
+              url: sub.link,
+              image: sub.thumbnail || (sub.source && sub.source.icon) || null,
+              publishedAt: parseSerpApiDate(sub.date),
+            });
+          }
+        });
+      }
+    });
+
+    console.log(`[INFO] Successfully fetched ${articles.length} articles from SerpApi Google News.`);
+    return articles;
+  } catch (error) {
+    console.error("[ERROR] Fetching news from SerpApi failed:", error.message);
+    return [];
+  }
+}
+
+function parseSerpApiDate(dateStr) {
+  if (!dateStr) return new Date().toISOString();
+  const parsed = new Date(dateStr);
+  if (!isNaN(parsed.getTime())) return parsed.toISOString();
+  
+  const now = new Date();
+  const lower = dateStr.toLowerCase();
+  if (lower.includes("min") || lower.includes("muto")) {
+    const mins = parseInt(lower) || 10;
+    return new Date(now.getTime() - mins * 60 * 1000).toISOString();
+  }
+  if (lower.includes("hour") || lower.includes("hora")) {
+    const hours = parseInt(lower) || 1;
+    return new Date(now.getTime() - hours * 60 * 60 * 1000).toISOString();
+  }
+  if (lower.includes("day") || lower.includes("dia")) {
+    const days = parseInt(lower) || 1;
+    return new Date(now.getTime() - days * 24 * 60 * 60 * 1000).toISOString();
+  }
+  return now.toISOString();
+}
+
 // GNews
 async function fetchGNews() {
   try {
@@ -42,7 +114,7 @@ async function fetchGNews() {
       publishedAt: article.publishedAt,
     }));
   } catch (error) {
-    console.error("Error fetching news from GNews:", error);
+    console.error("Error fetching news from GNews:", error.message);
     return [];
   }
 }
@@ -61,7 +133,7 @@ async function fetchNewsAPI() {
       publishedAt: article.publishedAt,
     }));
   } catch (error) {
-    console.error("Error fetching news from NewsAPI:", error);
+    console.error("Error fetching news from NewsAPI:", error.message);
     return [];
   }
 }
@@ -80,7 +152,7 @@ async function fetchCurrentsAPI() {
       publishedAt: article.published,
     }));
   } catch (error) {
-    console.error("Error fetching news from Currents API:", error);
+    console.error("Error fetching news from Currents API:", error.message);
     return [];
   }
 }
@@ -135,7 +207,8 @@ async function fetchAllNews() {
     ...scrapingPromises,
     fetchGNews(),
     fetchNewsAPI(),
-    fetchCurrentsAPI()
+    fetchCurrentsAPI(),
+    fetchSerpApiGoogleNews()
   ]);
 
   const allArticles = [];
@@ -148,66 +221,6 @@ async function fetchAllNews() {
   });
 
   return allArticles;
-}
-
-// Filtro de noticias globales y de Argentina (excluyendo noticias locales de otros países)
-function filterRelevantNews(articles) {
-  // Palabras y dominios a excluir (noticias locales de otros países)
-  const excludedKeywords = [
-    "perú", "peru", "peruano", "peruana", "lima",
-    "chile", "chileno", "chilena", "santiago de chile",
-    "colombia", "colombiano", "colombiana", "bogotá", "bogota",
-    "méxico", "mexico", "mexicano", "mexicana",
-    "ecuador", "ecuatoriano", "ecuatoriana", "quito",
-    "bolivia", "boliviano", "boliviana", "la paz",
-    "paraguay", "paraguayo", "paraguaya", "asunción", "asuncion",
-    "uruguay", "uruguayo", "uruguaya", "montevideo",
-    "venezuela", "venezolano", "venezolana", "caracas"
-  ];
-  
-  const excludedDomains = [".pe", ".cl", ".co", ".mx", ".ec", ".bo", ".py", ".uy", ".ve"];
-
-  return articles.filter((article) => {
-    // Sanitizar texto
-    const title = article.title ? article.title.trim() : "";
-    const description = article.description ? article.description.trim() : "";
-    
-    // Ignoramos articulos sin título o sin URL
-    if (!title || title.length < 5 || !article.url) return false;
-
-    const text = `${title} ${description}`.toLowerCase();
-    const url = article.url.toLowerCase();
-
-    // Comprobar si proviene de un dominio excluido (ej. peru.com, elcomercio.pe)
-    const hasExcludedDomain = excludedDomains.some(domain => url.includes(domain + "/") || url.endsWith(domain));
-    
-    // Comprobar si menciona países excluidos como tema principal
-    // Usamos límites de palabra (\b) para no excluir palabras que contengan esas letras por accidente
-    const mentionsExcludedCountry = excludedKeywords.some(keyword => {
-      // Regex que busca la palabra exacta
-      const regex = new RegExp(`\\b${keyword}\\b`, "i");
-      return regex.test(text);
-    });
-
-    if (hasExcludedDomain || mentionsExcludedCountry) {
-      return false; // Se descarta la noticia
-    }
-
-    // Conservamos el resto (Mundial y Argentina)
-    return true;
-  });
-}
-
-// Eliminar duplicados por título
-function removeDuplicates(articles) {
-  const seenTitles = new Set();
-  return articles.filter((article) => {
-    if (seenTitles.has(article.title)) {
-      return false;
-    }
-    seenTitles.add(article.title);
-    return true;
-  });
 }
 
 // Ordenar por fecha

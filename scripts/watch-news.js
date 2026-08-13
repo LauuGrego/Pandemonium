@@ -2,10 +2,10 @@ const { exec } = require('child_process');
 const path = require('path');
 
 const generateScript = path.join(__dirname, 'generate-news.js');
-const INTERVAL = 10 * 60 * 1000; // 10 minutes
+const INTERVAL = 12 * 60 * 60 * 1000; // 12 horas (2 veces al día)
 
 function runGeneration() {
-  console.log(`[${new Date().toLocaleTimeString()}] Starting news generation...`);
+  console.log(`[${new Date().toLocaleTimeString()}] Iniciando generación de noticias...`);
   exec(`node "${generateScript}"`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error: ${error.message}`);
@@ -16,12 +16,12 @@ function runGeneration() {
       return;
     }
     console.log(`Stdout: ${stdout}`);
-    console.log(`[${new Date().toLocaleTimeString()}] News generation complete. Waiting ${INTERVAL / 60000} minutes...`);
+    console.log(`[${new Date().toLocaleTimeString()}] Generación completada. Próxima actualización en 12 horas.`);
   });
 }
 
-// Run immediately
+// Ejecutar de inmediato
 runGeneration();
 
-// Run every 10 minutes
+// Ejecutar cada 12 horas (a las 00:00 y 12:00 aprox)
 setInterval(runGeneration, INTERVAL);

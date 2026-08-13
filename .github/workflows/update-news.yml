@@ -2,11 +2,11 @@ name: Daily News Fetch
 
 on:
   schedule:
-    - cron: "0 6 * * *" #  todos los días a las 6:00 AM UTC
+    - cron: "0 0,12 * * *" # Todos los días a las 00:00 y a las 12:00 UTC (2 veces al día)
   workflow_dispatch: # Permite ejecución manual
 
 permissions:
-  contents: write # hacer commit
+  contents: write # Hacer commit de news.json
 
 jobs:
   update-news:
@@ -28,6 +28,8 @@ jobs:
 
       - name: Run script to fetch news
         run: yarn build:news
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
 
       - name: Commit and push changes
         id: commit_changes
@@ -35,4 +37,4 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add news.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily news automatically" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update news twice daily via SerpApi & sources" && git push)
