@@ -43,6 +43,7 @@ async function fetchSerpApiGoogleNews() {
         });
       }
     });
+    
 
     console.log(`[INFO] Successfully fetched ${articles.length} articles from SerpApi Google News.`);
     return articles;
