@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
+const cheerio = require("cheerio");
 const { filterRelevantNews, removeDuplicates } = require("../js/filter.js");
 
 // SerpApi Google News Integration
@@ -43,7 +44,6 @@ async function fetchSerpApiGoogleNews() {
         });
       }
     });
-    
 
     console.log(`[INFO] Successfully fetched ${articles.length} articles from SerpApi Google News.`);
     return articles;
@@ -51,6 +51,60 @@ async function fetchSerpApiGoogleNews() {
     console.error("[ERROR] Fetching news from SerpApi failed:", error.message);
     return [];
   }
+}
+
+// Google News RSS Fallback (Gratuito sin API Key)
+async function fetchGoogleNewsRss() {
+  const rssUrls = [
+    "https://news.google.com/rss?hl=es-419&gl=AR&ceid=AR:es-419",
+    "https://news.google.com/rss/search?q=Argentina+noticias&hl=es-419&gl=AR&ceid=AR:es-419"
+  ];
+  
+  const articles = [];
+
+  for (const url of rssUrls) {
+    try {
+      const response = await axios.get(url, {
+        timeout: 10000,
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+      });
+
+      const $ = cheerio.load(response.data, { xmlMode: true });
+      $("item").each((_, el) => {
+        const title = $(el).find("title").text().trim();
+        const link = $(el).find("link").text().trim();
+        const pubDate = $(el).find("pubDate").text().trim();
+        const descriptionRaw = $(el).find("description").text();
+        const sourceName = $(el).find("source").text().trim();
+
+        let description = "";
+        if (descriptionRaw) {
+          const $desc = cheerio.load(descriptionRaw);
+          description = $desc.text().trim();
+        }
+        if (!description || description === title) {
+          description = sourceName ? `Noticias de ${sourceName}` : "Noticias de Argentina en vivo.";
+        }
+
+        if (title && link) {
+          articles.push({
+            title: title,
+            description: description,
+            url: link,
+            image: null,
+            publishedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
+          });
+        }
+      });
+    } catch (err) {
+      console.warn(`[WARN] Error obteniendo RSS de ${url}:`, err.message);
+    }
+  }
+
+  console.log(`[INFO] Se obtuvieron ${articles.length} artículos vía Google News RSS.`);
+  return articles;
 }
 
 function parseSerpApiDate(dateStr) {
@@ -85,7 +139,13 @@ function sortByDate(articles) {
 // Función principal
 async function generateNews() {
   console.log("Fetching news from SerpApi...");
-  const allNews = await fetchSerpApiGoogleNews();
+  let allNews = await fetchSerpApiGoogleNews();
+  
+  if (allNews.length === 0) {
+    console.log("SerpApi no devolvió artículos. Ejecutando fallback de Google News RSS...");
+    allNews = await fetchGoogleNewsRss();
+  }
+
   const filteredNews = filterRelevantNews(allNews);
   const uniqueNews = removeDuplicates(filteredNews);
   const sortedNews = sortByDate(uniqueNews);
@@ -96,3 +156,4 @@ async function generateNews() {
 }
 
 generateNews();
+

@@ -63,12 +63,13 @@ function renderNoticias(articles) {
 
   articles.slice(0, 12).forEach((noticia) => {
     const col = document.createElement("div");
-    col.classList.add("col-md-6", "col-lg-4", "d-flex", "align-items-stretch");
+    col.classList.add("col-12", "col-md-6", "col-lg-4", "d-flex", "align-items-stretch");
 
     const card = document.createElement("div");
     card.classList.add(
       "card",
       "h-100",
+      "w-100",
       "main__noticia-card",
       "animate__animated",
       "animate__fadeInUp"
@@ -125,6 +126,25 @@ function renderNoticias(articles) {
   noticiasContainer.appendChild(row);
 }
 
+// Fallback cliente vía RSS-to-JSON
+async function fetchRemoteFallbackNoticias() {
+  const rssUrl = "https://news.google.com/rss?hl=es-419&gl=AR&ceid=AR:es-419";
+  const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+
+  const res = await fetch(apiUrl);
+  if (!res.ok) throw new Error("Fallback RSS response not OK");
+  const data = await res.json();
+  if (!data.items || !Array.isArray(data.items)) return [];
+
+  return data.items.map((item) => ({
+    title: item.title,
+    description: item.description ? item.description.replace(/<[^>]*>?/gm, "").trim() : item.title,
+    url: item.link,
+    image: item.thumbnail || null,
+    publishedAt: item.pubDate || new Date().toISOString()
+  }));
+}
+
 // Función principal para obtener noticias desde news.json
 async function fetchNoticias() {
   if (!noticiasContainer) return;
@@ -135,18 +155,33 @@ async function fetchNoticias() {
         '<p class="main__text text-center py-5"><i class="fas fa-spinner fa-spin me-2"></i>Cargando noticias...</p>';
     }
 
-    // Petición directa al archivo estático news.json (generado por CI)
-    const response = await fetch("news.json?t=" + Date.now(), { cache: "no-cache" });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    let rawArticles = [];
+
+    try {
+      // Petición al archivo estático news.json (generado por CI / script)
+      const response = await fetch("news.json?t=" + Date.now(), { cache: "no-cache" });
+      if (response.ok) {
+        rawArticles = await response.json();
+      }
+    } catch (e) {
+      console.warn("Fallo lectura de news.json local, ejecutando fallback remoto...", e);
     }
 
-    const rawArticles = await response.json();
     const { filterRelevantNews, removeDuplicates } = getFilterFunctions();
 
     let uniqueArticles = removeDuplicates(rawArticles);
     let filteredArticles = filterRelevantNews(uniqueArticles);
+
+    // Si news.json devolvió 0 artículos, intentamos el fallback remoto directo
+    if (filteredArticles.length === 0) {
+      try {
+        const fallbackArticles = await fetchRemoteFallbackNoticias();
+        uniqueArticles = removeDuplicates(fallbackArticles);
+        filteredArticles = filterRelevantNews(uniqueArticles);
+      } catch (fallbackErr) {
+        console.warn("Fallo el fallback remoto RSS:", fallbackErr);
+      }
+    }
 
     // Si el filtro es muy estricto y quedan pocas noticias, completamos con las generales
     if (filteredArticles.length < 3 && uniqueArticles.length >= 3) {
@@ -178,3 +213,4 @@ fetchNoticias();
 
 // Actualización periódica cada 10 minutos (600.000 ms)
 setInterval(fetchNoticias, 600000);
+
