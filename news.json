@@ -1,24 +1,717 @@
 [
   {
-    "title": "Mientras Milei fortalece su vínculo con EE.UU., una cumbre en Salta mostró el avance de las inversiones chinas",
-    "description": "Mientras Milei fortalece su vínculo con EE.UU., una cumbre en Salta mostró el avance de las inversiones chinas",
+    "title": "Mientras Milei fortalece su vínculo con EE.UU., las inversiones chinas avanzan en una provincia estratégica",
+    "description": "Mientras Milei fortalece su vínculo con EE.UU., las inversiones chinas avanzan en una provincia estratégica",
     "url": "https://www.cronista.com/economia-politica/negocios-primero-lo-que-dejo-el-china-day-en-salta/",
     "image": "https://www.cronista.com/resizer/v2/GX6UYPBJLREUBDKJGGAC6AJZKM.jpg?auth=7a4bd67567f7924781a4004d7afd81af9941022db8758aecbb3551e42125ce8c&smart=true&width=848&height=560",
     "publishedAt": "2026-09-29T10:00:00.000Z"
   },
   {
-    "title": "Poder Ciudadano alertó sobre falta de políticas anticorrupción: “Pareciera que buscamos ampliar la impunidad”",
+    "title": "Jayson Tatum listo para liderar a los renovados Celtics tras canje de Jaylen Brown a 76ers",
+    "description": "Jayson Tatum asume el liderazgo de los Celtics tras el traspaso de Jaylen Brown a los 76ers, destacando su agradecimiento por los años compartidos.Paul George y Mitchell Robinson se unen al equipo, mientras el entrenador Mazzulla se enfoca en aprovechar las nuevas incorporaciones sin cambiar el estilo.",
+    "url": "https://www.clarin.com/estados-unidos/jayson-tatum-listo-para-liderar-a-los-renovados-celtics-tras-canje-de-jaylen-brown-a-76ers_0_dLStGCjh6F.html",
+    "image": "https://www.clarin.com/img/2026/04/16/ox6pYwAJj_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T04:40:04.000Z"
+  },
+  {
+    "title": "Alejandra Baigorria amenaza con demandar a TikTokers por burlas sobre Said Palao: “Te llegará tu carta notarial”",
+    "description": "‘El Chino que no es Chino’ y ‘Nelson Capitán’ quedaron en la mira de la exchica reality luego de realizar contenidos satíricos sobre su relación con Said Palao. La empresaria les exigió retractarse bajo amenaza de iniciar acciones legales",
+    "url": "https://www.infobae.com/peru/2026/09/29/alejandra-baigorria-amenaza-con-demandar-a-comediantes-tiktokers-por-burlas-sobre-said-palao-te-llegara-tu-carta-notarial/",
+    "image": "https://www.infobae.com/resizer/v2/CKZM63AXB5GODPSAU353YZVG7U.jpg?auth=12f1a28618735e2d4ef2baf4ae99f5a0195ae8341ecc242b43e68bc11eb4ba9e&smart=true&width=1086&height=580",
+    "publishedAt": "2026-09-29T04:36:21.000Z"
+  },
+  {
+    "title": "Un argentino aceptó 10 mil dólares para pelear por Rusia tras ver un anuncio en redes y terminó prisionero en Ucrania: quién es Ibrahim Roberto Yamil",
+    "description": "Tiene 37 años, es padre de dos hijos y fue capturado por fuerzas ucranianas después de combatir en una unidad del Ejército ruso.Según la información difundida por autoridades de Ucrania, se trata del primer argentino presentado como prisionero de guerra en el marco del conflicto con Moscú.",
+    "url": "https://www.clarin.com/sociedad/argentino-acepto-10-mil-dolares-pelear-rusia-ver-anuncio-redes-termino-prisionero-ucrania-ibrahim-roberto-yamil_0_z78kJqi2X0.html",
+    "image": "https://www.clarin.com/img/2026/09/29/N2zwjMW4v_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T04:35:08.000Z"
+  },
+  {
+    "title": "Entraron en vigor las nuevas prohibiciones de EEUU a las importaciones de alcohol, lácteos y motocicletas de Canadá",
+    "description": "La Casa Blanca anunció la medida el 8 de septiembre, después de que Ottawa impusiera nuevos aranceles a productos estadounidenses en respuesta a las sobretasas aplicadas por Washington",
+    "url": "https://www.infobae.com/america/mundo/2026/09/29/entraron-en-vigor-las-nuevas-prohibiciones-de-eeuu-a-las-importaciones-de-alcohol-lacteos-y-motocicletas-de-canada/",
+    "image": "https://www.infobae.com/resizer/v2/3ME364LHKVD6HFZZWNHOQLKB3U.JPG?auth=cfa410f6966a65cfeea8cafb26fb80bd7364c1cd936ac04331938e182ac39f39&smart=true&width=5000&height=3333",
+    "publishedAt": "2026-09-29T04:34:11.000Z"
+  },
+  {
+    "title": "La Academia de San Carlos presenta “Dibujos, representación & comunidad”: horarios, fechas y todo lo que debes saber sobre la exposición",
+    "description": "Con motivo de los 245 años de la Academia de San Carlos y los 475 de la UNAM, dos exposiciones dialogan entre acervo histórico y prácticas actuales del dibujo",
+    "url": "https://www.infobae.com/mexico/2026/09/28/la-academia-de-san-carlos-presenta-dibujos-representacion-comunidad-horarios-fechas-y-todo-lo-que-debes-saber-sobre-la-exposicion/",
+    "image": "https://www.infobae.com/resizer/v2/DFMYR2L67JCKBKHCHXIT6HPZMA.jpg?auth=350c5e9b2180d252681924df09a3d67f147e71a82f96128e2f212fc06748a12a&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T04:28:46.000Z"
+  },
+  {
+    "title": "Contraloría revisa $2,78 billones de MinIgualdad y alerta por pagos de $88.000 millones con insuficiencia documental",
+    "description": "El contralor general, Jorge Laverde Vargas, explicó que la revisión abarcará transferencias, contratos, giros y soportes, además de los recursos administrados por FonIgualdad entre 2023 y 2026",
+    "url": "https://www.infobae.com/colombia/2026/09/29/contraloria-revisa-278-billones-de-minigualdad-y-alerta-por-pagos-de-88000-millones-con-insuficiencia-documental/",
+    "image": "https://www.infobae.com/resizer/v2/ZHSA4LK7EFB7NHHSBB7WBRCCW4.jpg?auth=ffe41f80a6fb31ab62cda6eb16fc895dbffcc1b4c145780cfd4d0f1f3534ef7b&smart=true&width=2048&height=1536",
+    "publishedAt": "2026-09-29T04:28:44.000Z"
+  },
+  {
+    "title": "Rige una alerta amarilla por tormentas en el AMBA: cuándo terminan las lluvias",
+    "description": "Tormentas con probabilidad del 70% desde la madrugada, ráfagas de hasta 50 km/h y alerta naranja activa marcan el arranque de una semana que el SMN pronostica sin precipitaciones desde el miércoles y con temperaturas que no superan los 19°C hasta el domingo",
+    "url": "https://www.infobae.com/sociedad/2026/09/29/rige-una-alerta-amarilla-por-tormentas-en-el-amba-cuando-terminan-las-lluvias/",
+    "image": "https://www.infobae.com/resizer/v2/IVT7LOU2QBBMRHCHB4352VRJ64.png?auth=5434360311a05f6b9394e42f6578c44a86d933ccaa12509317e3138d5b4fc578&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T04:20:14.000Z"
+  },
+  {
+    "title": "Delincuentes aprovecharon que un jubilado salió de su casa y le robaron todos sus ahorros en Rosario",
+    "description": "El hecho ocurrió en un lapso de tres horas. Al regresar a su casa, el hombre descubrió que le habían sustraído 600 dólares y 300 mil pesos",
+    "url": "https://www.infobae.com/sociedad/policiales/2026/09/29/delincuentes-aprovecharon-que-un-jubilado-salio-de-su-casa-y-le-robaron-todos-sus-ahorros-en-rosario/",
+    "image": "https://www.infobae.com/resizer/v2/XGTMP36MQZF3XKVKSOPXYOCVSU.jpg?auth=e811727640fae0e53d84421e021746eb6286a056a13cef2e5b1a55da6ade2910&smart=true&width=1744&height=1080",
+    "publishedAt": "2026-09-29T04:19:47.000Z"
+  },
+  {
+    "title": "Pico y Placa: ¿Puedes manejar en Villavicencio sin infringir la ley?<br>",
+    "description": "Cuáles son los automóviles que no circulan este martes, chécalo y evita una multa",
+    "url": "https://www.infobae.com/colombia/2026/09/29/pico-y-placa-puedes-manejar-en-villavicencio-sin-infringir-la-leybr/",
+    "image": "https://www.infobae.com/resizer/v2/W6IOREI5JZHU3MUH2KVBBHZINA.jpg?auth=27bedfd842680e2fb9084dd59eaf05c0972ddb0c4c39272f025eb4108e9d2a1a&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T04:17:04.000Z"
+  },
+  {
+    "title": "¿Quieres saber quiénes ganaron en Tris? Aquí están los números afortunados",
+    "description": "Enseguida los resultados de todos los sorteos de Tris dados a conocer por la Lotería Nacional y descubra si ha sido uno de los ganadores",
+    "url": "https://www.infobae.com/mexico/2026/09/29/quieres-saber-quienes-ganaron-en-tris-aqui-estan-los-numeros-afortunados/",
+    "image": "https://www.infobae.com/resizer/v2/IECJ2JDMNFEJRKEHMRANYLXFQE.jpg?auth=5ee4217eecdd459e9936a74b9549d4fede93c13f9581021e4a5ec567efbc88ce&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T04:16:46.000Z"
+  },
+  {
+    "title": "Riesgo de muerte tras diagnóstico de diabetes tipo 2",
+    "description": "Healthday Spanish",
+    "url": "https://www.infobae.com/salud/2026/09/29/riesgo-de-muerte-tras-diagnostico-de-diabetes-tipo-2/",
+    "image": "https://www.infobae.com/resizer/v2/733C72US25AB3ILE6M3SN7YDVY.jpg?auth=0f84981612f446cd12d7b3de703853c829b9fa336896162f01e31c3074ff6871&smart=true&width=1200&height=675",
+    "publishedAt": "2026-09-29T04:16:44.000Z"
+  },
+  {
+    "title": "1 de cada 5 personas mayores en riesgo de interacciones con drogas peligrosas",
+    "description": "Healthday Spanish",
+    "url": "https://www.infobae.com/salud/2026/09/29/1-de-cada-5-personas-mayores-en-riesgo-de-interacciones-con-drogas-peligrosas/",
+    "image": "https://www.infobae.com/resizer/v2/SST2EMZFDNGNRPJTCXZMT7ONPQ.jpg?auth=de0e3ef3bb7af33bfdc085cf7794259a50afabc19ca0acf1e959491f44434bf7&smart=true&width=1200&height=900",
+    "publishedAt": "2026-09-29T04:16:26.000Z"
+  },
+  {
+    "title": "Cuba permitirá que mipymes y cooperativas administren bodegas estatales mediante contratos",
+    "description": "La iniciativa conserva la titularidad pública de los inmuebles y prevé transformar esos puntos de venta en Mercados de Barrio y de Abasto, con incentivos fiscales y exención de alquiler durante dos años",
+    "url": "https://www.infobae.com/cuba/2026/09/29/cuba-permitira-que-mipymes-y-cooperativas-administren-bodegas-estatales-mediante-contratos/",
+    "image": "https://www.infobae.com/resizer/v2/X2UAYZMNRRG4BH7R242T4UKLAU.jpeg?auth=101f553e01029c2d706cb60da7055c7b2fb2895fa63da26ee394bbd76c1e771a&smart=true&width=1200&height=675",
+    "publishedAt": "2026-09-29T04:16:17.000Z"
+  },
+  {
+    "title": "Resultado Super Astro Luna HOY: número ganador del lunes 28 de septiembre",
+    "description": "A continuación, se muestran los números ganadores y el signo zodiacal que salieron en las balotas del sorteo de esta noche",
+    "url": "https://www.infobae.com/colombia/2026/09/29/resultado-super-astro-luna-hoy-numero-ganador-del-lunes-28-de-septiembre/",
+    "image": "https://www.infobae.com/resizer/v2/SUW2GGZFOFHC5KRBVQXXK3VY2M.jpg?auth=c410a21f7d59f3134227342f239e96537a57f99551b924317f024c21091ea800&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T04:16:10.000Z"
+  },
+  {
+    "title": "Ejercicio es una receta sólida para el dolor, informes de reseñas",
+    "description": "Healthday Spanish",
+    "url": "https://www.infobae.com/salud/2026/09/29/ejercicio-es-una-receta-solida-para-el-dolor-informes-de-resenas/",
+    "image": "https://www.infobae.com/resizer/v2/JT6NI3VFGJHY3D4GEVKE3KG3OM.jpg?auth=db7b65d8f9961931398337ff3032fc98ce934e5ebab43a0c2f897b7bdc5a415b&smart=true&width=1200&height=800",
+    "publishedAt": "2026-09-29T04:16:08.000Z"
+  },
+  {
+    "title": "Eliminar los alimentos ultraprocesados de las cafeterías escolares será costoso y complicado, advierte un estudio",
+    "description": "Healthday Spanish",
+    "url": "https://www.infobae.com/salud/2026/09/29/eliminar-los-alimentos-ultraprocesados-de-las-cafeterias-escolares-sera-costoso-y-complicado-advierte-un-estudio/",
+    "image": "https://www.infobae.com/resizer/v2/OYIVZ2DW5NF23DNGZGLTEBSM3U.jpg?auth=6aa790f6ba90d574f5c12093fcab9c3f3853b4e2485c2d12d148c43a3052f6dd&smart=true&width=1200&height=800",
+    "publishedAt": "2026-09-29T04:15:50.000Z"
+  },
+  {
+    "title": "Uso frecuente de marihuana relacionado con epilepsia más grave",
+    "description": "Healthday Spanish",
+    "url": "https://www.infobae.com/salud/2026/09/29/uso-frecuente-de-marihuana-relacionado-con-epilepsia-mas-grave/",
+    "image": "https://www.infobae.com/resizer/v2/LQQOZVOMMFDHHHLDU3C73H2D7Q.jpg?auth=2f632c937726b2469633fbbc55683d90acfeebd96ac844543da6e8403b56d350&smart=true&width=1200&height=799",
+    "publishedAt": "2026-09-29T04:15:26.000Z"
+  },
+  {
+    "title": "En Panamá a una paciente de 47 años le retiran el cáncer y le reconstruyen la mama en una misma operación quirúrgica",
+    "description": "El caso forma parte de un modelo de atención conjunta entre oncología y cirugía plástica que realiza la Ciudad de la Salud",
+    "url": "https://www.infobae.com/panama/2026/09/29/en-panama-a-una-paciente-de-47-anos-le-retiran-el-cancer-y-le-reconstruyen-la-mama-en-una-misma-operacion-quirurgica/",
+    "image": "https://www.infobae.com/resizer/v2/ELUPNDBSINC4NKRM5BBIWP45QQ.jpeg?auth=69de5273a02240ea5426d1a41cf04e855332b0400029dcfdd436b1315091c84d&smart=true&width=830&height=474",
+    "publishedAt": "2026-09-29T04:14:40.000Z"
+  },
+  {
+    "title": "Equipo internacional llega a Costa Rica para operar complejas cardiopatías y capacitar a médicos locales",
+    "description": "Especialistas de Heart to Heart Global Cardiac Care prevén intervenir entre cuatro y cinco pacientes, de entre 4 y 39 años, con anomalía de Ebstein. Durante la misión enseñarán una técnica quirúrgica que, según la organización, no se había realizado anteriormente en el país",
+    "url": "https://www.infobae.com/costa-rica/2026/09/29/equipo-internacional-llega-a-costa-rica-para-operar-complejas-cardiopatias-y-capacitar-a-medicos-locales/",
+    "image": "https://www.infobae.com/resizer/v2/TRU4BLP3KJD2RJO6X57NFOQ3EU.png?auth=f9a69f934e3eee849d75baf684671fb56462de351ae2b1645011689897238138&smart=true&width=1798&height=1204",
+    "publishedAt": "2026-09-29T04:12:54.000Z"
+  },
+  {
+    "title": "Autoridades presentarán un proyecto de convivencia tras una baja del 15,8% en homicidios en República Dominicana",
+    "description": "El Gobierno dominicano llevará la iniciativa al Congreso Nacional para abordar la percepción de inseguridad, pese a que la tasa acumulada llegó a 7,36 por cada 100.000 habitantes el 25 de septiembre",
+    "url": "https://www.infobae.com/republica-dominicana/2026/09/29/autoridades-presentaran-un-proyecto-de-convivencia-tras-una-baja-del-158-en-homicidios-en-republica-dominicana/",
+    "image": "https://www.infobae.com/resizer/v2/3BW4AOVLZZFENK5XYOHXOEODVA.jpg?auth=8177e57f7344a07bb511c09c3ded0a1e1ef4598ab80e6d1509eb2b516da61c98&smart=true&width=2048&height=1152",
+    "publishedAt": "2026-09-29T04:10:28.000Z"
+  },
+  {
+    "title": "Entra en vigencia la prohibición de EEUU a importaciones de Canadá",
+    "description": "El veto de EE.UU. a productos canadienses como bebidas y motocicletas marca un nuevo episodio en su disputa comercial. La medida sigue a aranceles canadienses.Trump critica el trato de Canadá, comparando su relación con la de China. La prohibición afecta a productores que dependen del mercado estadounidense.",
+    "url": "https://www.clarin.com/estados-unidos/entra-en-vigencia-la-prohibicion-de-eeuu-a-importaciones-de-canada_0_OQ1puD3Rlr.html",
+    "image": "https://www.clarin.com/img/2026/09/03/opG8cy99-_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T04:10:09.000Z"
+  },
+  {
+    "title": "Gilgeous-Alexander y Thunder siguen confiados en competir pese a cambios en la plantilla",
+    "description": "Gilgeous-Alexander, estrella del Thunder, confía en su mejora tras el verano. El equipo busca el título con nuevos rostros tras cambios clave.El regreso de Jalen Williams y el crecimiento de Holmgren son esperanzas para Oklahoma City. El enfoque sigue siendo mantener la esencia del conjunto.",
+    "url": "https://www.clarin.com/estados-unidos/gilgeous-alexander-y-thunder-siguen-confiados-en-competir-pese-a-cambios-en-la-plantilla_0_5PXMNoJAlf.html",
+    "image": "https://www.clarin.com/img/2026/04/16/ox6pYwAJj_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T04:10:03.000Z"
+  },
+  {
+    "title": "Diputados aprueban en tercer debate el presupuesto del Canal de Panamá para el año fiscal 2027",
+    "description": "La vía interoceánica no prevé cambios en las tarifas vigentes que se aplican a los clientes de la vía acuática",
+    "url": "https://www.infobae.com/panama/2026/09/29/diputados-aprueban-en-tercer-debate-el-presupuesto-del-canal-de-panama-para-el-ano-fiscal-2027/",
+    "image": "https://www.infobae.com/resizer/v2/RXVQSUPXLBEYNPOEWBZ2BWS5QE.png?auth=7eee12b1e3f1120b31c0387040e1a01da0b376151b17bd4f0c2a9769ddb0a2da&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T04:08:35.000Z"
+  },
+  {
+    "title": "Chepo Reynoso acepta que Canelo Álvarez está cerca del retiro tras 21 años como boxeador: “No tiene nada que demostrar”",
+    "description": "El padre de Eddy Reynoso reconoció lo que ha construido Saúl en el boxeo y no dudó en que su legado será reconocido",
+    "url": "https://www.infobae.com/mexico/deportes/2026/09/29/chepo-reynoso-acepta-que-canelo-alvarez-esta-cerca-del-retiro-tras-21-anos-como-boxeador-no-tiene-nada-que-demostrar/",
+    "image": "https://www.infobae.com/resizer/v2/SJZXTSI6HS3B7YHSLGA6BW6GS4.jpg?auth=763fd92ecdf99f48485b3d86c94ec2f4050488e0a9c548d53aede98805f5cc5c&smart=true&width=3155&height=2313",
+    "publishedAt": "2026-09-29T04:08:13.000Z"
+  },
+  {
+    "title": "Autoridades Municipales denuncian un plan para colapsar el tránsito en la Ciudad de Guatemala",
+    "description": "Un gremio de pilotos de transporte pesado hizo pública la supuesta maniobra en redes sociales. Las autoridades presentaron la denuncia ante el Ministerio Público, aunque advierten que los hechos aún no han sido comprobados.",
+    "url": "https://www.infobae.com/guatemala/2026/09/29/autoridades-municipales-denuncian-un-plan-para-colapsar-el-transito-en-la-ciudad-de-guatemala/",
+    "image": "https://www.infobae.com/resizer/v2/DUEQW54FRFF23BYW47HW3HJGAE.png?auth=627c8c6dfc0697183ac617301940193b18f63fd62f57a7a41177f09bc42fe797&smart=true&width=1320&height=835",
+    "publishedAt": "2026-09-29T04:07:57.000Z"
+  },
+  {
+    "title": "Costa Rica analiza ampliar las millas de pesca ante el impacto de El Niño en el Pacífico",
+    "description": "Laura Fernández aseguró que el calentamiento de las aguas está afectando a la pesca artesanal y anunció que el Gobierno trabaja para permitir que los pescadores se desplacen a mayor distancia. También prometió el dragado de canales en Quepos y un plan de acompañamiento ante el fenómeno climático",
+    "url": "https://www.infobae.com/costa-rica/2026/09/29/costa-rica-analiza-ampliar-las-millas-de-pesca-ante-el-impacto-de-el-nino-en-el-pacifico/",
+    "image": "https://www.infobae.com/resizer/v2/7NMIRPT2WZB6BJYEAFXAAUWP3Y.png?auth=8d27b570debad6e86155f13a532b37d3026b83118477b0b0a6923725c5904c55&smart=true&width=1408&height=768",
+    "publishedAt": "2026-09-29T04:06:53.000Z"
+  },
+  {
+    "title": "Sociedad civil propone una semana laboral de 35 horas sin reducción salarial en El Salvador",
+    "description": "La Mesa Permanente por la Justicia Laboral propuso cinco días de siete horas y dos de descanso, mientras el Consejo Superior del Trabajo analiza cambios en la distribución semanal actual",
+    "url": "https://www.infobae.com/el-salvador/2026/09/29/sociedad-civil-propone-una-semana-laboral-de-35-horas-sin-reduccion-salarial-en-el-salvador/",
+    "image": "https://www.infobae.com/resizer/v2/PIVV5DRISJEBHCWNH6GC7VIQP4.png?auth=ba69bff69193e863b27a6e56606e8c1aa710aa080cf418a30e8c0183b167e95a&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T04:05:46.000Z"
+  },
+  {
+    "title": "La euforia de Mario Pergolini por el triunfo de Boca frente a Racing: “La frase ‘hermosa mañana’ te la podés meter...”",
+    "description": "El conductor de Otro Día Perdido arrancó eufórico tras el pase del Xeneize en la Copa Argentina y convirtió el estudio en una fiesta. El video",
+    "url": "https://www.infobae.com/teleshow/2026/09/29/la-euforia-de-mario-pergolini-por-el-triunfo-de-boca-frente-a-racing-la-frase-hermosa-manana-te-la-podes-meter/",
+    "image": "https://www.infobae.com/resizer/v2/HAL6ZD6VVVB3ZLIRKRDB5J2SFM.jpg?auth=d15cb54b5f7d498563b05992d749871e6a2122ad7a614167bfc5cb949a0e91a8&smart=true&width=1980&height=1090",
+    "publishedAt": "2026-09-29T04:05:19.000Z"
+  },
+  {
+    "title": "Empresarios nicaragüenses denuncian que auditorías fiscales ponen en riesgo la continuidad de sus negocios",
+    "description": "Tres propietarios de empresas describieron reparos fiscales, cálculos retroactivos y escasas opciones de recurso ante la Dirección General de Ingresos. Dos de ellos aceptaron pagos en cuotas para sostener sus compañías, mientras otro esperaba una eventual negociación",
+    "url": "https://www.infobae.com/nicaragua/2026/09/29/empresarios-nicaraguenses-denuncian-que-auditorias-fiscales-ponen-en-riesgo-la-continuidad-de-sus-negocios/",
+    "image": "https://www.infobae.com/resizer/v2/NO6DIRVRLA6N4FAZ4JSDJPRODU.jpg?auth=ab1d4fd26869c1aceb3e244814b0e4de300e2120b21e12a0e2dabcd534d90c9a&smart=true&width=5184&height=3456",
+    "publishedAt": "2026-09-29T04:02:21.000Z"
+  },
+  {
+    "title": "Grupo empresarial de Estados Unidos apuesta por El Salvador con la adquisición del 65% de la matriz de Aeroman",
+    "description": "AAR Corp acuerda adquirir la mayoría de MRO Holdings, matriz de la empresa salvadoreña. El acuerdo prevé inversiones para ampliar sus operaciones locales, mantiene el 35% en manos de los actuales accionistas y casi 10,000 empleados en cuatro países, con el país como eje de su clúster aeronáutico regional",
+    "url": "https://www.infobae.com/el-salvador/2026/09/29/grupo-empresarial-de-estados-unidos-apuesta-por-el-salvador-con-la-adquisicion-del-65-de-la-matriz-de-aeroman/",
+    "image": "https://www.infobae.com/resizer/v2/JXOD7INCCJC7RBS7J2LVHHTNPY.jpg?auth=c8c03fcfe3a72d5f0d8cc699f15f90b7b7c7fd5f40962acc03384ec79a2397f3&smart=true&width=2048&height=1152",
+    "publishedAt": "2026-09-29T04:01:03.000Z"
+  },
+  {
+    "title": "Resultados del sorteo Chispazo del 28 de septiembre",
+    "description": "Ya sea en la modalidad clásica o de las tres, consulta las cifras obtenidas este día y descubre si la suerte estuvo de tu lado",
+    "url": "https://www.infobae.com/mexico/2026/09/29/resultados-del-sorteo-chispazo-del-28-de-septiembre/",
+    "image": "https://www.infobae.com/resizer/v2/DK3HXIIMHVEGFACUQBXWKWQ2JE.png?auth=42bcfebb9294a772f7e4bc8e6d5377920c882a3430a1b5ba3df843523024a061&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T04:00:53.000Z"
+  },
+  {
+    "title": "“Necesitamos recuperar algo tan elemental como la previsibilidad”",
+    "description": "“Necesitamos recuperar algo tan elemental como la previsibilidad”",
+    "url": "https://www.clarin.com/cartas-al-pais/necesitamos-recuperar-elemental-previsibilidad_0_3GdJgzRt1J.html",
+    "image": "https://www.clarin.com/img/2026/09/27/zlPPOQshm_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T04:00:51.000Z"
+  },
+  {
+    "title": "Un hombre que pasó décadas esperando ser ejecutado en Utah es liberado y espera nuevo juicio",
+    "description": "Douglas Carter, tras décadas en el corredor de la muerte, fue liberado al no hallarse ADN suyo en la escena del crimen de 1985. El juicio se repetirá.Los fiscales reevalúan el caso, mientras Carter, con un monitor GPS, espera en libertad. La confesión original fue obtenida bajo coacción.",
+    "url": "https://www.clarin.com/estados-unidos/un-hombre-que-paso-decadas-esperando-ser-ejecutado-en-utah-es-liberado-y-espera-nuevo-juicio_0_3m9s4hPztQ.html",
+    "image": "https://www.clarin.com/img/2026/07/30/knP6xNUVh_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T04:00:08.000Z"
+  },
+  {
+    "title": "Josué, el niño hondureño con una condición cardíaca que ahora recibe atención especializada en El Salvador",
+    "description": "El menor de 11 años ingresó por la frontera de El Poy en una ambulancia salvadoreña de soporte vital avanzado, acompañado por su madre y entregado por personal médico hondureño.",
+    "url": "https://www.infobae.com/honduras/2026/09/29/josue-el-nino-hondureno-con-una-condicion-cardiaca-que-ahora-recibe-atencion-especializada-en-el-salvador/",
+    "image": "https://www.infobae.com/resizer/v2/XUQOAILIHREBPLKEY6OSLT4MFA.png?auth=f68ec5d06e1a34a835a52d9cb6f4ecc1484860fc411b9f6a1efb36c3276633eb&smart=true&width=547&height=395",
+    "publishedAt": "2026-09-29T04:00:02.000Z"
+  },
+  {
+    "title": "Las madres de los otros para entender a la propia: lo nuevo de Adriana Riva",
+    "description": "En “Entre otras” (Seix Barral, 2026), la autora de “Ruth” vuelve sobre una de las figuras más difíciles de contar: la mamá. A través de citas, anécdotas y escenas de madres de escritores, propone una lectura íntima que ilumina aquello que parece imposible de explicar",
+    "url": "https://www.infobae.com/cultura/2026/09/29/las-madres-de-los-otros-para-entender-a-la-propia-lo-nuevo-de-adriana-riva/",
+    "image": "https://www.infobae.com/resizer/v2/ZK6B2WIWFZC4BIE4LKSQSITRZI.png?auth=9e12b83db4add3fc2a11df319036db463b04c05d86fef9ed8beb329c2e5cf93b&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T04:00:00.000Z"
+  },
+  {
+    "title": "Capturan en Tibú a alias ‘El Pollo’, señalado de coordinar ataques con drones explosivos en el Catatumbo",
+    "description": "El Ejército indicó que el detenido sería cabecilla de una comisión de la Estructura 33 y estaría relacionado con el crimen de la menor Mónica Beltrán",
+    "url": "https://www.infobae.com/colombia/2026/09/29/capturan-en-tibu-a-alias-el-pollo-senalado-de-coordinar-ataques-con-drones-explosivos-en-el-catatumbo/",
+    "image": "https://www.infobae.com/resizer/v2/JPNUQI3LEVG3NJ4UQUFZVPHW24.jpg?auth=b8ea2cb7ff3197d656270d576dfd369c9e2aced84b8465a9819d776971117485&smart=true&width=780&height=565",
+    "publishedAt": "2026-09-29T03:59:20.000Z"
+  },
+  {
+    "title": "Quién es Amílcar Olán, el empresario y amigo de Andy López Beltrán que se refugia en Suiza",
+    "description": "Reportes señalan que obtuvo contratos millonarios durante el sexenio de López Obrador",
+    "url": "https://www.infobae.com/mexico/2026/09/29/quien-es-amilcar-olan-el-empresario-y-amigo-de-andy-lopez-beltran-que-se-refugia-en-suiza/",
+    "image": "https://www.infobae.com/resizer/v2/5WLS27Z3ZRCYPHPNKKSPWUBUSU.jpg?auth=9df1f5a36a755db72cf2388dc42ec3dfc1071b59cc52582ad1bdd670523e755c&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:55:00.000Z"
+  },
+  {
+    "title": "Fernanda Tapia deja al gobierno la explicación de su “millonario sueldo” como directora de Radio Educación",
+    "description": "La directora de Radio Educación reportó percepciones por su cargo público, servicios profesionales y la venta de un inmueble durante 2025",
+    "url": "https://www.infobae.com/mexico/2026/09/29/fernanda-tapia-deja-al-gobierno-la-explicacion-de-su-millonario-sueldo-como-directora-de-radio-educacion/",
+    "image": "https://www.infobae.com/resizer/v2/WFXFBRBKNFGLHAAQOZOHX7A2H4.png?auth=084c3df47bcc7801286ac4b47195cf6fd9d75a38b1a58f0b7bc4976b18a14deb&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T03:51:38.000Z"
+  },
+  {
+    "title": "El Mercado de Arte Contemporáneo cordobés cerró una edición vibrante, con gran concurrencia, pero registró ventas limitadas",
+    "description": "El encuentro, realizado por primera vez en el Espacio UNMOL, concentró a 59 galerías y proyectos en una propuesta que supo balancear a artistas reconocidos con jóvenes y una gran respuesta del público",
+    "url": "https://www.infobae.com/cultura/2026/09/29/el-mercado-de-arte-contemporaneo-cordobes-cerro-una-edicion-vibrante-con-gran-concurrencia-pero-registro-ventas-limitadas/",
+    "image": "https://www.infobae.com/resizer/v2/63F7VGHWTJBNLCBEALTLWIQGRM.jpg?auth=514ebb968209d91d2db753f3affb58a59bcdccf45b1e5f7fbb5df940e03c9444&smart=true&width=1920&height=1280",
+    "publishedAt": "2026-09-29T03:50:00.000Z"
+  },
+  {
+    "title": "Lucero actualiza el estado de salud de su hija Lucerito Mijares y revela si desea ser abuela",
+    "description": "La cantante ofrece un reporte médico favorable sobre su hija y responde con contundencia ante los cuestionamientos sobre convertirse en abuela a sus 57 años",
+    "url": "https://www.infobae.com/mexico/2026/09/29/lucero-actualiza-el-estado-de-salud-de-su-hija-lucerito-mijares-y-revela-si-desea-ser-abuela/",
+    "image": "https://www.infobae.com/resizer/v2/GIRQEQ6EJBAZBHMTON6T6BNQMA.jpg?auth=69dc0b9c6f78a2cd1d97954ecad9aaca4a08d48f1cf71155fc218fb4c24b6e02&smart=true&width=1200&height=676",
+    "publishedAt": "2026-09-29T03:49:04.000Z"
+  },
+  {
+    "title": "El enfrentamiento de Germán Martitegui con la Negra Vernaci en el debut de MasterChef Celebrity: “Esto no es una radio”",
+    "description": "El chef frenó a la conductora cuando le daba su devolución sobre su plato en el primer programa del reality. El tenso momento",
+    "url": "https://www.infobae.com/teleshow/2026/09/29/el-enfrentamiento-de-german-martitegui-con-la-negra-vernaci-en-el-debut-de-masterchef-celebrity-esto-no-es-una-radio/",
+    "image": "https://www.infobae.com/resizer/v2/2OHFLYD25FF6FPBI4YWQPECI7M.jpg?auth=a0bea1781b9f5e7849d32839ad66fe7a24b28ce2883945a297ac4be31a2af1f2&smart=true&width=1980&height=1090",
+    "publishedAt": "2026-09-29T03:49:02.000Z"
+  },
+  {
+    "title": "Un plan frustrado en Fairford es predecible pero desconcertante",
+    "description": "La amenaza a las bases militares británicas es real y compleja",
+    "url": "https://www.infobae.com/economist/2026/09/29/un-plan-frustrado-en-fairford-es-predecible-pero-desconcertante/",
+    "image": "https://www.infobae.com/resizer/v2/F6M2EA2TKNGC5GGAE7YIVCMGYA.jpg?auth=926fba89ff4988e37d7c113dee76fe5d325c92640f28c25e4c0bfa1023a67d8b&smart=true&width=1920&height=1280",
+    "publishedAt": "2026-09-29T03:48:26.000Z"
+  },
+  {
+    "title": "Morena designa a Manuel Alejandro Cota Cárdenas como coordinador de Defensa en Baja California Sur",
+    "description": "El funcionario fue nombrado Coordinador Estatal de la Defensa de la Transformación, con lo que asumirá la conducción de los trabajos del partido rumbo al próximo proceso electoral",
+    "url": "https://www.infobae.com/mexico/2026/09/29/morena-designa-a-lorenia-valles-sampedro-como-coordinadora-de-defensa-en-sonora/",
+    "image": "https://www.infobae.com/resizer/v2/43PFDZSQDVFEDLI655HRR2BQCE.png?auth=488c0cc1c061de51d4d0ec5c834207e99bf8dd88e40771dc70bbcb499e98d2a3&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T03:48:07.000Z"
+  },
+  {
+    "title": "MasterChef Celebrity: así fue el auspicioso rating del debut",
+    "description": "El reality culinario comenzó con un sólido número de audiencia+",
+    "url": "https://www.lanacion.com.ar/espectaculos/television/masterchef-celebrity-asi-fue-el-auspicioso-rating-del-debut-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/G6KWKPD3JVBOTGNICPNGHNM5KM.jpg?auth=3f5963e62a306372f8596eaef87b8a00fcb7b9cdd387c01208cb548526d1beba&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T03:47:26.000Z"
+  },
+  {
+    "title": "Pico y Placa: qué autos descansan en Cali este martes 29 de septiembre",
+    "description": "El Pico y Placa cambia constantemente por lo que es necesario mantenerse informado",
+    "url": "https://www.infobae.com/colombia/2026/09/29/pico-y-placa-que-autos-descansan-en-cali-este-martes-29-de-septiembre/",
+    "image": "https://www.infobae.com/resizer/v2/2LAXZ5DBM5AU3BYSZRYU5LPTRE.jpg?auth=8466e8a3985d1833db39c85a49f2ec55a798b8a11a7624fb7cad739017aafe74&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:46:34.000Z"
+  },
+  {
+    "title": "Tenga en cuenta: Así regirá el pico y placa en Cartagena este martes 29 de septiembre",
+    "description": "Cuáles son los vehículos que no circulan este martes, chécalo y evita una multa",
+    "url": "https://www.infobae.com/colombia/2026/09/29/tenga-en-cuenta-asi-regira-el-pico-y-placa-en-cartagena-este-martes-29-de-septiembre/",
+    "image": "https://www.infobae.com/resizer/v2/N34CJV4NRNCQPFDUCCOEWG2XCU.jpg?auth=3f149833de9a6912a8e41993e9d0b503a5ca58ae7529e8f44e0d2a20b7055a2b&smart=true&width=900&height=600",
+    "publishedAt": "2026-09-29T03:46:15.000Z"
+  },
+  {
+    "title": "Mataron a un adolescente en Salta y hay dos detenidos",
+    "description": "El cuerpo fue encontrado el domingo último en una propiedad rural cercana a un canal de la localidad de Las Lajitas. La autopsia busca precisar las circunstancias del fallecimiento",
+    "url": "https://www.infobae.com/sociedad/policiales/2026/09/29/mataron-a-un-adolescente-en-salta-y-hay-dos-detenidos/",
+    "image": "https://www.infobae.com/resizer/v2/AVHLXEL4TBGZLA6SWYRQOA6JCE.jpg?auth=a2c758956a1243bbeb18c2130857ec547e9cc3f5d09d60397a3e54eccfef5b93&smart=true&width=1920&height=1128",
+    "publishedAt": "2026-09-29T03:46:01.000Z"
+  },
+  {
+    "title": "Resultado Sinuano Noche hoy 28 de septiembre",
+    "description": "No se pierda los números ganadores del reciente sorteo de su lotería nocturna favorita",
+    "url": "https://www.infobae.com/colombia/2026/09/29/resultado-sinuano-noche-hoy-28-de-septiembre/",
+    "image": "https://www.infobae.com/resizer/v2/H6H7QEJ52BA2XEVYTWT5RA6VLQ.png?auth=2b0e2bcc7839ac505c13c2cb87fe36202e998003f3916c1641f4fa7c4b15c6b7&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:45:56.000Z"
+  },
+  {
+    "title": "Expertos advierten sobre el producto comprado en el supermercado y que podría llevar las cucarachas a tu hogar sin saberlo",
+    "description": "La detección temprana es necesaria porque una sola hembra puede originar una proliferación si encuentra calor, agua, alimento y escondites",
+    "url": "https://www.infobae.com/mexico/2026/09/29/expertos-advierten-sobre-el-producto-comprado-en-el-supermercado-y-que-podria-llevar-las-cucarachas-a-tu-hogar-sin-saberlo/",
+    "image": "https://www.infobae.com/resizer/v2/W4YX6I22EZCXLMC6ZKJ43K2WFM.png?auth=1caf297a65df6b9e1b011329ebd79b6508de8080b991f51fcb9df316e447a48f&smart=true&width=2752&height=1536",
+    "publishedAt": "2026-09-29T03:45:37.000Z"
+  },
+  {
+    "title": "David, 19 años, empezó con una sola cabra a los 12 y ya tiene un rebaño de 200: \"No estoy trabajando, es mi vida\"",
+    "description": "David Tomé gestiona solo una explotación caprina en la Axarquía de Málaga. No procede de una familia ganadera y quiere ampliar el proyecto con una quesería y una escuela para acercar el mundo rural a otras personas.",
+    "url": "https://www.clarin.com/internacional/david-19-anos-empezo-sola-cabra-12-rebano-200-trabajando-vida_0_z1VOFvmnUm.html",
+    "image": "https://www.clarin.com/img/2026/09/28/TlNhKWWR1_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T03:44:51.000Z"
+  },
+  {
+    "title": "Clima hoy en Punta Lara, Buenos Aires: el pronóstico del tiempo para este martes 29 septiembre de 2026",
+    "description": "El SMN anticipa para este martes temperaturas entre 12°C y 19°C.El pronóstico extendido durante la jornada. ¿Cómo estará el cielo? ¿Cuál es la probabilidad de lluvias?",
+    "url": "https://www.clarin.com/informacion-general/clima-hoy-punta-lara-buenos-aires-pronostico-tiempo-martes-29-septiembre-2026_0_gqu9fV0BX0.html",
+    "image": "https://www.clarin.com/img/2025/04/30/xTYjS08zx_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T03:40:15.000Z"
+  },
+  {
+    "title": "Tenga en cuenta: Así se regirá el Pico y placa en Medellín hoy, lunes 28 de septiembre de 2026",
+    "description": "Esto le interesa si va a manejar en la ciudad",
+    "url": "https://www.infobae.com/colombia/2026/09/29/tenga-en-cuenta-asi-se-regira-el-pico-y-placa-en-medellin-hoy-lunes-28-de-septiembre-de-2026/",
+    "image": "https://www.infobae.com/resizer/v2/XQHXJ6V6TNC3TESJV7CPSNXV7A.jpg?auth=a5db4ca4259c7202d0d8bfac27c4b447fd05626f7a283afe7e94d95a522a77a7&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:39:32.000Z"
+  },
+  {
+    "title": "Kimberly Flores habla sobre su relación con Edwin Luna tras el distanciamiento: “No hay momentos difíciles, todos estamos muy bien”",
+    "description": "La modelo guatemalteca rechazó que el distanciamiento de Edwin Luna responda a una estrategia publicitaria y asegura que mantienen un trato cordial por el bienestar de sus hijos",
+    "url": "https://www.infobae.com/mexico/2026/09/29/kimberly-flores-habla-sobre-su-relacion-con-edwin-luna-tras-el-distanciamiento-no-hay-momentos-dificiles-todos-estamos-muy-bien/",
+    "image": "https://www.infobae.com/resizer/v2/CFOFEPWTUZDTZJNJIZH2X7BLZ4.jpg?auth=64a4ab4d644fb18e846f36324cc14c724d986a11aa84f5e455c5b3b9d2399ed4&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:38:19.000Z"
+  },
+  {
+    "title": "Su cuerpo estuvo esperando en la morgue por casi 6 años: CDMX se disculpa con la familia de Braulio Bacilio por la \"desaparición administrativa\" que sufrió",
+    "description": "El Instituto de Servicios Periciales junto con autoridades capitalinas reconocieron omisiones tras enviar a un menor de trece años a la fosa común por casi seis años debido a errores de registro",
+    "url": "https://www.infobae.com/mexico/2026/09/29/su-cuerpo-estuvo-esperando-en-la-morgue-por-casi-6-anos-cdmx-se-disculpa-con-la-familia-de-braulio-bacilio-por-la-desaparicion-administrativa-que-sufrio/",
+    "image": "https://www.infobae.com/resizer/v2/YQRSRHLDGRD6BDN7MD64KUQ7KE.jpg?auth=d1ba1b62148639d90e53b213bb0f32ea7d9ff12799a8b235e0882f6a42c7a90c&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:33:23.000Z"
+  },
+  {
+    "title": "Huracán Polo comienza a golpear Baja California Sur y ya va hacia Sonora: piden a la población acudir a refugios",
+    "description": "Previo a su inminente llegada, los efectos de Polo ya se hacen presentes mientras las autoridades hacen un llamado a la población a resguardarse",
+    "url": "https://www.infobae.com/mexico/2026/09/29/huracan-polo-comienza-a-golpear-baja-california-sur-y-ya-va-hacia-sonora-piden-a-la-poblacion-acudir-a-refugios/",
+    "image": "https://www.infobae.com/resizer/v2/ULIIJXRU5JAT3N2CBUOSLFJCE4.png?auth=886cafd249f07527558d3cf442413bf78168b5b24493a6c9a0ef7c78b99c0dd0&smart=true&width=1600&height=900",
+    "publishedAt": "2026-09-29T03:32:55.000Z"
+  },
+  {
+    "title": "Capturan a “El Carnicero” por el presunto abandono de cadáveres desmembrados en Guatemala",
+    "description": "El sospechoso, de 28 años y alias “Carnicero”, fue trasladado al juzgado de turno tras un operativo de investigadores en la colonia La Esperanza, mientras se determina su situación jurídica penal",
+    "url": "https://www.infobae.com/guatemala/2026/09/29/capturan-a-el-carnicero-por-el-presunto-abandono-de-cadaveres-desmembrados-en-guatemala/",
+    "image": "https://www.infobae.com/resizer/v2/TQHZM3IMAVEBXGW24CNB3NZIGM.jpg?auth=4dc3722c33a18bf4d2c1c62ec1a03caad90219a5ef444871ae5debec7b790f1b&smart=true&width=1599&height=1066",
+    "publishedAt": "2026-09-29T03:31:41.000Z"
+  },
+  {
+    "title": "El barrio que pasó de fábrica y conventillo a meca gastronómica y cultural",
+    "description": "Una creciente oferta gourmet, outlets de marcas, el principal estadio cerrado de espectáculos porteño y cientos de murales ampliaron su perfil urbano",
+    "url": "https://www.lanacion.com.ar/revista-lugares/el-barrio-que-paso-de-fabrica-y-conventillo-a-meca-gastronomica-y-cultural-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/T6FLXYPJQRHHZGGJJB6ZKOOITQ.jpg?auth=b2c27aa9fded74a307167272776742a0cde71b0761cd0a30f13fbd40697ff6f7&smart=true&width=6000&height=3999",
+    "publishedAt": "2026-09-29T03:30:00.000Z"
+  },
+  {
+    "title": "Ampliación de la Línea 12 del Metro CDMX: filtran detalles de cómo será la terminal Observatorio que conectará con la Línea 1 y el Tren El Insurgente",
+    "description": "Los trabajos de excavación ya concluyeron, por lo que personal de la obra se concentra en la siguiente fase del proyecto y ampliar el servicio de Mixcoac a Observatorio",
+    "url": "https://www.infobae.com/mexico/2026/09/29/ampliacion-de-la-linea-12-del-metro-cdmx-filtran-detalles-de-como-sera-la-terminal-observatorio-que-conectara-con-la-linea-1-y-el-tren-el-insurgente/",
+    "image": "https://www.infobae.com/resizer/v2/SZH6PC4BSBHVPGNPXNAXRBLXGE.jpg?auth=525891ce9e8f09ce38adcbc92c6cb475c6b570ccf1ea01079632c8faebc66666&smart=true&width=1920&height=1080",
+    "publishedAt": "2026-09-29T03:29:41.000Z"
+  },
+  {
+    "title": "Aeropuerto Juan Santamaría en Costa Rica ampliará su estacionamiento con 600 nuevos espacios y una inversión de USD 14.9 millones",
+    "description": "La expansión contempla una estructura de aproximadamente 21,000 metros cuadrados, con seis niveles y dos subniveles.",
+    "url": "https://www.infobae.com/costa-rica/2026/09/29/aeropuerto-juan-santamaria-en-costa-rica-ampliara-su-estacionamiento-con-600-nuevos-espacios-y-una-inversion-de-usd-149-millones/",
+    "image": "https://www.infobae.com/resizer/v2/NFVZ5BH4S5GVDMOVEXE77FSRUA.png?auth=c14ab7fb23f29804deb5ee5b99c54063593f6c3e5434135081070be0f88abfa2&smart=true&width=2592&height=1372",
+    "publishedAt": "2026-09-29T03:28:18.000Z"
+  },
+  {
+    "title": "Ejército captura en Turbo a presunto narcotraficante del Clan del Golfo pedido en extradición por EE. UU",
+    "description": "Alias ‘Ñato’ o ‘Cachaco’ habría coordinado el envío mensual de más de una tonelada de cocaína hacia Centroamérica y Norteamérica",
+    "url": "https://www.infobae.com/colombia/2026/09/29/ejercito-captura-en-turbo-a-presunto-narcotraficante-del-clan-del-golfo-pedido-en-extradicion-por-ee-uu/",
+    "image": "https://www.infobae.com/resizer/v2/GBU6RG2HMNHEPKG73QLBAG3O2Q.jpeg?auth=08a230ade2c05739ceb44cd5d13f976fd82967aece46bde6ee89ede83010d916&smart=true&width=1434&height=1074",
+    "publishedAt": "2026-09-29T03:26:13.000Z"
+  },
+  {
+    "title": "MasterChef Celebrity: el reality comenzó con un tenso momento entre Germán Martitegui y Elizabeth Vernaci",
+    "description": "Nuevamente con la conducción de Wanda Nara, el reality de cocina presentó un nuevo año",
+    "url": "https://www.lanacion.com.ar/espectaculos/television/masterchef-celebrity-el-reality-comenzo-con-un-tenso-momento-entre-german-martitegui-y-elizabeth-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/NBM6B3PP3BB4TMXAWIUIRMCPDI.png?auth=df66c6ad166744ab1b911b690b5d272e69e084d27f43ead0116a2b36881a74c3&smart=true&width=1201&height=700",
+    "publishedAt": "2026-09-29T03:25:47.000Z"
+  },
+  {
+    "title": "El Ministerio de Defensa e YPF firmaron un acuerdo para fortalecer las provisiones de combustible a las Fuerzas Armadas",
+    "description": "El minuto a minuto de las decisiones del mandatario, las reacciones de la oposición y las declaraciones de los funcionarios",
+    "url": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-tengo-algunos-enemigos-muy-pesados-aca-y-en-el-mundo-dijo-el-nid28092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/UPW7KOPWKVGT7N2WNQZKK6G4S4.png?auth=908af4d58af99d052f8a82025b0d219fc32825d4e68c2e3a78aac9394ccf71eb&smart=true&width=1128&height=711",
+    "publishedAt": "2026-09-29T03:25:43.000Z"
+  },
+  {
+    "title": "Comisión legislativa avala un préstamo de USD 50 millones del BID para el censo económico de El Salvador",
+    "description": "La financiación, que deberá ser autorizada por el pleno de la Asamblea Legislativa, permitirá al Banco Central de Reserva de El Salvador modernizar las estadísticas nacionales y reforzar sus sistemas digitales",
+    "url": "https://www.infobae.com/el-salvador/2026/09/29/comision-legislativa-avala-un-prestamo-de-usd-50-millones-del-bid-para-el-censo-economico-de-el-salvador/",
+    "image": "https://www.infobae.com/resizer/v2/ECNZYXRJY5EHVMK4NXGNPQRO5I.jpg?auth=704f910784f3ce6b1e9fea106b2b26bbb7bd134b9e1f19cf413f707e2bf43c59&smart=true&width=1440&height=810",
+    "publishedAt": "2026-09-29T03:23:22.000Z"
+  },
+  {
+    "title": "Seis asesores independientes renunciaron al organismo contra el terrorismo online que preside Meta",
+    "description": "Los expertos salientes acusaron a las empresas de convertir al comité en \"decoración y teatro de rendición de cuentas\"",
+    "url": "https://www.infobae.com/tecno/2026/09/29/seis-asesores-independientes-renunciaron-al-organismo-contra-el-terrorismo-online-que-preside-meta/",
+    "image": "https://www.infobae.com/resizer/v2/KX2353LVOFGGFEWSOHQMD5P6XQ.JPG?auth=c6cdb8e419a2950e232c9dd0b302a64cd6678612a297ca843b2559a3cbeaf8b1&smart=true&width=5500&height=3804",
+    "publishedAt": "2026-09-29T03:20:46.000Z"
+  },
+  {
+    "title": "El gobierno de Brasil busca contener alzas “abusivas” en precios de combustibles",
+    "description": "Los últimos sondeos de intención de voto marcan un panorama reñido entre Flavio Bolsonaro e Luiz Inácio “Lula” da Silva; los comicios tendrán lugar el domingo 4 de octubre",
+    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-brasil-2026-en-vivo-las-ultimas-noticias-sobre-los-comicios-hoy-nid28092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/5UFAHYRF7FEXTEXNYG452HSJGA.jpg?auth=524230a92fc961e170939872cd1c7285eb019f80219dc69208de800bc5961a38&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T03:20:00.000Z"
+  },
+  {
+    "title": "Chocolate Rigau: la basura debajo de la alfombra",
+    "description": "Quedó en evidencia una decisión de los diputados bonaerenses de ocultar pruebas y entorpecer la investigación de un escandaloso caso de corrupción",
+    "url": "https://www.lanacion.com.ar/editoriales/chocolate-rigau-la-basura-debajo-de-la-alfombra-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/O2ASFVQBZ5CL7BZQKIGSVWR7EA.JPG?auth=3eccc9235cf7713883dab90df018aa08698be64eb57a37bff847206788895885&smart=true&width=1354&height=1083",
+    "publishedAt": "2026-09-29T03:10:00.000Z"
+  },
+  {
+    "title": "Ulises y los límites del poder en la era del TikTok",
+    "description": "Ulises y los límites del poder en la era del TikTok",
+    "url": "https://www.lanacion.com.ar/opinion/ulises-y-los-limites-del-poder-en-la-era-del-tiktok-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/SYX7BA3HJVDU3NH7K5J7NVLZZU.jpg?auth=c8e0a3adf8c27c0489cd1a59718db5287d44c2bcf227202f6d91aa06ac04a21b&smart=true&width=800&height=600",
+    "publishedAt": "2026-09-29T03:05:00.000Z"
+  },
+  {
+    "title": "La escuela frente a un cambio de época: enseñar más allá de los algoritmos",
+    "description": "La inteligencia artificial generativa irrumpió en la educación antes de que las escuelas terminaran de debatir su llegada",
+    "url": "https://www.lanacion.com.ar/opinion/la-escuela-frente-a-un-cambio-de-epoca-ensenar-mas-alla-de-los-algoritmos-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/BPCAZR35QNGAHJBIJ6ASTYRA4E.png?auth=670193afa08a75debb3069322ecaf44590eb89f4b5cd44aab1804d064de5eea5&smart=true&width=1536&height=1024",
+    "publishedAt": "2026-09-29T03:05:00.000Z"
+  },
+  {
+    "title": "Cartas de lectores: El pasado como futuro, eficacia de la ONU, inadmisible",
+    "description": "Cartas de lectores: El pasado como futuro, eficacia de la ONU, inadmisible",
+    "url": "https://www.lanacion.com.ar/opinion/carta-de-lectores/cartas-de-lectores-el-pasado-como-futuro-eficacia-de-la-onu-inadmisible-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/PBLP43XNFNA4DLZUD2RNZUSZVU.jpg?auth=b223393663f4b758ab1e862f8f17c8e4f9d5857a7b044d861c0dd60330f5ad4a&smart=true&width=659&height=578",
+    "publishedAt": "2026-09-29T03:05:00.000Z"
+  },
+  {
+    "title": "Cómo te fue en internet",
+    "description": "Cómo te fue en internet",
+    "url": "https://www.lanacion.com.ar/editoriales/como-te-fue-en-internet-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/4ZMADLQCYVEEZDY4UQZZHGHHCQ.jpg?auth=fef966b8b3ce5cef2229537ed85fe31c5a48e47c6cd306e6f083813509a608d1&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T03:05:00.000Z"
+  },
+  {
+    "title": "Hay alerta naranja y amarilla por tormentas y lluvias intensas para este martes 29 de septiembre: las provincias afectadas",
+    "description": "El Servicio Meteorológico Nacional advirtió por condiciones adversas en distintas regiones del país; en la Ciudad, la máxima será de 20°C",
+    "url": "https://www.lanacion.com.ar/sociedad/hay-alerta-naranja-y-amarilla-por-tormentas-y-lluvias-intensas-para-este-martes-29-de-septiembre-las-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/ON4EIFTURRAKNIJGDZIIEXZBIM.png?auth=a1c3b87fd2c18648227d82fc2e5dd3460acc0bc7e342db581cdc5e7ab73484d6&smart=true&width=1053&height=716",
+    "publishedAt": "2026-09-29T03:01:00.000Z"
+  },
+  {
+    "title": "Burlas, chismes y literatura. Vuelve Borges, el diario más salvaje y revelador de Bioy Casares",
+    "description": "Burlas, chismes y literatura. Vuelve Borges, el diario más salvaje y revelador de Bioy Casares",
+    "url": "https://www.lanacion.com.ar/cultura/burlas-chismes-y-literatura-vuelve-borges-el-diario-mas-salvaje-y-revelador-de-bioy-casares-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/WFV5TT5SIZCMRINXWA27OOIDSM.jpg?auth=5705d23186c0ac7a648cc7e402a42e943ea03d9588eeee5f021dadaca3d53f33&smart=true&width=960&height=640",
+    "publishedAt": "2026-09-29T03:01:00.000Z"
+  },
+  {
+    "title": "La encrucijada argentina: del cine “catástrofe” de Kicillof al final feliz de Milei",
+    "description": "El paso del Presidente y el gobernador por Nueva York dejó un sabor a “frustración” en Wall Street: no hubo observaciones realistas para encarar los desafíos pendientes",
+    "url": "https://www.lanacion.com.ar/politica/la-encrucijada-argentina-del-cine-catastrofe-de-kicillof-al-final-feliz-de-milei-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/36J3JNDH7FHHTNNY3GMPUOVCFI.jpg?auth=ac63b1b3783c86ca7b32971dfd1bca94696491a4a00c1e46da90998dc6faed14&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T03:01:00.000Z"
+  },
+  {
+    "title": "Cada vez menos mujeres “ni-ni”. La fecundidad cayó a la mitad y un número explica el derrumbe",
+    "description": "En apenas una década, la Argentina pasó de 2,4 a 1,2 hijos por mujer. Es una caída de casi 48%, concentrada en un período extraordinariamente corto. Pero detrás del desplome aparece una historia más compleja que una generación que simplemente dejó de tener hijos: la maternidad ocurre, pero más tarde.",
+    "url": "https://www.lanacion.com.ar/sociedad/cada-vez-menos-mujeres-ni-ni-la-fecundidad-cayo-a-la-mitad-y-un-numero-explica-el-derrumbe-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/TTV2P3MSLNAMNCHNFIMJX2JWMA.jpg?auth=364fed01465adca81499bbb4c93ae51edb6bea4de57c129e37b47ddfcc791239&smart=true&width=4096&height=2304",
+    "publishedAt": "2026-09-29T03:01:00.000Z"
+  },
+  {
+    "title": "Trabajando juntos por la liberación y el retorno de los niños ucranianos secuestrados, civiles detenidos y prisioneros de guerra",
+    "description": "La magnitud de este problema es inmensa, y ningún país u organización puede enfrentarlo solo; el éxito requiere cooperación sostenida entre gobiernos, organizaciones internacionales, actores humanitarios y la sociedad civil",
+    "url": "https://www.lanacion.com.ar/opinion/trabajando-juntos-por-la-liberacion-y-el-retorno-de-los-ninos-ucranianos-secuestrados-civiles-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/C37TIT4ZRZCRLGGMRSEUKB4JFE.jpg?auth=637eda0bba1a10db18a681089b23d3c805f21444ca0bb91a4a3d1a18e713a0b0&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T03:00:00.000Z"
+  },
+  {
+    "title": "Costó millones y fue vendido por un US$1: la historia del icónico Batimóvil de los años 60",
+    "description": "El Lincoln Futura fue creado por Ford como una muestra del futuro automotor y presentado en 1955; tras quedar abandonado, el prototipo fue adquirido para la serie de televisión",
+    "url": "https://www.lanacion.com.ar/autos/costo-millones-y-fue-vendido-por-un-us1-la-historia-del-iconico-batmovil-de-los-anos-60-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/JOOVNAD75VFFJNWQVJAK6NQ5WA.jpg?auth=28fbefe2643b02398523dbaf86b3b0b02899239bae3a0f2593b3458286e5339c&smart=true&width=710&height=399",
+    "publishedAt": "2026-09-29T03:00:00.000Z"
+  },
+  {
+    "title": "Fracasar en nombre del cambio social: la izquierda en su laberinto",
+    "description": "Fraude, crimen y latrocinio: ¿por qué deberían las masas populares volver a probar con estas fórmulas si siempre terminan igual?",
+    "url": "https://www.lanacion.com.ar/opinion/fracasar-en-nombre-del-cambio-social-la-izquierda-en-su-laberinto-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/IY6N7XWV5ZBBNAMSWISMRN2RHM.jpg?auth=a8a8aa60d5e92ba1d0e3361ab5c79fa9cb4a6ab62a30f6926aa3d207563be85d&smart=true&width=2000&height=1125",
+    "publishedAt": "2026-09-29T03:00:00.000Z"
+  },
+  {
+    "title": "Querían una oficina con alma de casa",
+    "description": "Eligieron una casa en Barrio Parque pensando en alejarse de la oficina tradicional para crear un espacio flexible en el que trabajar, recibir y encontrarse",
+    "url": "https://www.lanacion.com.ar/revista-living/querian-una-oficina-con-alma-de-casa-nid29092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/GVEGBABXAFHR7FYJQH4KPES3GQ.jpg?auth=4f84a3c4130730847abd0e5dcd3bde50c1e6a7eb65714d0b0c725d608e9a4c06&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T03:00:00.000Z"
+  },
+  {
+    "title": "Conrado Estol, neurólogo: “Casi el 40% de la población duerme menos de lo necesario”",
+    "description": "El experto habló acerca de la importancia de un buen descanso y explicó las claves para un sueño reparador",
+    "url": "https://www.lanacion.com.ar/sociedad/conrado-estol-neurologo-el-cambio-de-horario-de-sueno-entre-dias-de-semana-y-fin-de-semana-aumenta-nid28092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/OKSDOEVCPFFQZJUKD66UADHZHE.jpg?auth=1e99061b827b634493e7f582973bf9a578ebe8d3c17571f86f96a193f4cb3bea&smart=true&width=800&height=600",
+    "publishedAt": "2026-09-29T02:55:00.000Z"
+  },
+  {
+    "title": "Cadenas miofasciales: los ejercicios que revolucionaron la forma de practicar pilates, una técnica que no para de sumar adeptos",
+    "description": "Un móvil de LN+ dialogó con la instructora Melani Giommetti, quien sostuvo que “la actividad sirve para fortalecer nuestros músculos de forma consciente y a largo plazo”",
+    "url": "https://www.lanacion.com.ar/sociedad/cadenas-miofasciales-los-ejercicios-que-revolucionaron-la-forma-de-practicar-pilates-una-tecnica-que-nid27092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/KTN5EYPHZVGEDA3OEKUWOVDYJ4.jpg?auth=e46e723a476febe1c83d84804f0461aada8bda98672c14f2abad1165b4191e24&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T02:54:00.000Z"
+  },
+  {
+    "title": "El gesto de la Selección Argentina con Benja",
+    "description": "Los jugadores y el cuerpo técnico se movilizaron para conseguirle una silla de ruedas de alta tecnología a un menor de edad que sufre una discapacidad.",
+    "url": "https://www.ole.com.ar/seleccion/seleccionargentina-benja-silladeruedas-lionelscaloni-bolivia_0_t6SPDS6ulS.html",
+    "image": "https://www.ole.com.ar/images/2026/09/28/EAZCQpJ8a_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T02:30:48.000Z"
+  },
+  {
+    "title": "La fuerte historia de Enner Valencia, el goleador que siempre resurge en las difíciles",
+    "description": "Vivió en un estadio, cuidó animales, vendió limones para comprar botines y hasta le secuestraron a su hermana, pero siempre se sobrepuso. Ahora, cuando a los 36 años pocos creían en él, fue el héroe de Boca.",
+    "url": "https://www.ole.com.ar/boca-juniors/historia-enner-valencia-especialista-noche-especiales-goles-boca-racing-copa-argentina-vivio-estadio-vendio-limones-secuestro-hermana_0_yVTI4wn7ER.html",
+    "image": "https://www.ole.com.ar/images/2026/09/28/XOrSCtkKL_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T02:26:29.000Z"
+  },
+  {
+    "title": "El guiño de Leandro Paredes a la Selección Argentina: “Si no estuviera sancionado, seguramente estaría ahí”",
+    "description": "El volante central de Boca, que en algún momento puso en duda su continuidad, no fue citado a la Fecha FIFA porque debe cumplir una sanción de diez partidos.",
+    "url": "https://www.ole.com.ar/seleccion/leandro-paredes-guino-seleccion-argentina-continuidad-scaloni-sancionado-ahii-fecha-fifa_0_SSEqeCnsSd.html",
+    "image": "https://www.ole.com.ar/images/2026/07/08/DfM-kqEJn_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T02:18:23.000Z"
+  },
+  {
+    "title": "Juego online: De Loredo vuelve a cargar contra Llaryora y pone la visita del Papa como presión política",
+    "description": "La UCR volvió a poner el juego online en el centro de la agenda y apuntó contra Llaryora por la falta de reglamentación. De Loredo, Ferrero y Austin impulsan la prohibición a la publicidad en redes, en los mensajes de los influencers y en las camisetas de los clubes cordobeses.  Leer más",
+    "url": "https://www.perfil.com/noticias/cordoba/juego-online-de-loredo-vuelve-a-cargar-contra-llaryora-y-pone-la-visita-del-papa-como-presion-politica.phtml",
+    "image": "https://fotos.perfil.com/2026/09/29/trim/540/304/la-problematica-del-juego-online-el-eje-de-la-charla-entre-de-loredo-y-el-cardenal-rossi-2335993.jpeg",
+    "publishedAt": "2026-09-29T02:10:55.000Z"
+  },
+  {
+    "title": "La ansiedad política busca anticipar resultados sin dar garantías de que sean reales",
+    "description": "La ansiedad política busca anticipar resultados sin dar garantías de que sean reales",
+    "url": "https://www.cronista.com/columnistas/la-ansiedad-politica-busca-anticipar-resultados-sin-dar-garantias-de-que-sean-reales/",
+    "image": "https://www.cronista.com/resizer/v2/J7OT4YO7MBBYBLKXM5VB555BSQ.jpg?auth=7266bf6b96ec7a918bfc14e130aff0582526f7e31ad9e194d737694fdb64e5a8&smart=true&width=3000&height=1848",
+    "publishedAt": "2026-09-29T02:08:58.000Z"
+  },
+  {
+    "title": "Anthropic prepara su salida a Bolsa: ingresos por US$4.600 millones, pérdidas millonarias y obligaciones por US$518.000 millones",
+    "description": "La compañía multiplicó por 12 sus ingresos durante 2025, pero registró una pérdida neta de US$42.000 millones, en parte por cargos contables vinculados a instrumentos de financiación. Leer más",
+    "url": "https://www.perfil.com/noticias/internacional/anthropic-prepara-su-salida-a-bolsa-ingresos-por-us4600-millones-perdidas-millonarias-y-obligaciones-por-us518000-millones.phtml",
+    "image": "https://fotos.perfil.com/2026/09/12/trim/540/304/dario-amodei-2324980.jpg",
+    "publishedAt": "2026-09-29T02:06:52.000Z"
+  },
+  {
+    "title": "Gabriel Rolón, psicólogo: “La felicidad no es una decisión”",
+    "description": "El psicoanalista analizó la complejidad del bienestar emocional frente a las presiones externas; reflexiona sobre la construcción de vínculos sanos y el peso de los mandatos sociales en la búsqueda del deseo propio",
+    "url": "https://www.lanacion.com.ar/sociedad/gabriel-rolon-psicologo-la-felicidad-no-es-una-decision-nid28092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/I65ZSDVVLNCVPALQSGO53GSFSI.png?auth=d187b2d3bf80dc6bb61562d7473ec57a6e7503ff4cf048faf0736856a20a6a78&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T01:55:00.000Z"
+  },
+  {
+    "title": "Gabriel Rolón, psicólogo, sobre el amor: “A toda media naranja le falta al menos un gajo, porque esa ilusión de completud no está”",
+    "description": "En una entrevista exclusiva para LN+, el psicoanalista y escritor reflexionó sobre la naturaleza humana y propuso una mirada cruda sobre el amor, la muerte y la persistencia de los mandatos sociales",
+    "url": "https://www.lanacion.com.ar/sociedad/gabriel-rolon-psicologo-sobre-el-amor-a-toda-media-naranja-le-falta-al-menos-un-gajo-porque-esa-nid23092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/24XO7QCTKBDYXFGG4WENNIDOV4.png?auth=2edc3da6bd2cfb9435d8b20bd9a31ae1eec25a55f8b51af139853e1dd9839483&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T01:52:00.000Z"
+  },
+  {
+    "title": "Roberto Edgar, líder del grupo Volcán, se sumó a La Libertad Avanza: \"Quiero ser candidato a intendente\"",
+    "description": "El cantante de \"Esa malvada\" dijo que buscará pelear por la intendencia de Puerto Iguazú, Misiones.\"La música es mi cable a tierra, pero si asumo esta responsabilidad, la prioridad va a ser la política\", afirmó.",
+    "url": "https://www.clarin.com/politica/roberto-edgar-lider-grupo-volcan-sumo-libertad-avanza-quiero-candidato-intendente_0_Rrm2aYeMKQ.html",
+    "image": "https://www.clarin.com/img/2026/09/28/yjX9BWZxj_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T01:44:16.000Z"
+  },
+  {
+    "title": "Un exintendente radical de Mendoza quedó a un paso de ser condenado por corrupción por desviar fondos a una cooperativa fantasma",
+    "description": "Daniel Orozco gobernó en Las Heras. Fue aliado y luego rival del gobernador Alfredo Cornejo, quien celebró que se admita culpable.Imputado por peculado doloso, aceptó un juicio abreviado y quedó al borde de la condena con su mujer, Janina Ortiz, ex diputada provincial.",
+    "url": "https://www.clarin.com/politica/exintendente-radical-compitio-cornejo-quedo-paso-condenado-corrupcion-desviar-fondos-cooperativa-fantasma_0_NaDMyFylbR.html",
+    "image": "https://www.clarin.com/img/2023/06/21/pUxS7lm_E_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T01:37:34.000Z"
+  },
+  {
+    "title": "El tremendo dato que compartió Jorgelina Cardoso sobre Di María tras ser campeón con Rosario Central",
+    "description": "Jorgelina aprovechó una coincidencia por los 38 años del futbolista en el que expone su orgullo por el flamante campeón de la Supercopa Internacional, éxito que capitalizó.",
+    "url": "https://www.ole.com.ar/rosario-central/jorgelinacardoso-angeldimaria-trofeodecampeones-rosariocentral-seleccionargentina_0_XpilHZfc1G.html",
+    "image": "https://www.ole.com.ar/images/2026/09/28/fz3G5Vgd0_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T01:16:49.000Z"
+  },
+  {
+    "title": "La Justicia recibió una pericia clave a semanas del juicio contra Cristina y Máximo Kirchner por lavado de dinero",
+    "description": "Un informe de la Corte Suprema advirtió la falta de balances para justificar los números de Los Sauces. El debate oral, que sentará en el banquillo a la ex presidenta, a su hijo y a empresarios de la obra pública, arrancará el próximo 23 de octubre. Leer más",
+    "url": "https://www.perfil.com/noticias/politica/la-justicia-recibio-una-pericia-clave-a-semanas-del-juicio-contra-cristina-y-maximo-kirchner-por-lavado-de-dinero.phtml",
+    "image": "https://fotos.perfil.com/2026/08/03/trim/540/304/cristina-2296661.jpg",
+    "publishedAt": "2026-09-29T01:10:11.000Z"
+  },
+  {
+    "title": "Poder Ciudadano cuestionó al Gobierno por \"ampliar la impunidad\" y alertó por el retroceso del país en la corrupción",
+    "description": "En su cena anual, el titular de la entidad advirtió que distintas medidas oficiales provocan que la Argentina haya caído en el Índice de Percepción de Corrupción y que eso provoca que este año el país esté en el \"último lugar de la región en recepción de inversiones extranjeras\".También cuestionó  que haya \"una intolerancia que no para de crecer, y la reducción de las instancias de participación de la sociedad civil\".",
+    "url": "https://www.clarin.com/politica/poder-ciudadano-cuestiono-gobierno-ampliar-impunidad-alerto-retroceso-pais-corrupcion_0_x2HiwOPUZq.html",
+    "image": "https://www.clarin.com/img/2026/09/28/hgS2tqhLL_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T01:05:09.000Z"
+  },
+  {
+    "title": "Giacomini: \"El plan de estabilización es tan malo que ni siquiera sirve para bajar la inflación en serio\"",
+    "description": "\"Tener 30 por ciento de inflación anual después de 36 meses casi es un fracaso\", aseguró el analista.\n Leer más",
+    "url": "https://www.perfil.com/noticias/nea/giacomini-el-plan-de-estabilizacion-es-tan-malo-que-ni-siquiera-sirve-para-bajar-la-inflacion-en-serio.phtml",
+    "image": "https://fotos.perfil.com/2026/03/26/trim/540/304/diego-giacomini-2210303.jpg",
+    "publishedAt": "2026-09-29T01:02:00.000Z"
+  },
+  {
+    "title": "Encuesta: Milei con 63,6% de rechazo y un escenario de balotaje",
+    "description": "\"Con los números de hoy, no hay ninguno en condiciones de ganar en primera vuelta\", aseguró el analista Gustavo Córdoba.\n Leer más",
+    "url": "https://www.perfil.com/noticias/nea/encuesta-milei-con-636-de-rechazo-y-un-escenario-de-balotaje.phtml",
+    "image": "https://fotos.perfil.com/2026/09/22/trim/540/304/gustavo-cordoba-director-de-zuban-cordoba-estuvo-en-qr-2-2331086.jpg",
+    "publishedAt": "2026-09-29T01:01:00.000Z"
+  },
+  {
+    "title": "Poder Ciudadano: Martín D’Alessandro habló sobre corrupción, transparencia y participación ciudadana",
+    "description": "El presidente de Poder Ciudadano expuso durante la cena aniversario de la organización y repasó distintos aspectos vinculados con la corrupción, los controles institucionales, la participación ciudadana y la calidad democrática. Leer más",
+    "url": "https://www.perfil.com/noticias/sociedad/poder-ciudadano-martin-dalessandro-hablo-sobre-corrupcion-transparencia-y-participacion-ciudadana.phtml",
+    "image": "https://fotos.perfil.com/2026/09/29/trim/540/304/poder-ciudadano-28092026-2335951.jpg",
+    "publishedAt": "2026-09-29T01:00:00.000Z"
+  },
+  {
+    "title": "Esta es la fórmula ideal para lograr un descanso reparador para nuestro cerebro (y no pensar en nada)",
+    "description": "La mente no se ‘apaga’ en estado de reposo, pero aprender algo nuevo o superar un reto puede ayudar a disminuir el agotamiento acumulado",
+    "url": "https://www.lanacion.com.ar/sociedad/esta-es-la-formula-ideal-para-lograr-un-descanso-reparador-para-nuestro-cerebro-y-no-pensar-en-nada-nid27092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/XHYMDLBZGJCT7JGX6IS6KW62ZM.png?auth=4cf0aafbeb6c27984378315f6642ad7c214ae6b80aa9ef5f372235a3ca2bc4b4&smart=true&width=406&height=228",
+    "publishedAt": "2026-09-29T00:55:00.000Z"
+  },
+  {
+    "title": "Gabriel Rolón, psicólogo, sobre el amor: “La gracia es abrazar también la imperfección del otro”",
+    "description": "En una entrevista exclusiva para LN+, el psicoanalista y escritor reflexionó sobre la naturaleza humana y propuso una mirada cruda sobre el amor, la muerte y la persistencia de los mandatos sociales",
+    "url": "https://www.lanacion.com.ar/sociedad/gabriel-rolon-psicologo-sobre-el-amor-la-gracia-es-abrazar-tambien-la-imperfeccion-del-otro-nid25092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/24XO7QCTKBDYXFGG4WENNIDOV4.png?auth=2edc3da6bd2cfb9435d8b20bd9a31ae1eec25a55f8b51af139853e1dd9839483&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T00:52:00.000Z"
+  },
+  {
+    "title": "Decisión tomada: Marcos Rojo le pedirá a Diego Milito que lo deje ir a jugar la Libertadores con Estudiantes",
+    "description": "Tras la eliminación en la Copa Argentina, el defensor busca cerrar su ciclo en Racing y volver al Pincha para jugar la Copa como último desafío en su carrera.",
+    "url": "https://www.ole.com.ar/futbol-primera/decision-tomada-marcos-rojo-jugar-estudiantes-copa-libertadores-pedido-diego-milito-racing_0_dNExCxFB6K.html",
+    "image": "https://www.ole.com.ar/images/2026/09/28/2DyNStRgj_1200x630__1.jpg",
+    "publishedAt": "2026-09-29T00:50:34.000Z"
+  },
+  {
+    "title": "“Si sale libre me tengo que mudar de país”: medidas de protección para la psiquiatra del hombre acusado de quemar a su padre",
+    "description": "La médica recibía amenazas y sostuvo que Lucas Grinstein, detenido por homicidio agravado por el vínculo, le enviaba mensajes de contenido sexual",
+    "url": "https://www.lanacion.com.ar/seguridad/si-sale-libre-me-tengo-que-mudar-de-pais-medidas-de-proteccion-para-la-psiquiatra-del-hombre-acusado-nid28092026/",
+    "image": "https://resizer.glanacion.com/resizer/v2/FOXE7CVDCZBYHNURKXKEJPE5P4.jpg?auth=5be943187889f0f21090787c6789922967e9d00cfb5ff98f3cf8a7e299f42d99&smart=true&width=2000&height=1333",
+    "publishedAt": "2026-09-29T00:50:30.000Z"
+  },
+  {
+    "title": "Poder Ciudadano alertó sobre la falta de políticas anticorrupción: “Pareciera que buscamos ampliar la impunidad”",
     "description": "En su cena anual, la entidad advirtió sobre el enriquecimiento de funcionarios, los índices crecientes de corrupción y sus consecuencias sobre la caída del PBI, la inversión y la economía",
     "url": "https://www.lanacion.com.ar/politica/poder-ciudadano-alerto-sobre-falta-de-politicas-anticorrupcion-pareciera-que-buscamos-ampliar-la-nid28092026/",
     "image": "https://resizer.glanacion.com/resizer/v2/32V5BWNOWFCQNCKAY2BNYYZ7RU.JPG?auth=a922299d92b2370a46db43b5077a8578bc491517ba18272c0270cc0424ff4eff&smart=true&width=1998&height=1333",
     "publishedAt": "2026-09-29T00:45:54.000Z"
-  },
-  {
-    "title": "Guerra en Yemen: el Parlamento declaró la “movilización general” para frenar la ofensiva de los hutíes y recuperar el control del país",
-    "description": "El Consejo de Liderazgo Presidencial llamó a los jóvenes de las zonas bajo control insurgente a incorporarse a las Fuerzas Armadas y ofreció una amnistía a quienes abandonen las filas de los insurgentes",
-    "url": "https://www.infobae.com/america/mundo/2026/09/29/guerra-en-yemen-el-parlamento-declaro-la-movilizacion-general-para-frenar-la-ofensiva-de-los-huties-y-recuperar-el-control-del-pais/",
-    "image": "https://www.infobae.com/resizer/v2/A27ACIJWVJGLJHQV2ITEZCKXME.jpg?auth=2bc8b421b2894571ebc985f04a1cf39d4e87fa088682895e7a3d68c74dc5cbf2&smart=true&width=1920&height=1279",
-    "publishedAt": "2026-09-29T00:45:07.000Z"
   },
   {
     "title": "Rubén Calviño, profesor: “Si durante años dejamos de leer, aprender o enfrentarnos a retos cognitivos, volver a hacerlo puede ser difícil”",
@@ -28,81 +721,11 @@
     "publishedAt": "2026-09-29T00:43:00.000Z"
   },
   {
-    "title": "Elecciones Brasil 2026, EN VIVO: las últimas noticias sobre los comicios hoy",
-    "description": "Los últimos sondeos de intención de voto marcan un panorama reñido entre Flavio Bolsonaro e Luiz Inácio “Lula” da Silva; los comicios tendrán lugar el domingo 4 de octubre",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-brasil-2026-en-vivo-las-ultimas-noticias-sobre-los-comicios-hoy-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/4NX4NGM6RZGRTJA2TDQ5CYWW6Y.jpg?auth=b1aeb565c1762434415b8c4fcae67d6aaf6d649cc7bb65ac9e46d9d0580b5ba8&smart=true&width=6536&height=3860",
-    "publishedAt": "2026-09-29T00:41:44.000Z"
-  },
-  {
-    "title": "Javier Milei y sus medidas, EN VIVO: el Presidente habló de Patricia Bullrich y dijo: “No la subestimen”",
-    "description": "El minuto a minuto de las decisiones del mandatario, las reacciones de la oposición y las declaraciones de los funcionarios",
-    "url": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-tengo-algunos-enemigos-muy-pesados-aca-y-en-el-mundo-dijo-el-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/YJD56ZT5UNCRJDJDKK4GD6HFPM.JPG?auth=29481278f74ab08a9c3ccf711047fbb9a028d1ea9a9990a155d5f6f3a6a8b233&smart=true&width=2000&height=1334",
-    "publishedAt": "2026-09-29T00:41:41.000Z"
-  },
-  {
-    "title": "El régimen de Kim Jong-un elevó las tensiones con Estados Unidos, Corea del Sur y Japón: descartó abandonar su arsenal nuclear",
-    "description": "Pyongyang acusó a Washington de convertir su cooperación militar con Seúl y Tokio en un “bloque militar más ofensivo y agresivo” y cuestionó los ejercicios conjuntos que realizan las tres potencias en aguas cercanas a la península",
-    "url": "https://www.infobae.com/america/mundo/2026/09/29/el-regimen-de-kim-jong-un-elevo-las-tensiones-con-estados-unidos-corea-del-sur-y-japon-descarto-abandonar-su-arsenal-nuclear/",
-    "image": "https://www.infobae.com/resizer/v2/6FPMYTXHVBF63MB3YYEKJ3FJYA.JPG?auth=93f3344455024cb179f21cbda4b42301d778cb7ddfe2748a06c8a1f5b48ac511&smart=true&width=4056&height=2692",
-    "publishedAt": "2026-09-29T00:40:29.000Z"
-  },
-  {
-    "title": "Trump elimina normas que protegían a alumnos LGTBI de discriminación sexual",
-    "description": "La administración actual revierte las normas de 2024 que ampliaban protecciones contra discriminación en escuelas, regresando a políticas anteriores.La nueva medida reafirma regulaciones de 2020, reduciendo el ámbito de protección y ajustando el proceso para estudiantes acusados.",
-    "url": "https://www.clarin.com/estados-unidos/trump-elimina-normas-que-protegian-a-alumnos-lgtbi-de-discriminacion-sexual_0_CJiswMKhsu.html",
-    "image": "https://www.clarin.com/img/2026/08/27/ulrSZN4Sn_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:40:11.000Z"
-  },
-  {
-    "title": "El deseo de Stephen Curry de ganar otra vez lo llevó a aceptar menos dinero en Warriors",
-    "description": "El base estrella de Golden State optó por un recorte salarial para asegurar su permanencia y fortalecer al equipo en su carrera final.Curry, con 38 años, busca nuevos títulos con los Warriors, priorizando la competitividad del equipo sobre su salario.",
-    "url": "https://www.clarin.com/estados-unidos/el-deseo-de-stephen-curry-de-ganar-otra-vez-lo-llevo-a-aceptar-menos-dinero-en-warriors_0_0eA1ZnsP1E.html",
-    "image": "https://www.clarin.com/img/2026/04/16/ox6pYwAJj_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:40:03.000Z"
-  },
-  {
-    "title": "La China Suárez respondió a los rumores de crisis con Mauro Icardi: sus fotos juntos y enamorados",
-    "description": "La actriz compartió postales abrazada al delantero en Instagram, luego de las especulaciones que siempre rodean a la pareja y del revuelo por su recuerdo de París de 2021",
-    "url": "https://www.infobae.com/teleshow/2026/09/29/la-china-suarez-respondio-a-los-rumores-de-crisis-con-mauro-icardi-sus-fotos-juntos-y-enamorados/",
-    "image": "https://www.infobae.com/resizer/v2/ZNG6WX6V6NGZXKZ5RIIVEWQBAY.jpg?auth=665ad670477b4f8643870d519a903970efce6a84fa967046477464eccb0163f9&smart=true&width=847&height=561",
-    "publishedAt": "2026-09-29T00:39:54.000Z"
-  },
-  {
-    "title": "El Gobierno cambia el reparto de tutelas contra el Presidente: ahora llegarán al Consejo de Estado",
-    "description": "El Decreto 1446 de 2026 establece que las acciones relacionadas con actuaciones u omisiones de Abelardo de la Espriella en ejercicio de sus funciones deberán llegar en primera instancia al máximo tribunal de lo contencioso-administrativo",
-    "url": "https://www.infobae.com/colombia/2026/09/28/el-gobierno-cambia-el-reparto-de-tutelas-contra-el-presidente-ahora-llegaran-al-consejo-de-estado/",
-    "image": "https://www.infobae.com/resizer/v2/RE6BW4JY5FHNPDHUYOZEVGC6NY.jpg?auth=4d18a2085a823590f5c64a052bdc5aa411ea3dad4f128043de93c2fb94892f24&smart=true&width=2048&height=1366",
-    "publishedAt": "2026-09-29T00:38:40.000Z"
-  },
-  {
-    "title": "Oficial y confirmado | Los agentes de la CBP están en 10 aeropuertos extranjeros e inspeccionan a pasajero por pasajero antes de que aborden sus vuelos a EE.UU.",
-    "description": "La Oficina de Aduanas y Protección Fronteriza utiliza la comparación facial para verificar la identidad.Es un procedimiento rápido que compara las imágenes tomadas en tiempo real con las registradas por el gobierno estadounidense.",
-    "url": "https://www.clarin.com/estados-unidos/oficial-confirmado-agentes-cbp-10-aeropuertos-extranjeros-inspeccionan-pasajero-pasajero-aborden-vuelos-eeuu_0_SUVceG4c4X.html",
-    "image": "https://www.clarin.com/img/2026/09/15/L4rs4WGNP_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:34:48.000Z"
-  },
-  {
     "title": "Juicio por la muerte de Maradona continuará con nueva declaración de principales acusados",
     "description": "Continúa el proceso judicial que intenta esclarecer el fallecimiento del 10 en noviembre de 2020. Acá, un adelanto de lo que pasará este martes.",
     "url": "https://www.ole.com.ar/fuera-de-juego/juicio-maradona-acusados-forlini-luque_0_iSzYwRnYcP.html",
     "image": "https://www.ole.com.ar/images/2026/07/27/GAsO2Imo__1200x630__1.jpg",
     "publishedAt": "2026-09-29T00:34:33.000Z"
-  },
-  {
-    "title": "¿Qué está pasando en el Metro CDMX y Metrobús hoy 28 de septiembre? Diversas líneas del MB presentan retraso por manifestaciones",
-    "description": "Información y actualización del servicio de transporte público en la capital este lunes en vivo minuto a minuto",
-    "url": "https://www.infobae.com/mexico/2026/09/28/que-esta-pasando-en-el-metro-cdmx-y-metrobus-hoy-28-de-septiembre/",
-    "image": "https://www.infobae.com/resizer/v2/SXMOALLESVABJA7EGD72QROSCM.jpg?auth=0a7e7e6f1c7b2583c0cfb575cf995f3a6dc9d9594ae791c5954fc090c61147ce&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-29T00:34:24.000Z"
-  },
-  {
-    "title": "Quién es Jasmine Bugarín, la aspirante de la 4T en Nayarit ligada al Partido Verde",
-    "description": "La legisladora encabezará la organización territorial y política de la alianza en la entidad",
-    "url": "https://www.infobae.com/mexico/2026/09/29/quien-es-jasmine-bugarin-la-aspirante-de-la-4t-en-nayarit-ligada-al-partido-verde/",
-    "image": "https://www.infobae.com/resizer/v2/QNHO7XF66RCZNIDUGKNKR47L3I.webp?auth=5004da4d6c412620f224aaac15a355ce24adcc5d64deaf8b0a1693f7e4024e53&smart=true&width=1280&height=720",
-    "publishedAt": "2026-09-29T00:34:17.000Z"
   },
   {
     "title": "El Gobierno pidió al Reino Unido que frene la explotación petrolera en Malvinas y advirtió que acudirá a un tribunal internacional",
@@ -112,46 +735,11 @@
     "publishedAt": "2026-09-29T00:30:49.000Z"
   },
   {
-    "title": "La psicología dice que las personas que se guardan estas 6 opiniones para sí mismas en las cenas familiares tienden a ser más seguras que las personas que necesitan que todos sepan cuál es su postura",
-    "description": "Callarse una opinión no siempre significa miedo al conflicto o falta de carácter.En determinadas situaciones, puede reflejar algo bastante distinto.",
-    "url": "https://www.clarin.com/estados-unidos/psicologia-dice-personas-guardan-6-opiniones-mismas-cenas-familiares-tienden-seguras-personas-necesitan-sepan-postura_0_x6O3TLShSn.html",
-    "image": "https://www.clarin.com/img/2025/04/14/pZaE3U-xb_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:30:48.000Z"
-  },
-  {
     "title": "El compromiso que Quique Sacco firmó ante escribano: \"Independiente no será una SAD\"",
     "description": "Lo aseguró este lunes en la conferencia de prensa de su lanzamiento como candidato a presidente del Rojo. \"Siempre será el orgullo nacional\", dijo.",
     "url": "https://www.ole.com.ar/independiente/quiquesacco-independiente-sad-elecciones_0_mDtSVPFgnh.html",
     "image": "https://www.ole.com.ar/images/2026/09/28/FG-hXZKic_1200x630__1.jpg",
     "publishedAt": "2026-09-29T00:30:14.000Z"
-  },
-  {
-    "title": "Exnegociador de paz de una disidencia de las FARC comparece ante una corte en California",
-    "description": "El exnegociador de paz de las FARC, extraditado a EE.UU., enfrenta cargos por conspirar para traficar cocaína y financiar actividades ilícitas.Tras su extradición, la audiencia en San Diego fijó nueva cita judicial para octubre, mientras permanece detenido por cargos de narcoterrorismo.",
-    "url": "https://www.clarin.com/estados-unidos/exnegociador-de-paz-de-una-disidencia-de-las-farc-comparece-ante-una-corte-en-california_0_nYndkgUi4N.html",
-    "image": "https://www.clarin.com/img/2026/08/27/-I2w8bjWX_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:30:10.000Z"
-  },
-  {
-    "title": "El Salvador espera lluvias y riesgo de inundaciones y deslizamientos durante los próximos días",
-    "description": "El Ministerio de Medio Ambiente mantiene vigilancia durante 48 horas por deslizamientos, caída de rocas y dificultades temporales para circular, principalmente en la franja montañosa norte del país desde la mañana hasta la tarde",
-    "url": "https://www.infobae.com/el-salvador/2026/09/29/el-salvador-espera-lluvias-y-riesgo-de-inundaciones-y-deslizamientos-durante-los-proximos-dias/",
-    "image": "https://www.infobae.com/resizer/v2/7WW4U7ZD7BB5XI5KBX7ERC2MNM.jpg?auth=245c917c3c6dd2a74a3569db23a43a725811847771e7025e82c9a229ceeb4c7b&smart=true&width=2048&height=1365",
-    "publishedAt": "2026-09-29T00:29:39.000Z"
-  },
-  {
-    "title": "“Pity” Álvarez sigue internado: qué dice el informe sobre su salud y cómo podría participar de la audiencia desde el hospital",
-    "description": "El músico permanece en el Tornú y su defensa reclamó que presencie la audiencia de manera remota. Qué detectó la evaluación realizada durante su internación y cómo se encuentra actualmente",
-    "url": "https://www.infobae.com/sociedad/policiales/2026/09/28/pity-alvarez-sigue-internado-que-dice-el-informe-sobre-su-salud-y-como-podria-participar-de-la-audiencia-desde-el-tornu/",
-    "image": "https://www.infobae.com/resizer/v2/62YXF47SHVD4NFIUDL2RX4OOQI.jpg?auth=2dab1649ac5e466472c717b791f1bc12652025dd0231954dede347803377b42f&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-29T00:27:41.000Z"
-  },
-  {
-    "title": "Quiniela de la Provincia: resultado del sorteo de la Nocturna de hoy, lunes 28 de septiembre",
-    "description": "Conocé qué números salieron hoy a la cabeza y todo lo que necesitás saber. A cruzar los dedos.",
-    "url": "https://www.clarin.com/loterias-y-quinielas/quiniela-provincia-resultado-sorteo-nocturna-hoy-lunes-28-septiembre_0_6NbhvTrZKw.html",
-    "image": "https://www.clarin.com/img/2020/06/25/QWj8idQPo_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:27:25.000Z"
   },
   {
     "title": "En California: Newsom firmó la ley SB 1151 que libera de impuestos a un producto consumido por familias con hijos",
@@ -161,132 +749,6 @@
     "publishedAt": "2026-09-29T00:27:00.000Z"
   },
   {
-    "title": "Juicio a “Pity” Álvarez: una amenaza a Fernando Burlando, tres horas de cuarto intermedio y el músico “descalzo y a los gritos”",
-    "description": "El querellante, que representa a una de las hijas de la víctima, recibió un mensaje intimidatorio de parte de un seguidor del músico. La defensa volvió a pedir la suspensión del juicio por el estado de salud de Álvarez. El tribunal intentó conectarlo desde el Hospital Tornú, pero no pudo hacerlo y la jornada terminó sin que declararan los siete testigos citados",
-    "url": "https://www.infobae.com/sociedad/policiales/2026/09/28/juicio-a-pity-alvarez-en-vivo-el-musico-sigue-internado-y-citaron-siete-testigos-de-identidad-reservada-para-esta-jornada/",
-    "image": "https://www.infobae.com/resizer/v2/VGPTGR7XJ5APZLE36IBU2M5JJM.jpg?auth=d84ccefd45e17aeaf83702e8f5aa7dec45f76b793a83c28a34861d8b4e1a9188&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-29T00:25:19.000Z"
-  },
-  {
-    "title": "Zelensky aseguró que Corea del Norte enviará otros 10.000 militares a pelear para Rusia",
-    "description": "Kiev sostiene que Moscú paga a Pyongyang con tecnología militar, mientras Putin vuelve a ampliar las Fuerzas Armadas rusas. Las cifras proceden del Gobierno ucraniano y no han sido verificadas de forma independiente",
-    "url": "https://www.infobae.com/america/mundo/2026/09/29/zelensky-aseguro-que-corea-del-norte-enviara-otros-10000-militares-a-pelear-para-rusia/",
-    "image": "https://www.infobae.com/resizer/v2/5OMZTZIQZFYMOHG5SAOXQ5XCK4.jpg?auth=32b8d2231027ce6b86d8712105078049cca305045fe2b2b66c44fcb55f5afd5e&smart=true&width=3689&height=2460",
-    "publishedAt": "2026-09-29T00:22:47.000Z"
-  },
-  {
-    "title": "Cuatro taxistas murieron en Nueva York este verano y el sindicato reclama a Mamdani un fondo de salud para los conductores",
-    "description": "La organización propone reasignar un recargo aplicado a cada viaje para financiar seguros por incapacidad, licencias médicas, atención psicológica, cobertura odontológica y un mecanismo de jubilación",
-    "url": "https://www.infobae.com/estados-unidos/2026/09/29/cuatro-taxistas-murieron-en-nueva-york-este-verano-y-el-sindicato-reclama-a-mamdani-un-fondo-de-salud-para-los-conductores/",
-    "image": "https://www.infobae.com/resizer/v2/5KIYTUDLUFACJI4R6H74U3W6KY.jpg?auth=965f6fd75815160618822a053b8280c836b922e727cdb296eeab46e266d7825a&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-29T00:22:41.000Z"
-  },
-  {
-    "title": "El crudo análisis de un medio inglés sobre Colapinto, tras ubicarlo en el último puesto de su ranking: “Falló estrepitosamente”",
-    "description": "The Race armó su habitual listado de pilotos después de las carreras. Evaluó la labor del argentino y fue lapidario por su error en el GP de Azerbaiyán de Fórmula 1",
-    "url": "https://www.infobae.com/deportes/2026/09/29/el-crudo-analisis-de-un-medio-ingles-sobre-colapinto-tras-ubicarlo-en-el-ultimo-puesto-de-su-ranking-fallo-estrepitosamente/",
-    "image": "https://www.infobae.com/resizer/v2/XE3TZZERVVBGLFBXNIXXHE5JRI.jpg?auth=10ef24bb296a52d06c03246335f6cb1896be80009c77d1ed801682d645658534&smart=true&width=10848&height=7232",
-    "publishedAt": "2026-09-29T00:21:16.000Z"
-  },
-  {
-    "title": "Chaco pagará un bono de hasta $100.000 en octubre: quiénes lo cobrarán y en qué fecha",
-    "description": "Los empleados públicos provinciales recibirán $100.000, mientras que para jubilados y pensionados el monto será de $80.000. Hacienda confirmó que ambos pagos se acreditarán el jueves 15 de octubre. Leer más",
-    "url": "https://www.perfil.com/noticias/nea/chaco-pagara-un-bono-de-hasta-100000-en-octubre-quienes-lo-cobraran-y-en-que-fecha.phtml",
-    "image": "https://fotos.perfil.com/2026/01/27/trim/540/304/cajero-automatico-del-nbch-2176196.jpeg",
-    "publishedAt": "2026-09-29T00:20:18.000Z"
-  },
-  {
-    "title": "YPF y Entre Ríos firmaron un acuerdo para mejorar la logística y reducir costos hacia Vaca Muerta",
-    "description": "La iniciativa apunta a evaluar alternativas para abaratar el traslado de insumos, sumar firmas locales a la cadena energética y definir proyectos mediante convenios específicos",
-    "url": "https://www.infobae.com/economia/2026/09/29/ypf-y-entre-rios-firmaron-un-acuerdo-para-mejorar-la-logistica-y-reducir-costos-hacia-vaca-muerta/",
-    "image": "https://www.infobae.com/resizer/v2/DHNMQZNLLVD7HOSOU2JRY5ZEYQ.jpeg?auth=0abb85e35cadf1b76abac2266aa511deb04e30fdab84eb60c3291eb4c28c1bc7&smart=true&width=1280&height=852",
-    "publishedAt": "2026-09-29T00:20:06.000Z"
-  },
-  {
-    "title": "Ajo, cebolla y poro: qué compuestos aportan estos alimentos para alimentar la microbiota intestinal y favorecer la digestión",
-    "description": "Tres ingredientes habituales de cocina esconden un efecto sobre el intestino",
-    "url": "https://www.infobae.com/mexico/2026/09/29/ajo-cebolla-y-poro-que-compuestos-aportan-estos-alimentos-para-alimentar-la-microbiota-intestinal-y-favorecer-la-digestion/",
-    "image": "https://www.infobae.com/resizer/v2/B77UCNZKDNBDZATV6IW2ZMNL7Y.png?auth=8fc5ca5e33ef3d6515fb5d1473c541b51a78c5a0958fa9bd703df8f8295c2133&smart=true&width=2752&height=1536",
-    "publishedAt": "2026-09-29T00:20:00.000Z"
-  },
-  {
-    "title": "Cayó alias Tazmania, incluido en el cartel de los más buscados del Atlántico por extorsión y su presunta participación en siete homicidios",
-    "description": "El presunto miembro de Los Costeños tenía tres requerimientos judiciales vigentes y fue ubicado por unidades de la Armada y la Policía en una vía pública de Turbaco, Bolívar",
-    "url": "https://www.infobae.com/colombia/2026/09/29/cayo-alias-tazmania-incluido-en-el-cartel-de-los-mas-buscados-del-atlantico-por-extorsion-y-su-presunta-participacion-en-siete-homicidios/",
-    "image": "https://www.infobae.com/resizer/v2/42MXZRBOGBGXHPGQJEI4AJ3I2Q.jpeg?auth=443e4a5640ae3bcd280db78ff27172ed10f299abe5da2042fdeae5044161c8d7&smart=true&width=1248&height=796",
-    "publishedAt": "2026-09-29T00:18:28.000Z"
-  },
-  {
-    "title": "Tras el histórico triunfo de Boca ante Racing, la decisión que tomó Estudiantes con Marcos Rojo",
-    "description": "El Pincha avanza para destrabar la salida anticipada del defensor y sumarlo a la última línea antes de las semifinales de la Copa Libertadores frente a Flamengo",
-    "url": "https://www.infobae.com/deportes/2026/09/29/tras-el-historico-triunfo-de-boca-ante-racing-la-decision-que-tomo-estudiantes-con-marcos-rojo/",
-    "image": "https://www.infobae.com/resizer/v2/S6FWZSOK7FFXZNHYWKVE2JXCV4.jfif?auth=d2218f6b8e214bf79fbddfaade116899acd02aa59a0aa3f3e857328fb51928e8&smart=true&width=2333&height=1312",
-    "publishedAt": "2026-09-29T00:17:44.000Z"
-  },
-  {
-    "title": "Andrew Bailey, director adjunto del FBI, deja su cargo",
-    "description": "Reportajes Especiales - News",
-    "url": "https://www.infobae.com/america/the-new-york-times/2026/09/29/andrew-bailey-director-adjunto-del-fbi-deja-su-cargo/",
-    "image": "https://www.infobae.com/resizer/v2/WFYECSV66BHN3EEQBHVXNG5YQI.png?auth=4c5614643e176ddff8daeb0445185c663ef0e71a1bcb41a97812f51f8ea7af31&smart=true&width=992&height=558",
-    "publishedAt": "2026-09-29T00:15:16.000Z"
-  },
-  {
-    "title": "Fernanda Miño reclamó fondos para los barrios populares: “El Gobierno desmanteló la integración urbana”",
-    "description": "La diputada nacional de Unión por la Patria respaldó un proyecto que reúne a más de 140 legisladores para extender por diez años la emergencia sociourbana y aseguró que todavía existen recursos para retomar las obras",
-    "url": "https://www.infobae.com/politica/2026/09/29/fernanda-mino-reclamo-fondos-para-los-barrios-populares-el-gobierno-desmantelo-la-integracion-urbana/",
-    "image": "https://www.infobae.com/resizer/v2/A2WEGKGDJZFWHNIGTZFVMQCBJI.png?auth=a68ca9529dc97d6c24d43a6eabc4404789f932c7240b0884281a81550d97f16b&smart=true&width=892&height=538",
-    "publishedAt": "2026-09-29T00:13:57.000Z"
-  },
-  {
-    "title": "El Abelito defiende a su mamá tras los señalamientos de acoso en su fiesta de cumpleaños",
-    "description": "El influencer responde a las críticas después de que un video mostrara a Naim Darrechi bailando de forma incómoda con su madre durante el festejo de cumpleaños",
-    "url": "https://www.infobae.com/mexico/2026/09/29/el-abelito-defiende-a-su-mama-tras-los-senalamientos-de-acoso-en-su-fiesta-de-cumpleanos/",
-    "image": "https://www.infobae.com/resizer/v2/JNHEZUIHIFHEVMN4FPEVPPIWLE.jpg?auth=668b82db92a55a290ae1bb72cc69c71cea104e5b3e3d159880ccff8887b9a0cd&smart=true&width=1200&height=678",
-    "publishedAt": "2026-09-29T00:10:30.000Z"
-  },
-  {
-    "title": "Trump anuncia en Iowa la mayor planta siderúrgica de EE.UU. por 15.000 millones de dólares",
-    "description": "Una planta siderúrgica de 15.000 millones de dólares será construida en Iowa por Mesabi Metallics, prometiendo ser la mayor en EE.UU. y operativa en 2030.La iniciativa, impulsada por políticas arancelarias, generará miles de empleos y un impacto económico significativo, según la Casa Blanca.",
-    "url": "https://www.clarin.com/estados-unidos/trump-anuncia-en-iowa-la-mayor-planta-siderurgica-de-ee-uu-por-15-000-millones-de-dolares_0_tDCnRoVZ8U.html",
-    "image": "https://www.clarin.com/img/2026/08/27/ulrSZN4Sn_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:10:11.000Z"
-  },
-  {
-    "title": "Chiqui Tapia y AFA: nuevas escenas de una decadencia sin fin",
-    "description": "Otra final bochornosa marca un nuevo episodio en la descomposición del fútbol. El presidente de la AFA y los dirigentes, máximos responsables.",
-    "url": "https://www.clarin.com/opinion/chiqui-tapia-afa-nuevas-escenas-decadencia-fin_0_Tp5SmeDcYe.html",
-    "image": "https://www.clarin.com/img/2026/09/28/Igi83nMIC_1200x630__1.jpg",
-    "publishedAt": "2026-09-29T00:08:48.000Z"
-  },
-  {
-    "title": "Trump negó haber ofrecido alivio de sanciones a Irán a cambio de concesiones sobre su programa nuclear",
-    "description": "“Esto es falso. ¡No les ofrecí nada!”, expresó el mandatario republicano, mientras Estados Unidos mantiene el bloqueo sobre los puertos iraníes, amplía sus sanciones y Qatar intenta acercar a las partes para reanudar las negociaciones",
-    "url": "https://www.infobae.com/estados-unidos/2026/09/29/trump-nego-haber-ofrecido-alivio-de-sanciones-a-iran-a-cambio-de-concesiones-sobre-su-programa-nuclear/",
-    "image": "https://www.infobae.com/resizer/v2/NGV5NDKK5NC25L5ZXXJU24LSYU.JPG?auth=379db9cf9ae089845148cf08c6ee49779fa24fb6451b8a4f1b2e6b88234d81ee&smart=true&width=3893&height=2599",
-    "publishedAt": "2026-09-29T00:03:48.000Z"
-  },
-  {
-    "title": "Fernando Batista dejó de ser el entrenador de la selección de Costa Rica tras apenas seis partidos",
-    "description": "El técnico argentino terminó su ciclo de apenas siete meses: quién será su reemplazante",
-    "url": "https://www.infobae.com/deportes/2026/09/28/fernando-batista-dejo-de-ser-el-entrenador-de-la-seleccion-de-costa-rica-tras-apenas-seis-partidos/",
-    "image": "https://www.infobae.com/resizer/v2/IZ4FKOHK75DG3CPTCS2ESDXFD4?auth=57e6a6705ef4dedf38028d9a30b9d3ae189f979e8b2bafedb3435b75a18af4c0&smart=true&width=3046&height=1713",
-    "publishedAt": "2026-09-29T00:01:47.000Z"
-  },
-  {
-    "title": "Andersson fracasó en su intento de formar gobierno en Suecia y la decisión pasó al presidente del Parlamento",
-    "description": "La líder socialdemócrata devuelve el encargo tras perder el apoyo del Partido de la Izquierda. Se espera que el primer ministro saliente, el conservador Ulf Kristersson, sea el siguiente en intentarlo",
-    "url": "https://www.infobae.com/america/mundo/2026/09/29/andersson-fracaso-en-su-intento-de-formar-gobierno-en-suecia-y-la-decision-paso-al-presidente-del-parlamento/",
-    "image": "https://www.infobae.com/resizer/v2/TUMD3TPEJZHX5NVE2VU5CQFSDM.JPG?auth=3a58b2b0812d02c19a5d0596b48703bfca74e82a35cd8eb3cf6a097e6f3a940d&smart=true&width=5927&height=3951",
-    "publishedAt": "2026-09-29T00:01:34.000Z"
-  },
-  {
-    "title": "La trayectoria del huracán Polo pone al suroeste de EE. UU. en alerta por fuertes lluvias",
-    "description": "Reportajes Especiales - News",
-    "url": "https://www.infobae.com/america/the-new-york-times/2026/09/29/la-trayectoria-del-huracan-polo-pone-al-suroeste-de-ee-uu-en-alerta-por-fuertes-lluvias/",
-    "image": "https://www.infobae.com/resizer/v2/WFYECSV66BHN3EEQBHVXNG5YQI.png?auth=4c5614643e176ddff8daeb0445185c663ef0e71a1bcb41a97812f51f8ea7af31&smart=true&width=992&height=558",
-    "publishedAt": "2026-09-29T00:00:39.000Z"
-  },
-  {
     "title": "Gabriel Rolón: “No hay otra muerte que el olvido”",
     "description": "El reconocido psicólogo y escritor cuestionó los mandatos sociales y propuso una mirada sobre la finitud y el deseo",
     "url": "https://www.lanacion.com.ar/sociedad/gabriel-rolon-no-hay-otra-muerte-que-el-olvido-nid28092026/",
@@ -294,18 +756,18 @@
     "publishedAt": "2026-09-29T00:00:00.000Z"
   },
   {
-    "title": "La virgen de la tosquera, la apuesta argentina para brillar en los Premios Oscar",
-    "description": "La Academia de Cine Argentina eligió a la película de Laura Casabé para competir en la categoría de Mejor película internacional en la gran cita de Hollywood",
-    "url": "https://www.infobae.com/teleshow/2026/09/28/la-virgen-de-la-tosquera-la-apuesta-argentina-para-brillar-en-los-premios-oscar/",
-    "image": "https://www.infobae.com/resizer/v2/TPUSF7GFENEIRIB43NLSFPI3F4.jpg?auth=1bdba0a9630e91ba0f4de57e709869f03fe1d7cffc6c71bf2a2a4e08022db8c9&smart=true&width=1980&height=1090",
-    "publishedAt": "2026-09-28T23:59:37.000Z"
-  },
-  {
     "title": "Una casa para la música y el arte",
     "description": "“El cruce entre territorio, materia y clima” construye el espacio que necesita cualquier persona. Pero ¿qué tipo de hábitat necesita un músico para sentir que respeta su identidad?  Leer más",
     "url": "https://www.perfil.com/noticias/opinion/una-casa-para-la-musica-y-el-arte.phtml",
     "image": "https://fotos.perfil.com/2025/11/05/trim/540/304/la-patagonia-fue-elegida-como-uno-de-los-mejores-lugares-para-ir-en-diciembre-2132584.jpg",
     "publishedAt": "2026-09-28T23:59:19.000Z"
+  },
+  {
+    "title": "Tras criticarla, Milei recurre a Naciones Unidas para denunciar a Gran Bretaña por Malvinas",
+    "description": "Intimó a detener la explotación de hidrocarburos o llevará la queja al Tribunal Internacional del Derecho del Mar.Dijo que va a sancionar a la aerolínea Thales UK Limited, que voló sin autorización entre las islas y Punta Arenas.",
+    "url": "https://www.clarin.com/politica/criticarla-milei-recurre-naciones-unidas-denunciar-gran-bretana-malvinas_0_Sd5bEouRQn.html",
+    "image": "https://www.clarin.com/img/2026/09/28/4EhbUs9l5_1200x630__1.jpg",
+    "publishedAt": "2026-09-28T23:58:43.000Z"
   },
   {
     "title": "La reflexión de Epicuro: “Ser feliz es que no duela”",
@@ -329,13 +791,6 @@
     "publishedAt": "2026-09-28T23:54:00.000Z"
   },
   {
-    "title": "Miguel Torres, alarmado por negativa a facultades legislativas: “Correspondía debatir, ajustar y decidir, no rechazar todo”",
-    "description": "El titular del Senado cuestionó el predictamen que plantea archivar la solicitud del Gobierno y pidió preservar medidas consideradas urgentes",
-    "url": "https://www.infobae.com/peru/2026/09/28/miguel-torres-alarmado-por-negativa-a-facultades-legislativas-correspondia-debatir-ajustar-y-decidir-no-rechazar-todo/",
-    "image": "https://www.infobae.com/resizer/v2/R2JBCRQ2HJFBVEHQW3D3SBDEKQ.jpg?auth=98d4bca9a3c56cceb4592f20f6114334b50608de8624faf2a0c90f150f4ef159&smart=true&width=2048&height=1365",
-    "publishedAt": "2026-09-28T23:52:49.000Z"
-  },
-  {
     "title": "La reflexión de Platón sobre el sentido de la existencia: “Vamos en busca de un saber que no vamos a alcanzar”",
     "description": "En una entrevista exlusiva para LA NACION, el filósofo argentino Darío Sztajnszrajber profundizó en la definición de la filosofía y en el concepto de “sentirse realizado”",
     "url": "https://www.lanacion.com.ar/sociedad/la-reflexion-de-platon-sobre-el-sentido-de-la-existencia-vamos-en-busca-de-un-saber-que-no-vamos-a-nid21092026/",
@@ -350,53 +805,11 @@
     "publishedAt": "2026-09-28T23:51:43.000Z"
   },
   {
-    "title": "El Verde pinta su raya con Morena en SLP, Ruth González perfila competir por la gubernatura sin alianza",
-    "description": "La senadora habló después de que Morena confirmara que competirá sin coalición en San Luis Potosí rumbo a las elecciones de 2027",
-    "url": "https://www.infobae.com/mexico/2026/09/28/el-verde-pinta-su-raya-con-morena-en-slp-ruth-gonzalez-perfila-competir-por-la-gubernatura-sin-alianza/",
-    "image": "https://www.infobae.com/resizer/v2/HB4OSMQE3VBAJDYC4Z276PBB3U.png?auth=5cc87f1f73a1b822c014d65f8595a4fa9da6d68d42da080311c5425dee2f7889&smart=true&width=2752&height=1536",
-    "publishedAt": "2026-09-28T23:51:39.000Z"
-  },
-  {
-    "title": "Cae en Guerrero Primitivo \"N\", señalado como el presunto responsable de quemar viva a Margarita Seceña en Cuautla",
-    "description": "La víctima de Morelos había denunciado previamente agresiones familiares relacionadas con un inmueble, pero las autoridades no le otorgaron medidas de protección a tiempo",
-    "url": "https://www.infobae.com/mexico/2026/09/28/cae-en-guerrero-primitivo-n-senalado-como-el-presunto-responsable-de-quemar-viva-a-margarita-secena-en-cuautla/",
-    "image": "https://www.infobae.com/resizer/v2/IPOP6TCR4JC3LONHO2M7HVO4WQ.jpg?auth=03c9b832227de70ae5422f6b6ebb6617bab7dadce703e1ee5035873dbaca89e0&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:51:30.000Z"
-  },
-  {
-    "title": "La exnovia de Paul McCartney, Jane Asher, se niega a ver las películas de The Beatles que recrearán su relación con el músico",
-    "description": "La actriz, quien mantuvo una relación con  el cantante entre 1963 y 1968, será interpretada por Lucy Boynton en las cuatro películas dirigidas por Sam Mendes",
-    "url": "https://www.infobae.com/entretenimiento/2026/09/28/la-exnovia-de-paul-mccartney-jane-asher-se-niega-a-ver-las-peliculas-de-the-beatles-que-recrearan-su-relacion-con-el-musico/",
-    "image": "https://www.infobae.com/resizer/v2/LAGXJZBJSNCSXGTQNAT55O7DUE.jpg?auth=fa1f2176cdf38404bf91a5b4936e28ad258e53bac692fcf2efaf4650672743f4&smart=true&width=1906&height=1072",
-    "publishedAt": "2026-09-28T23:50:00.000Z"
-  },
-  {
-    "title": "Más allá de la indignación: una responsabilidad como sociedad educadora",
-    "description": "El sistema SíseVe ha recibido denuncias por agresiones físicas, psicológicas y sexuales contra alumnado durante 2025, una cifra que sitúa el episodio del autobús dentro de un problema nacional de mayor alcance",
-    "url": "https://www.infobae.com/peru/2026/09/28/mas-alla-de-la-indignacion-una-responsabilidad-como-sociedad-educadora/",
-    "image": "https://www.infobae.com/resizer/v2/3HXFJ5K5BVE4JG5ZH365R7CPBY.png?auth=2f3e4eaea29bb8e49f7894b929455996e2cb8b4bca22179f35770657f37e2617&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:49:38.000Z"
-  },
-  {
-    "title": "Yanina Latorre opinó de la aparición de Tini Stoessel en el show de Lali Espósito: “En este quilombo la metió el padre”",
-    "description": "La conductora analizó en su programa la primera actuación conjunta entre ambas artistas en el estadio de River Plate",
-    "url": "https://www.infobae.com/teleshow/2026/09/28/yanina-latorre-opino-de-la-aparicion-de-tini-stoessel-en-el-show-de-lali-esposito-en-este-quilombo-la-metio-el-padre/",
-    "image": "https://www.infobae.com/resizer/v2/5KPNQAE23ZDPXBJIKZYRH7UTMI.png?auth=0f0f27877a826ef569d8dbbd7abc0547ce4be62fe54efc226233e602e234fab7&smart=true&width=1280&height=720",
-    "publishedAt": "2026-09-28T23:48:49.000Z"
-  },
-  {
-    "title": "Gala Montes acusa a Paty Cantú y María José de plagiar su canción “La Mala”",
-    "description": "La actriz estalló en redes sociales y reveló la mala relación que tiene actualmente con Paty Cantú y “La Josa”",
-    "url": "https://www.infobae.com/mexico/2026/09/28/gala-montes-acusa-a-paty-cantu-y-maria-jose-de-plagiar-su-cancion-la-mala/",
-    "image": "https://www.infobae.com/resizer/v2/CK6WWJDPARAFDMOVYQWQ3P6OZE.jpg?auth=b0bdf6fb33dd119be93a6b92e5766fcdcfd695f0ebbf8fa46e91b0df06ca35e1&smart=true&width=1200&height=675",
-    "publishedAt": "2026-09-28T23:45:32.000Z"
-  },
-  {
-    "title": "La Suprema Corte tira la “ley Esposa” impulsada por el gobernador de San Luis Potosí",
-    "description": "El Máximo Tribunal resolvió que imponer de forma permanente el género de quien puede competir por una gubernatura restringe el derecho a ser votado",
-    "url": "https://www.infobae.com/mexico/2026/09/28/la-suprema-corte-tira-la-ley-esposa-impulsada-por-el-gobernador-de-san-luis-potosi/",
-    "image": "https://www.infobae.com/resizer/v2/CBZNPSDJB5EI5ONBLZ3DSCBLYU.jpg?auth=e47b8f10c2cbef757a2b1274eb392fef4fd635433612e6e5a7987528606c750c&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:43:23.000Z"
+    "title": "\"Es por el saqueo de nuestros recursos\": Quirno dijo que es la primera vez Argentina va a un tribunal internacional por la explotación en Malvinas",
+    "description": "El canciller brindó precisiones acerca del procedimiento de arbitraje que encarará el Gobierno ante la Convención de las Naciones Unidas sobre el Derecho del Mar. El tribunal únicamente analizará la cuestión de los recursos naturales y no se pronunciará sobre cuestiones de soberanía.",
+    "url": "https://www.clarin.com/politica/saqueo-recursos-quirno-dijo-primera-vez-argentina-va-tribunal-internacional-explotacion-malvinas_0_H66NXeQHuO.html",
+    "image": "https://www.clarin.com/img/2026/09/28/zGxb4SDWt_1200x630__1.jpg",
+    "publishedAt": "2026-09-28T23:43:30.000Z"
   },
   {
     "title": "El homenaje de Kevin Benavides a Lionel Messi antes de su despedida de la Selección Argentina",
@@ -413,13 +826,6 @@
     "publishedAt": "2026-09-28T23:40:57.000Z"
   },
   {
-    "title": "Miguel Uribe Londoño reclamó avances en la investigación por el magnicidio de su hijo: “¿Quién dio la orden?”",
-    "description": "Tras la muerte de alias Robinson en una operación militar, el padre de Miguel Uribe Turbay pidió que la investigación avance sobre los responsables intelectuales, cuestionó actuaciones previas y rechazó acusaciones contra los escoltas del precandidato presidencial",
-    "url": "https://www.infobae.com/colombia/2026/09/28/miguel-uribe-londono-reclamo-avances-en-la-investigacion-por-el-magnicidio-de-su-hijo-quien-dio-la-orden/",
-    "image": "https://www.infobae.com/resizer/v2/NU2VIG5RSBHVLKISLS22WIAVWA.jpg?auth=b0d747fbdd5cb851c9d3b22798f9da1406a5aea25789af8de03db11692adb9c2&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:40:48.000Z"
-  },
-  {
     "title": "Romina Yan, a 16 años de su muerte: el mensaje de Cris Morena y las fotos inéditas que compartió uno de sus hijos",
     "description": "La productora homenajeó a su hija con una frase muy especial; Diego Topa sorprendió con su testimonio y Valentín subió imágenes de la intimidad familiar",
     "url": "https://www.lanacion.com.ar/espectaculos/personajes/romina-yan-a-16-anos-de-su-muerte-el-mensaje-de-cris-morena-y-las-fotos-ineditas-que-compartio-uno-nid28092026/",
@@ -427,18 +833,11 @@
     "publishedAt": "2026-09-28T23:40:34.000Z"
   },
   {
-    "title": "Como Mauro Icardi: las nueve estrellas internacionales que todavía se encuentran sin equipo",
-    "description": "Un grupo de futbolistas con trayectoria en selecciones nacionales y torneos continentales aún no definió su futuro",
-    "url": "https://www.infobae.com/deportes/2026/09/28/como-mauro-icardi-las-nueve-estrellas-internacionales-que-todavia-se-encuentran-sin-equipo/",
-    "image": "https://www.infobae.com/resizer/v2/YVZJEGWWZZEBVG33WBR5A6TFVU.jpg?auth=376e7a263176d4e9a38c57f79fb7f71344acc00ec771eb82ef9a85ba379a9d3c&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:40:16.000Z"
-  },
-  {
-    "title": "Científicos identifican probiótico que ayuda a eliminar tumores causantes de cáncer de colon",
-    "description": "El enfoque de los investigadores es atacar las células malignas sin perjudicar los tejidos sanos cercanos",
-    "url": "https://www.infobae.com/mexico/2026/09/28/cientificos-identifican-probiotico-que-ayuda-a-eliminar-tumores-causantes-de-cancer-de-colon/",
-    "image": "https://www.infobae.com/resizer/v2/OZMM3MI2JZC6ZAJZTJ3QMHTGG4.png?auth=0ae4fb335d267d6dc9f81411b45089772886a160dc0264b3f755e4111ab82ba0&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:39:17.000Z"
+    "title": "El Gobierno oficializó la venta de tres centrales termoeléctricas y proyecta recaudar más de US$ 800 millones",
+    "description": "A través de un decreto firmado por Javier Milei y Luis Caputo, el Ejecutivo habilitó la licitación de las generadoras Manuel Belgrano y José de San Martín, actualmente bajo control de Enarsa.  Leer más",
+    "url": "https://www.perfil.com/noticias/economia/el-gobierno-oficializo-la-venta-de-tres-centrales-termoelectricas-y-proyecta-recaudar-mas-de-us-800-millones.phtml",
+    "image": "https://fotos.perfil.com/2024/10/31/trim/540/304/enarsa-1902411.jpg",
+    "publishedAt": "2026-09-28T23:37:18.000Z"
   },
   {
     "title": "Juan Pablo Vojvoda dejó de ser el técnico de Racing tras la resonante y agónica derrota frente a Boca",
@@ -462,25 +861,11 @@
     "publishedAt": "2026-09-28T23:33:50.000Z"
   },
   {
-    "title": "Etiopía recuperó una ciudad estratégica en el norte del país mientras se extienden los combates con los rebeldes de Tigré",
-    "description": "La captura de Alamata, a 120 kilómetros de la capital regional, Mekele, es el primer revés de los rebeldes desde que estalló la ofensiva la semana pasada. El avance aviva el temor a una nueva guerra en el norte de Etiopía, tras el conflicto de 2020-2022, que dejó cientos de miles de muertos",
-    "url": "https://www.infobae.com/america/mundo/2026/09/28/etiopia-recupero-una-ciudad-estrategica-en-el-norte-del-pais-mientras-se-extienden-los-combates-con-los-rebeldes-de-tigre/",
-    "image": "https://www.infobae.com/resizer/v2/GR7IDMJBUZD2NAR33SHIJ3Q7Z4.jpg?auth=f7c4566d574bea900de415e598dbb1079cd2f018e1561a5acb88d78e8a9828ce&smart=true&width=5568&height=3306",
-    "publishedAt": "2026-09-28T23:31:28.000Z"
-  },
-  {
     "title": "El futuro de la selección: la renovación ya empezó, solo falta la firma de la continuidad de Scaloni",
     "description": "A la espera que se termine de confirmar la extensión del vínculo con la AFA, la formación en la que piensa el DT se basa en los futuros cracks",
     "url": "https://www.lanacion.com.ar/deportes/futbol/el-futuro-de-la-seleccion-la-renovacion-ya-empezo-solo-falta-la-firma-de-la-continuidad-de-scaloni-nid28092026/",
     "image": "https://resizer.glanacion.com/resizer/v2/XTKBIWYHMBCGFP5LBNL3SFRCPA.JPG?auth=6cccb55ad740a2ee880fedbb1eb079f81a7559c754696f5d616b26558248b444&smart=true&width=3560&height=2373",
     "publishedAt": "2026-09-28T23:29:44.000Z"
-  },
-  {
-    "title": "ATP 500 de Pekín: los argentinos ya tienen rivales en el cuadro principal y hay uno luciéndose en la qualy",
-    "description": "Se viene el torneo chino, que contara con varias figuras albicelestes. Antes del inicio del main draw, Marco Trungelliti trata de meterse desde la fase previa y logró un triunfazo en su estreno.",
-    "url": "https://www.ole.com.ar/tenis/atp-500-pekin-argentinos-rivales-cuadro-principal-qualy_0_GTPBIgYExY.html",
-    "image": "https://www.ole.com.ar/images/2026/09/13/r2NbDJ4v-_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T23:29:11.000Z"
   },
   {
     "title": "Aeroparque registra demoras y una cancelación en vuelos con destinos nacionales e internacionales",
@@ -490,13 +875,6 @@
     "publishedAt": "2026-09-28T23:28:08.000Z"
   },
   {
-    "title": "Lijo amplió el levantamiento del secreto fiscal de Manuel Adorni en la causa por enriquecimiento ilícito",
-    "description": "La medida alcanza también a su esposa, Bettina Angeletti, y abarca información tributaria desde que ambos alcanzaron la mayoría de edad. Además, el juez autorizó una prueba para verificar ocho direcciones de bitcoin invocadas por la defensa",
-    "url": "https://www.infobae.com/politica/2026/09/28/lijo-amplio-el-levantamiento-del-secreto-fiscal-de-manuel-adorni-en-la-causa-por-enriquecimiento-ilicito/",
-    "image": "https://www.infobae.com/resizer/v2/LXOIWUARQZHRZEMW6VE32SCIPY?auth=57c9f1e93458b84a5a7e0c5193326a9b908775b3c85f258c824733576a2b4fe5&smart=true&width=1938&height=1090",
-    "publishedAt": "2026-09-28T23:26:50.000Z"
-  },
-  {
     "title": "Lagarde dice que los mayores rendimientos de los bonos frenarán el crecimiento y la inflación",
     "description": "“Aunque el crecimiento se ha mostrado resiliente, desde nuestra última reunión las tasas de interés a largo plazo han aumentado notablemente, lo que desacelerará el crecimiento y reducirá el traslado a los precios más de lo proyectado en nuestro ejercicio de septiembre”, dijo la presidenta del Banco Central Europeo. Leer más",
     "url": "https://www.perfil.com/noticias/bloomberg/bc-lagarde-dice-que-mayores-rendimientos-frenaran-el-crecimiento-y-la-inflacion.phtml",
@@ -504,32 +882,11 @@
     "publishedAt": "2026-09-28T23:26:00.000Z"
   },
   {
-    "title": "Con un gol agónico, Dock Sud ganó en Jáuregui y se ilusiona con entrar al Reducido",
-    "description": "En una tarde donde los arqueros fueron figura, el Docke se llevó tres puntos de oro sobre el final y complicó a Flandria en la lucha por la permanencia en la Primera B.",
-    "url": "https://www.ole.com.ar/futbol-ascenso/docksud-flandria-reducido-primerab-ascenso_0_Zb9x91NrSl.html",
-    "image": "https://www.ole.com.ar/images/2026/09/28/dl8yRwzDK_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T23:24:01.000Z"
-  },
-  {
-    "title": "Jorge Colina: “Para crecer en serio, Argentina necesita llevar la inversión al 25% del PBI”",
-    "description": "El economista de Idesa analizó la caída de la inversión productiva, que representa el 15,1% del PBI, y señaló a la desconfianza, el cepo, las tasas y la presión tributaria como obstáculos para el crecimiento",
-    "url": "https://www.infobae.com/economia/2026/09/28/jorge-colina-para-crecer-en-serio-argentina-necesita-llevar-la-inversion-al-25-del-pbi/",
-    "image": "https://www.infobae.com/resizer/v2/3VZHEZ2WVVFWFNFHBSRXNBSZP4.png?auth=9454343767dca91c22123ed1376c87386eb97079914a4bc4cb298b6d99d6902a&smart=true&width=837&height=543",
-    "publishedAt": "2026-09-28T23:23:58.000Z"
-  },
-  {
     "title": "“Showroom” por Malvinas: un encuentro comercial en Punta Arenas entre isleños y chilenos desafía la postura argentina",
     "description": "Se trata de un foro en el que, además de negocios, se busca establecer un nuevo enlace marítimo entre las islas y la ciudad patagónica trasandina",
     "url": "https://www.lanacion.com.ar/politica/malvinas-un-encuentro-comercial-en-punta-arenas-entre-islenos-y-chilenos-desafia-la-postura-nid28092026/",
     "image": "https://resizer.glanacion.com/resizer/v2/G6D5475GC5AVLNAM5L7PVPB6IY.JPG?auth=afa07d207a868ea438b6beb12098c8c9322e8a8dfbb3b6814061c6b7fa222bd5&smart=true&width=2000&height=1333",
     "publishedAt": "2026-09-28T23:23:42.000Z"
-  },
-  {
-    "title": "“¿Saben quién soy?”: las desafiantes frases de LeBron James en su nueva franquicia y la broma sobre su legado en la NBA",
-    "description": "King James participó del media day con Philadelphia 76ers y remarcó sus aspiraciones en su 24° temporada en la liga más importante de básquet mundial",
-    "url": "https://www.infobae.com/deportes/2026/09/28/saben-quien-soy-las-desafiantes-frases-de-lebron-james-en-su-nueva-franquicia-y-la-broma-sobre-su-legado-en-la-nba/",
-    "image": "https://www.infobae.com/resizer/v2/ERLYCCY6MRA33KQ223RZSXSFDI.jpg?auth=fb0aa7adb233f763c75d3f265c4dd4bb9b78e3e4cefae4f1f52cf09d0a6651db&smart=true&width=5124&height=3409",
-    "publishedAt": "2026-09-28T23:22:50.000Z"
   },
   {
     "title": "Confirman nueva regla del Uscis que complicaría a cubanos con green card en trámite por Ley de Ajuste",
@@ -546,13 +903,6 @@
     "publishedAt": "2026-09-28T23:21:03.000Z"
   },
   {
-    "title": "Boca podrá llevar hinchas visitantes contra Instituto en un partido clave",
-    "description": "El Xeneize visitará Córdoba el viernes 9 de octubre por la fecha 12 del Clausura y estará acompañado por su gente ante un rival directo en las dos tablas.",
-    "url": "https://www.ole.com.ar/boca-juniors/boca-instituto-torneoclausura-ligaprofesional-marioalbertokempes-copaargentina-cordoba-visitantes-xeneize_0_L5T6QBDZq1.html",
-    "image": "https://www.ole.com.ar/images/2026/09/02/fTs7b2xtQ_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T23:20:18.000Z"
-  },
-  {
     "title": "Masivo acampe en Guernica para entregar currículums ante la apertura de un comercio mayorista",
     "description": "Cuadra de fila y cientos de postulantes visibilizan el impacto de la recesión del Conurbano, en medio del desplome del empleo formal.  Leer más",
     "url": "https://www.perfil.com/noticias/economia/masivo-acampe-en-guernica-para-entregar-curriculums-ante-la-apertura-de-un-comercio-mayorista-a50.phtml",
@@ -560,46 +910,11 @@
     "publishedAt": "2026-09-28T23:20:00.000Z"
   },
   {
-    "title": "Nutrición en redes sociales: no todo lo que se viraliza alimenta bien",
-    "description": "Dietas milagro, recomendaciones sin evidencia y experiencias personales convertidas en “verdades” circulan cada día en redes sociales. Aprender a distinguir información confiable es hoy parte esencial del cuidado de nuestra salud",
-    "url": "https://www.infobae.com/peru/2026/09/28/nutricion-en-redes-sociales-no-todo-lo-que-se-viraliza-alimenta-bien/",
-    "image": "https://www.infobae.com/resizer/v2/DSSPNLES2BD7NB5MHEDBWTZ6MI.png?auth=0a9489e233de8d224c7253026376bd5a48529ba706a8ac9adbbcfa8529b8796c&smart=true&width=2752&height=1536",
-    "publishedAt": "2026-09-28T23:19:19.000Z"
-  },
-  {
     "title": "Oscar 2027: La virgen de la tosquera es la representante argentina para los premios de la Academia de Hollywood",
     "description": "El film dirigido por Laura Casabé ya había sido elegido como precandidato para los Goya",
     "url": "https://www.lanacion.com.ar/espectaculos/cine/oscar-2027-la-virgen-de-la-tosquera-es-la-representante-argentina-para-los-premios-de-la-academia-de-nid28092026/",
     "image": "https://resizer.glanacion.com/resizer/v2/F46VXACYORHB5C7ZJNVVWRFFPQ.jpg?auth=107d469f61f74dd7c6b6ced9d37e591ffc570336114e1a3393833bf2dec5230e&smart=true&width=2000&height=1333",
     "publishedAt": "2026-09-28T23:19:16.000Z"
-  },
-  {
-    "title": "El TAS falló por la deuda de Lomónaco y fijó cuánto deberá pagar Independiente",
-    "description": "El tribunal se expidió ante el reclamo del Bragantino contra el Rojo, que tendrá un plazo para abonar si no quiere ser inhibido. Los detalles.",
-    "url": "https://www.ole.com.ar/independiente/independiente-tas-kevinlomonaco-redbullbragantino_0_y8bYVmbiCY.html",
-    "image": "https://www.ole.com.ar/images/2026/09/28/Q5QiC7ZWo_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T23:17:15.000Z"
-  },
-  {
-    "title": "California elimina requisitos para que casi un millón de estudiantes de inglés puedan salir del programa: qué cambia",
-    "description": "Una norma firmada por Gavin Newsom agiliza la reclasificación escolar, acorta las esperas y prevé acompañamiento lingüístico durante cuatro años",
-    "url": "https://www.infobae.com/estados-unidos/2026/09/28/california-elimina-requisitos-para-que-casi-un-millon-de-estudiantes-de-ingles-puedan-salir-del-programa-que-cambia/",
-    "image": "https://www.infobae.com/resizer/v2/YHTDWEGL4VH35L4R6DPGGBC33Q.jpg?auth=f60bc78519b50aaf773290f259452439e869b8a91d80e812766a1b2edeeb1dd6&smart=true&width=5500&height=3668",
-    "publishedAt": "2026-09-28T23:14:39.000Z"
-  },
-  {
-    "title": "Comisión de Constitución recomienda no aprobar pedido de facultades al Gobierno de Keiko Fujimori y enviarlo al archivo, según predictamen",
-    "description": "El documento recomienda la “no aprobación y envío al archivo” de la propuesta presentada por el Gobierno. El debate en la Comisión de Constitución está programado para el 29 y 30 de septiembre",
-    "url": "https://www.infobae.com/peru/2026/09/28/comision-de-constitucion-recomienda-no-aprobar-pedido-de-facultades-del-ejecutivo-y-enviarlo-al-archivo-segun-predictamen/",
-    "image": "https://www.infobae.com/resizer/v2/W2D2OMCUVNDF5JHHAIVT45TWTA.jpg?auth=2419b87103bdfa35b4767b3997ad2da61ebd5200fc69764c5739b354f226c308&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:10:13.000Z"
-  },
-  {
-    "title": "Un empleado robó casi medio millón de pesos de la bóveda de un casino en Hermosillo: así lo capturaron",
-    "description": "Las autoridades en Sonora detuvieron al sospechoso en un cajero automático cercano donde intentaba ingresar casi medio millón en efectivo sustraído de la bóveda del centro de apuestas tras una rápida persecución policial",
-    "url": "https://www.infobae.com/mexico/2026/09/28/un-empleado-robo-casi-medio-millon-de-pesos-de-la-boveda-de-un-casino-en-hermosillo-asi-lo-capturaron/",
-    "image": "https://www.infobae.com/resizer/v2/2RZ2HMP5SNAQPJVQAK7VUSDACM.png?auth=a067ae1d57bbe461e6eebfa073fa43e71e7eeba934b6832d160e738bdb40f180&smart=true&width=2752&height=1536",
-    "publishedAt": "2026-09-28T23:08:18.000Z"
   },
   {
     "title": "Estemos de acuerdo o no con los beneficios del RIGI, los contratos se cumplen",
@@ -616,20 +931,6 @@
     "publishedAt": "2026-09-28T23:05:29.000Z"
   },
   {
-    "title": "NSQK anuncia su primer concierto en el Estadio GNP Seguros: fecha, preventa y boletos para ver ‘MOSCA’",
-    "description": "El cantante y productor de 28 años confirmó el concierto más grande de su carrera con la llegada de su espectáculo MOSCA al Estadio GNP Seguros para 2027",
-    "url": "https://www.infobae.com/mexico/2026/09/28/nsqk-anuncia-su-primer-concierto-en-el-estadio-gnp-seguros-fecha-preventa-y-boletos-para-ver-mosca/",
-    "image": "https://www.infobae.com/resizer/v2/YQNTEF2XWRFN5PGL3DCIHELHHM.jpg?auth=ab3e27b08ee58a6767f0a48cd6c9128b48e48a655322892483594e6adfe9a959&smart=true&width=1920&height=1080",
-    "publishedAt": "2026-09-28T23:03:12.000Z"
-  },
-  {
-    "title": "FIFA abre la billetera: Infantino analiza un millonario reparto entre las federaciones",
-    "description": "La propuesta contempla hasta US$ 10 millones adicionales por asociación. Se analizará en el próximo congreso.",
-    "url": "https://www.ole.com.ar/futbol-internacional/infantino-fondos-fifa-uefa_0_XwHS6EPBKx.html",
-    "image": "https://www.ole.com.ar/images/2026/09/28/DgNFk-ayA_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T23:02:05.000Z"
-  },
-  {
     "title": "Emiliano Gallegos, kinesiólogo, sobre los pelogros al retomar la actividad física: “Muchas veces somos sedentarios que hacen deporte”",
     "description": "El kinesiólogo Emiliano Gallegos destacó en LN+ los cuidados iniciales a tener en cuenta cuando se retoma la actividad física",
     "url": "https://www.lanacion.com.ar/sociedad/emiliano-gallegos-kinesiologo-sobre-los-pelogros-al-retomar-la-actividad-fisica-muchas-veces-somos-nid28092026/",
@@ -642,20 +943,6 @@
     "url": "https://www.perfil.com/noticias/masperfil/exportaciones-argentinas-en-rdeco-commodities-industria-y-los-desafios-del-comercio-exterior.phtml",
     "image": "https://fotos.perfil.com/2026/09/28/trim/540/304/dolares-2335880.jpg",
     "publishedAt": "2026-09-28T22:59:54.000Z"
-  },
-  {
-    "title": "Quién es el influencer santafesino que fue denunciado por cazar aves protegidas en la Laguna Setúbal",
-    "description": "Se trata de Milton Espeche, de 38 años, que es empleado en el Hospital Cullen desde hace más de diez años y no posee carnet habilitante para la caza deportiva. Compartió en redes imágenes de su actividad y una organización ambientalista lo expuso",
-    "url": "https://www.infobae.com/sociedad/2026/09/28/quien-es-el-influencer-santafesino-que-fue-denunciado-por-cazar-aves-protegidas-en-la-laguna-setubal/",
-    "image": "https://www.infobae.com/resizer/v2/A57JV56A4ZAY3CBNXVMDZTBTPA.png?auth=4aad9f153015ed31d2876dac299730dd9df5fc5345060ccee18ab58df3578572&smart=true&width=639&height=359",
-    "publishedAt": "2026-09-28T22:56:47.000Z"
-  },
-  {
-    "title": "Así será la ‘Milagro Week’ del gobierno de Abelardo de la Espriella en Nueva York: presentará 176 proyectos para atraer inversión",
-    "description": "La estrategia del Gobierno apunta a conectar iniciativas de infraestructura, energía, turismo y tecnología con empresarios, fondos e inversionistas internacionales que puedan aportar recursos para su desarrollo",
-    "url": "https://www.infobae.com/colombia/2026/09/28/asi-sera-la-milagro-week-del-gobierno-de-abelardo-de-la-espriella-en-nueva-york-presentara-176-proyectos-para-atraer-inversion/",
-    "image": "https://www.infobae.com/resizer/v2/S62RUK2OKRGNHGDSUT4JRBG3GQ.jpeg?auth=7494476488981507f2af249f0a0cf373becb1d26c67db1b2455a401126ce9643&smart=true&width=1536&height=1024",
-    "publishedAt": "2026-09-28T22:55:57.000Z"
   },
   {
     "title": "Estabilización sin recuperación: en RDEco analizaron por qué la secuencia del programa económico “no se da”",
@@ -742,13 +1029,6 @@
     "publishedAt": "2026-09-28T22:53:00.000Z"
   },
   {
-    "title": "Giacomini: \"El plan de estabilización es tan malo que ni siquiera sirve para bajar la inflación en serio\"",
-    "description": "\"Tener 30 por ciento de inflación anual después de 36 meses casi es un fracaso\", aseguró el analista.\n Leer más",
-    "url": "https://www.perfil.com/noticias/nea/giacomini-el-plan-de-estabilizacion-es-tan-malo-que-ni-siquiera-sirve-para-bajar-la-inflacion-en-serio.phtml",
-    "image": "https://fotos.perfil.com/2026/03/26/trim/540/304/diego-giacomini-2210303.jpg",
-    "publishedAt": "2026-09-28T22:53:00.000Z"
-  },
-  {
     "title": "Amenazas, vejaciones, chantajes y otros métodos crueles de la banda narco que, para la Justicia, integraba Bebote Álvarez",
     "description": "El exjefe de la barra brava de Independiente fue procesado con prisión preventiva por asociación ilícita y tráfico de estupefacientes",
     "url": "https://www.lanacion.com.ar/seguridad/amenazas-vejaciones-chantajes-y-otros-metodos-crueles-de-la-banda-narco-que-para-la-justicia-nid28092026/",
@@ -767,13 +1047,6 @@
     "description": "El entrenador Álvaro Puche planteó una alternativa para poner en práctica a partir de los 60 años orientada a preservar la calidad de vida en esta etapa",
     "url": "https://www.lanacion.com.ar/sociedad/ni-gimnasio-ni-caminata-cual-es-el-ejercicio-de-fuerza-ideal-para-frenar-la-perdida-de-masa-muscular-nid21092026/",
     "image": "https://resizer.glanacion.com/resizer/v2/22RGSDXPDFCLXNJEHGFFT57WSI.webp?auth=ab8843d1c6c741a5a47c0fb39d4a12f7b7d04fe07ab363a1de9c91a66d48a5d3&smart=true&width=1200&height=535",
-    "publishedAt": "2026-09-28T22:52:00.000Z"
-  },
-  {
-    "title": "Encuesta: Milei con 63,6% de rechazo y un escenario de balotaje",
-    "description": "\"Con los números de hoy, no hay ninguno en condiciones de ganar en primera vuelta\", aseguró el analista Gustavo Córdoba.\n Leer más",
-    "url": "https://www.perfil.com/noticias/nea/encuesta-milei-con-636-de-rechazo-y-un-escenario-de-balotaje.phtml",
-    "image": "https://fotos.perfil.com/2026/09/22/trim/540/304/gustavo-cordoba-director-de-zuban-cordoba-estuvo-en-qr-2-2331086.jpg",
     "publishedAt": "2026-09-28T22:52:00.000Z"
   },
   {
@@ -861,123 +1134,11 @@
     "publishedAt": "2026-09-28T22:49:33.000Z"
   },
   {
-    "title": "Elecciones Brasil 2026: qué es el balotaje, cómo y cuándo se define la segunda vuelta presidencial",
-    "description": "Los cargos más importantes del Poder Ejecutivo se definirán en una votación adicional, dado que ninguno de los postulantes obtendría un triunfo en las generales; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-brasil-2026-que-es-el-balotaje-como-y-cuando-se-define-la-segunda-vuelta-presidencial-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/DXHBJBJAXVESJMLWFKRO4BQ3GE.jpg?auth=70a42abb9ebb9a952412bac01261b334e05d3aabcf0d0d8838972f2bf2bd20b6&smart=true&width=960&height=640",
-    "publishedAt": "2026-09-28T22:47:34.000Z"
-  },
-  {
-    "title": "La última encuesta de Quaest: Lula, con 39%, y Flavio Bolsonaro, con 34%, para las elecciones Brasil 2026",
-    "description": "Las mediciones evidencian una diferencia de cinco puntos entre los dos principales postulantes; por qué se amplió la brecha en los últimos días; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/la-ultima-encuesta-de-quaest-lula-con-39-y-flavio-bolsonaro-con-34-para-las-elecciones-brasil-2026-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/TNLDKSSVAVHJLKRISTTCMQ3PRY.JPG?auth=c17bd730e8fe2bec624ab78268934cd51439857d167c2c82921247e1e4f5e8b2&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:47:22.000Z"
-  },
-  {
-    "title": "Todas las listas de las elecciones Brasil 2026: los candidatos a presidente",
-    "description": "Un total de 13 espacios políticos competirán para quedarse con el máximo cargo del Poder Ejecutivo del país más grande de Sudamérica; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/todas-las-listas-de-las-elecciones-brasil-2026-los-candidatos-a-presidente-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/VII7LA4YUJDSNPH26PBKRZGIE4.jpg?auth=bdd67295f942b093869a4154f991262903cb9997dbd3536b764e3c7eccd4da2d&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:47:13.000Z"
-  },
-  {
-    "title": "Cómo votar desde la Argentina para las elecciones de Brasil 2026: todo lo que hay que saber para las presidenciales",
-    "description": "Los residentes en el país deben seguir una serie de pasos antes de participar en los comicios generales; cuáles son las condiciones de la Justicia Electoral brasilera; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/sociedad/como-votar-desde-la-argentina-para-las-elecciones-de-brasil-2026-todo-lo-que-hay-que-saber-para-las-nid27092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/VII7LA4YUJDSNPH26PBKRZGIE4.jpg?auth=bdd67295f942b093869a4154f991262903cb9997dbd3536b764e3c7eccd4da2d&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:47:03.000Z"
-  },
-  {
-    "title": "Qué necesita un candidato a presidente en Brasil para ganar las elecciones en primera vuelta",
-    "description": "Qué porcentaje de los votos le permitiría al postulante más votado convertirse en el próximo mandatario; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/que-necesita-un-candidato-a-presidente-en-brasil-para-ganar-las-elecciones-en-primera-vuelta-nid25092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/IBQ44RROK5AZFKIVJZQ2WOT6MY.png?auth=75dd0b69908622b33761bf001b95a55aaec1493d90e06313d3fbecdf2bdcc4b3&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:46:52.000Z"
-  },
-  {
-    "title": "Elecciones Brasil 2026: quiénes son los candidatos a vicepresidente de Lula y Flávio Bolsonaro",
-    "description": "El 4 de octubre se celebran los comicios en el país vecino; quiénes acompañan en la fórmula a los postulantes con mayor intención de voto; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-brasil-2026-quienes-son-los-candidatos-a-vicepresidente-de-lula-y-flavio-bolsonaro-nid26092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/JBA2DOVKIREBTDCZCUF5WMGMPM.jpg?auth=1b91666bfda1585d5691d6f2a6b4662abe922875eedd72be811da41aedef48bc&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:46:42.000Z"
-  },
-  {
-    "title": "Esteban Lamothe y Débora Nishimoto se casan: la historia de amor que empezó en Envidiosa y tardó ocho meses en nacer",
-    "description": "Se conocieron durante el rodaje de la serie y empezaron a salir cuando faltaban pocos días para terminar las grabaciones; dos años después, confirmaron que darán el sí en una ceremonia íntima",
-    "url": "https://www.lanacion.com.ar/espectaculos/personajes/esteban-lamothe-y-debora-nishimoto-se-casan-la-historia-de-amor-que-empezo-en-envidiosa-y-tardo-ocho-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/IDGYZXSD7FFWRAB7IWYV2ZQW4I.png?auth=0ee8e9c0fe856a342cd7ef3615ddc96e7b505d5dff926ee6ff68abbcf3336a0e&smart=true&width=854&height=603",
-    "publishedAt": "2026-09-28T22:46:27.000Z"
-  },
-  {
-    "title": "Cuándo habría segunda vuelta en las elecciones de Brasil 2026",
-    "description": "Este año, los brasileros eligen a su próximo presidente; en caso de que ningún candidato obtenga más del 50% de los votos, los dos postulantes más votados deberán medirse en balotaje; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/cuando-habria-segunda-vuelta-en-las-elecciones-de-brasil-2026-nid27092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/Q5IW25BB3VDCJLBMOXVK7BNXCE.jpg?auth=4680e286ded4c480512b4db0093b33b2d9c2fcb1d7f464fa507e090e562f11d8&smart=true&width=2048&height=1534",
-    "publishedAt": "2026-09-28T22:46:22.000Z"
-  },
-  {
-    "title": "Voto electrónico de las elecciones en Brasil 2026: cómo funciona el sistema para las presidenciales",
-    "description": "En los comicios se utilizan nuevamente las urnas electrónicas que agilizan la votación y la difusión de resultados; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/voto-electronico-de-las-elecciones-en-brasil-2026-como-funciona-el-sistema-para-las-presidenciales-nid24092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/LHOMZ3C4R5AURBTQLQQVWWKLUY.JPG?auth=ed5a0da5c094d08b24da2b34aad518c4cec96d5a6130053ba9c7dea1fb6c92a6&smart=true&width=2500&height=1667",
-    "publishedAt": "2026-09-28T22:46:12.000Z"
-  },
-  {
-    "title": "Cuándo son las elecciones para presidente de Brasil 2026",
-    "description": "Falta cada vez menos para la votación en el país vecino; en octubre los brasileros eligen al próximo presidente; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/cuando-son-las-elecciones-para-presidente-de-brasil-2026-nid25092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/YFUHGKDXSJEUROZB5XVVP3F5DU.JPG?auth=3ad1fcea233b5b0f10265ccd6194eeebf3366dd483383fee22dae016ee4d4f41&smart=true&width=5427&height=3618",
-    "publishedAt": "2026-09-28T22:46:02.000Z"
-  },
-  {
-    "title": "Encuestas elecciones Brasil 2026: quién gana según los últimos sondeos",
-    "description": "Las preferencias de los votantes indican que no habrá una definición en primera vuelta, dada la paridad entre los postulantes; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/encuestas-elecciones-brasil-2026-quien-gana-segun-los-ultimos-sondeos-nid24092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/6VYYWXBO3BHERCAE4ZYT3WHPEE.JPG?auth=1b23952210f2dacda1b07103c1dc0cbfe4c7c10ae04e379643bececae466805a&smart=true&width=4983&height=3322",
-    "publishedAt": "2026-09-28T22:45:48.000Z"
-  },
-  {
-    "title": "Dónde votar en las elecciones de Brasil 2026 y cómo consultar el lugar de votación en la Argentina",
-    "description": "La inscripción previa en un registro de empadronamiento es requisito elemental para emitir el sufragio; dónde se deben presentar quienes deseen votar para presidente y vice; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/donde-votar-en-las-elecciones-de-brasil-2026-y-como-consultar-el-lugar-de-votacion-en-la-argentina-nid24092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/LHOMZ3C4R5AURBTQLQQVWWKLUY.JPG?auth=ed5a0da5c094d08b24da2b34aad518c4cec96d5a6130053ba9c7dea1fb6c92a6&smart=true&width=2500&height=1667",
-    "publishedAt": "2026-09-28T22:45:33.000Z"
-  },
-  {
-    "title": "Cómo funciona el sistema electoral de Brasil y cuándo habría segunda vuelta",
-    "description": "Se utiliza un sistema informatizado, dada la densidad poblacional del país; cuándo se celebrará el balotaje; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/como-funciona-el-sistema-electoral-de-brasil-y-cuando-habria-segunda-vuelta-nid23092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/KGUV4IZYVJASLCOH5O52HMOQB4.JPG?auth=2fe127e7e2aeb6e0666a3ef200f84c0d5667a4c5d9a1f9f0360697c2ca12f77b&smart=true&width=5008&height=3339",
-    "publishedAt": "2026-09-28T22:45:16.000Z"
-  },
-  {
-    "title": "Elecciones en Brasil 2026: fecha, candidatos y todo lo que hay que saber",
-    "description": "El primer fin de semana de octubre se celebran las elecciones generales para definir al próximo presidente; qué otros cargos se votan; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-en-brasil-2026-fecha-candidatos-y-todo-lo-que-hay-que-saber-nid22092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/LFPMC7LXYJHF7A2BMHUJAZKN3A.JPG?auth=cd3f8c8d2e8a00d7d5b7ee2b519706d2bfc34050a351b598f0df49d393214f49&smart=true&width=4000&height=2667",
-    "publishedAt": "2026-09-28T22:45:03.000Z"
-  },
-  {
     "title": "Microsoft cambia el rumbo de Copilot y se enfoca en el trabajo",
     "description": "El nuevo Copilot, que comenzará a implementarse en las próximas semanas, pone fin a una de las mayores apuestas de Microsoft en la era de la IA. Leer más",
     "url": "https://www.perfil.com/noticias/bloomberg/bc-microsoft-cambia-el-rumbo-de-copilot-y-se-enfoca-en-el-trabajo.phtml",
     "image": "https://fotos.perfil.com/2025/04/03/trim/540/304/BC-microsoft-suspende-proyectos-de-centros-de-datos-alrededor-del-mundo-wM.jpg",
     "publishedAt": "2026-09-28T22:45:00.000Z"
-  },
-  {
-    "title": "Quiénes son los candidatos a presidente de Brasil en las elecciones 2026",
-    "description": "Se presentan 13 referentes de los espacios políticos que compiten para ocupar el máximo cargo del Ejecutivo; descubrí los detalles",
-    "url": "https://www.lanacion.com.ar/el-mundo/quienes-son-los-candidatos-a-presidente-de-brasil-en-las-elecciones-2026-nid22092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/6YURMAO7OBEP5MV2JNAU4EI6KU.JPG?auth=c347686401a4359bc0a4f914be35421dbc849655b315186e89c9aa3e694b745b&smart=true&width=2000&height=1506",
-    "publishedAt": "2026-09-28T22:44:49.000Z"
-  },
-  {
-    "title": "Dónde voto para Brasil 2026 en la Argentina: consultá cómo se puede votar para el domingo 4 de octubre",
-    "description": "Los residentes en el país debían anotarse en un registro de empadronamiento para emitir el sufragio; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/donde-voto-para-brasil-2026-en-la-argentina-consulta-como-se-puede-votar-para-el-domingo-4-de-nid22092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/VII7LA4YUJDSNPH26PBKRZGIE4.jpg?auth=bdd67295f942b093869a4154f991262903cb9997dbd3536b764e3c7eccd4da2d&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:44:25.000Z"
   },
   {
     "title": "“No va a ocurrir una expansión pyme si el Estado no acompaña”: en RDEco analizaron el rol del Gobierno en el desarrollo productivo",
@@ -987,60 +1148,11 @@
     "publishedAt": "2026-09-28T22:44:09.000Z"
   },
   {
-    "title": "Calendario de elecciones Brasil 2026: cuándo se votan primera vuelta y balotaje",
-    "description": "Los ciudadanos brasileros asistirán a la cita democrática en el mes de octubre; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/calendario-de-elecciones-brasil-2026-cuando-se-votan-primera-vuelta-y-balotaje-nid21092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/YAAYP7Q7UVH53P6LJHXRRQBZEI.JPG?auth=2b993d2bb6d313420aa9d9b8a83f12f92a68238aa703fd3dd565dd098fd34459&smart=true&width=6274&height=4214",
-    "publishedAt": "2026-09-28T22:42:51.000Z"
-  },
-  {
-    "title": "Elecciones en Brasil 2026: la fecha de cuándo se vota al próximo presidente",
-    "description": "En el mes de octubre, los ciudadanos brasileños asistirán a las urnas para elegir a quien ocupará el máximo cargo ejecutivo del país; descubrí los detalles",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-en-brasil-2026-la-fecha-de-cuando-se-vota-al-proximo-presidente-nid17092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/IAC36NWRUVDDDFHKEXCDPSDHZM.JPG?auth=b24d5d9e04a4b034091ae2082fe87af0d1276965f365a39fb5dbedeacfbf4e4c&smart=true&width=5184&height=3456",
-    "publishedAt": "2026-09-28T22:42:40.000Z"
-  },
-  {
-    "title": "Ley de semillas: pese al acercamiento y tras la falta de acuerdo, el Gobierno decidirá quiénes pagarán por el uso propio",
-    "description": "Los productores plantean que el pago en soja, trigo y arroz alcance al 30% del universo, que concentra el 82,72% de la superficie; los semilleros buscan llevarlo al 60%, que reúne el 95,44%; la diferencia involucra a 16.818 productores",
-    "url": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-pese-al-acercamiento-y-tras-la-falta-de-acuerdo-el-gobierno-decidira-quienes-pagaran-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/VTXG5OVFAZA5PGW2YOHER733E4.jpg?auth=4d6c19365483f599f8dd2483ea1781a787060de8ad99d6e08da30021c2dddc19&smart=true&width=8192&height=5464",
-    "publishedAt": "2026-09-28T22:42:40.000Z"
-  },
-  {
-    "title": "Cómo votar desde la Argentina para las elecciones de Brasil 2026",
-    "description": "Los residentes en el país pueden emitir su voto siguiendo una serie de pasos y así participar en los comicios generales; cuáles son las condiciones de la Justicia Electoral; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/sociedad/como-votar-desde-la-argentina-para-las-elecciones-de-brasil-2026-nid08092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/LHOMZ3C4R5AURBTQLQQVWWKLUY.JPG?auth=ed5a0da5c094d08b24da2b34aad518c4cec96d5a6130053ba9c7dea1fb6c92a6&smart=true&width=2500&height=1667",
-    "publishedAt": "2026-09-28T22:42:19.000Z"
-  },
-  {
-    "title": "Elecciones en Brasil 2026: quiénes son los candidatos a presidente",
-    "description": "Se presentan trece espacios políticos para ocupar el máximo cargo del Poder Ejecutivo; cuáles son los políticos que compiten y qué dicen las encuestas más recientes; descubrí los detalles",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-en-brasil-2026-quienes-son-los-candidatos-a-presidente-nid03092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/KGUV4IZYVJASLCOH5O52HMOQB4.JPG?auth=2fe127e7e2aeb6e0666a3ef200f84c0d5667a4c5d9a1f9f0360697c2ca12f77b&smart=true&width=5008&height=3339",
-    "publishedAt": "2026-09-28T22:42:07.000Z"
-  },
-  {
-    "title": "Elecciones: cuándo se vota para presidente en Brasil 2026",
-    "description": "Los ciudadanos habilitados para votar elegirán a las máximas autoridades del país vecino; los detalles en la nota",
-    "url": "https://www.lanacion.com.ar/el-mundo/elecciones-cuando-se-vota-para-presidente-en-brasil-2026-nid05082026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/YAAYP7Q7UVH53P6LJHXRRQBZEI.JPG?auth=2b993d2bb6d313420aa9d9b8a83f12f92a68238aa703fd3dd565dd098fd34459&smart=true&width=6274&height=4214",
-    "publishedAt": "2026-09-28T22:41:39.000Z"
-  },
-  {
     "title": "El consumo de los hogares cayó 1,1% interanual en agosto, según la CAC",
     "description": "Transporte y vehículos fue el rubro que más lastró el índice de la Cámara Argentina de Comercio, debido a la baja en el número de patentamientos. Leer más",
     "url": "https://www.perfil.com/noticias/economia/el-consumo-de-los-hogares-cayo-11-interanual-en-agosto-segun-la-cac.phtml",
     "image": "https://fotos.perfil.com/2026/09/07/trim/540/304/concesionario-2320350.jpg",
     "publishedAt": "2026-09-28T22:39:38.000Z"
-  },
-  {
-    "title": "El juez Lijo aceptó reconstruir el patrimonio de Adorni desde 1998 y verificar sus billeteras virtuales",
-    "description": "El magistrado le dio curso a un requerimiento del fiscal Pollicita; amplió 14 años la investigación porque el exfuncionario dice que fue a fines de los ’90 cuando comenzó a generar el capital con el que compró las criptomonedas",
-    "url": "https://www.lanacion.com.ar/politica/el-fiscal-pollicita-pidio-reconstruir-el-patrimonio-de-adorni-desde-1998-y-verificar-sus-billeteras-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/TTXERS2J5FGILPQWDRKXN3IPXM.png?auth=a5e7bb128a6043f78553129d4b6f00bb23f86a234d5904167a92a8906b92c8e7&smart=true&width=1360&height=910",
-    "publishedAt": "2026-09-28T22:37:32.000Z"
   },
   {
     "title": "La industria volvió a caer en agosto y acumuló una caída del 3% en 2026 según la UIA",
@@ -1050,25 +1162,11 @@
     "publishedAt": "2026-09-28T22:35:06.000Z"
   },
   {
-    "title": "Crecida extraordinaria: familias aisladas, destrozos y animales en riesgo en la zona andina tras las abundantes lluvias",
-    "description": "La confluencia de las cuencas de los ríos Foyel, Manso, Villegas y Escondido saturó los valles; hay campos y caminos inundados",
-    "url": "https://www.lanacion.com.ar/sociedad/crecida-extraordinaria-familias-aisladas-destrozos-y-animales-en-riesgo-en-la-zona-andina-tras-las-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/4ILZ6JH7F5GCTKBJFLIPK2H7SA.jpg?auth=47c5eaee4a9c59b9b5f7061b79e18368f2b21a8aa3077045ce4cc85df7413a6a&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:30:25.000Z"
-  },
-  {
     "title": "Investigadora del CONICET, sobre El Niño: “Las lluvias abundantes superarán la capacidad de absorción de la Tierra”",
     "description": "Según señala un informe de la Universidad de Buenos Aires (UBA) compartido a PERFIL, cuatro de las diez primaveras más frías se dieron bajo este fenómeno. Leer más",
     "url": "https://www.perfil.com/noticias/ciencia/investigadora-del-conicet-matilda-rusticucci-sobre-el-nino-a50-las-lluvias-abundantes-superaran-la-capacidad-de-absorcion-de-la-tierra.phtml",
     "image": "https://fotos.perfil.com/2026/09/28/trim/540/304/investigadora-del-conicet-matilde-rusticucci-sobre-el-nino-2335705.jpg",
     "publishedAt": "2026-09-28T22:30:00.000Z"
-  },
-  {
-    "title": "Confirmado por el Uscis: podrían revocar la nacionalidad americana a inmigrantes naturalizados",
-    "description": "Confirmado por el Uscis: inmigrantes naturalizados podrían perder la ciudadanía estadounidense bajo nuevos criterios de desnaturalización. Qué casos investiga la agencia y quiénes podrían verse afectados",
-    "url": "https://www.lanacion.com.ar/estados-unidos/migraciones/confirmado-por-el-uscis-podrian-revocar-la-nacionalidad-americana-a-inmigrantes-naturalizados-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/CJZUMTXKW5FB5LTZZW77CWRP4Y.jpg?auth=baf86d05d5718b497c9e8f14f97540f92197cc9cf2430f842c7c02c527273cba&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:29:00.000Z"
   },
   {
     "title": "Citi suma bancos para OPI de Banamex por US$ 3.000 millones",
@@ -1106,13 +1204,6 @@
     "publishedAt": "2026-09-28T22:15:30.000Z"
   },
   {
-    "title": "Redadas del ICE: denuncian que agentes acecharon una casa y cortaron la luz para detener a un inmigrante",
-    "description": "Conoce la denuncia sobre una redada del ICE en Florida: una mujer embarazada afirmó que agentes cortaron la luz y rompieron una ventana.",
-    "url": "https://www.lanacion.com.ar/estados-unidos/florida/redadas-del-ice-denuncian-que-agentes-acecharon-una-casa-y-cortaron-la-luz-para-detener-a-un-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/6DS33TPCYZFEFBFL3HATRLYRFY.jpg?auth=b30cf77f6613f32f99208ffd06db4085be133006aa699cdc728cb5d5cd80d2fa&smart=true&width=2002&height=1333",
-    "publishedAt": "2026-09-28T22:15:00.000Z"
-  },
-  {
     "title": "La letra pequeña del amor",
     "description": "“Se supone que cuando alguien nos lastima debemos borrarlo, superarlo, dar vuelta la página”, dice la autora. Pero el amor sigue viviendo en silencio. “soltar, cerrar ciclos, sacar de nuestra vida a quien no nos hace bien”, enumera. ¿Es necesario? Leer más",
     "url": "https://www.perfil.com/noticias/opinion/la-letra-pequena-del-amor.phtml",
@@ -1125,13 +1216,6 @@
     "url": "https://www.perfil.com/noticias/politica/sin-paso-peronismo-debate-como-definir-candidato-pas-voto-digital-internas-regionales-acuerdo-unidad.phtml",
     "image": "https://fotos.perfil.com/2026/04/29/trim/540/304/peronismo-2230331.jpg",
     "publishedAt": "2026-09-28T22:11:50.000Z"
-  },
-  {
-    "title": "Diseñadores favoritos, tendencias y outfits de cabecera: Nicole Neumann comparte sus secretos de estilo",
-    "description": "Referente de la moda argentina, cuenta cómo logró mantener una identidad única durante más de tres décadas",
-    "url": "https://www.lanacion.com.ar/sabado/disenadores-favoritos-tendencias-atemporales-y-sus-outfits-de-cabecera-nicole-neumann-comparte-sus-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/CB4YAE7N5FH7HC45MAQOBCU5OA.jpg?auth=94aab77c4273f906ef146b7980fa9b77c50b1e81ec4ea2e7d0cd5ae609eb4855&smart=true&width=2416&height=3222",
-    "publishedAt": "2026-09-28T22:05:59.000Z"
   },
   {
     "title": "El “Plan 150 intendencias”: la estrategia de Macri para preservar al PRO frente a Milei",
@@ -1155,39 +1239,11 @@
     "publishedAt": "2026-09-28T22:01:13.000Z"
   },
   {
-    "title": "Vonda Wright, experta en longevidad: “Me concentro en consumir 130 gramos de proteína al día para poder desarrollar los músculos que necesito”",
-    "description": "La doctora estadounidense dio varios tips acerca de cómo alimentarse y así llegar en óptimas condiciones a la tercera edad",
-    "url": "https://www.lanacion.com.ar/lifestyle/vonda-wright-experta-en-longevidad-me-concentro-en-consumir-130-gramos-de-proteina-al-dia-para-poder-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/LRJ4KDVV7RGXHGU2NEWLWKYABY.jpg?auth=8aaf68684a93193e5f81eaa0b834e790d2f201754add0ef6a69aa0c8dc04bcee&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T22:00:00.000Z"
-  },
-  {
-    "title": "Hígado graso: cuál es la dieta en auge para tratarlo, según expertos",
-    "description": "Aceite de oliva, pescado, frutos secos, frutas, verduras y legumbres aparecen entre los alimentos más recomendados para cuidar la salud hepática; en el otro extremo se encuentran algunos productos ricos en azúcares añadidos y endulzantes industriales.",
-    "url": "https://www.lanacion.com.ar/sociedad/higado-graso-cual-es-la-dieta-en-auge-para-tratarlo-segun-expertos-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/KHSE5FETGBHX5KGEMFPVAYYHHY.png?auth=cada4f471d7f449f16a1a0ea16fd1d2f371163d497e9d8494aea403735b1b61f&smart=true&width=1536&height=1024",
-    "publishedAt": "2026-09-28T22:00:00.000Z"
-  },
-  {
     "title": "Piden detener a Diego Spagnuolo por sobreprecios del 4200% y compras infladas por $425 millones en la ANDIS",
     "description": "El abogado Gregorio Dalbón le solicitó al juez Ariel Lijo la captura del extitular de la ANDIS por riesgo de fuga y entorpecimiento de la causa.  Leer más",
     "url": "https://www.perfil.com/noticias/judiciales/piden-detener-a-diego-spagnuolo-por-sobreprecios-del-4200-y-compras-infladas-por-425-millones-en-la-andis.phtml",
     "image": "https://fotos.perfil.com/2026/06/02/trim/540/304/diego-spagnuolo-2252291.jpg",
     "publishedAt": "2026-09-28T22:00:00.000Z"
-  },
-  {
-    "title": "Murió Benjamin Satterley, reconocida figura de la lucha libre, a los 40 años: compitió horas antes de su fallecimiento",
-    "description": "La noticia fue anunciada el domingo por All Elite Wrestling (AEW), la compañía para la que competía desde 2019; hasta el momento, se desconoce las causas o circunstancias en las que se produjo su deceso repentino",
-    "url": "https://www.lanacion.com.ar/espectaculos/murio-benjamin-satterley-reconocida-figura-de-la-lucha-libre-a-los-40-anos-compitio-horas-antes-de-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/OO27BTVVUFDX5OKCZGCW5UTBYY.jpg?auth=333ebbc5c7d5e77f0ef88b37b18c31df9a4b273a6c8dd0609e63e675f1a8be39&smart=true&width=1043&height=696",
-    "publishedAt": "2026-09-28T21:59:44.000Z"
-  },
-  {
-    "title": "“Nunca renuncies a tus sueños”: un candidato a la presidencia de Brasil es un autor best seller de autoayuda",
-    "description": "El psiquiatra y empresario Augusto Cury representa al partido Avante, que ya figura tercero en las encuestas",
-    "url": "https://www.lanacion.com.ar/cultura/nunca-renuncies-a-tus-suenos-un-candidato-a-la-presidencia-de-brasil-es-un-autor-best-seller-de-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/UIRYAEQXPRBC5FY36WS6VPDCNE.jpg?auth=2b6961f81d2fd8d046f88480804ce216f1a2c17b6249f3f6f6b650bfcae4ee35&smart=true&width=1280&height=854",
-    "publishedAt": "2026-09-28T21:58:48.000Z"
   },
   {
     "title": "La industria moderó la caída en agosto tras el rebote de un sector clave",
@@ -1197,46 +1253,11 @@
     "publishedAt": "2026-09-28T21:57:24.000Z"
   },
   {
-    "title": "Pronóstico del tiempo: alerta por lluvias y viento en los próximos días en Buenos Aires",
-    "description": "El SMN anticipó precipitaciones y tormentas para el comienzo de la semana, con ráfagas que podrían acercarse a los 60 km/h; cuándo mejoran las condiciones y cómo seguirá la temperatura",
-    "url": "https://www.lanacion.com.ar/sociedad/pronostico-del-tiempo-alerta-por-lluvias-y-viento-en-los-proximos-dias-en-buenos-aires-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/6JDGSK63GBAXHC6FY2TOPPEZ24.png?auth=9faf01fb13a58094d95ce8afe48c0399fa3fefebe48fa0b9d35d397929b9691b&smart=true&width=1536&height=1024",
-    "publishedAt": "2026-09-28T21:56:00.000Z"
-  },
-  {
-    "title": "Arthur Brooks, experto en felicidad de Harvard: “Las personas que son felices y saludables cuando son mayores tienen un matrimonio sólido o amistades cercanas”",
-    "description": "El investigador identificó siete hábitos, físicos y psicológicos, que comparten las personas que llegan a edades avanzadas con salud y bienestar",
-    "url": "https://www.lanacion.com.ar/sociedad/arthur-brooks-experto-en-felicidad-de-harvard-las-personas-que-son-felices-y-saludables-cuando-son-nid28092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/64NJPAAPXZAF5HLW4OIXV46ZDE.png?auth=10a76004c18563488fcc2dcc266f9a415995bca736fa0149b1741cd715862352&smart=true&width=461&height=285",
-    "publishedAt": "2026-09-28T21:55:00.000Z"
-  },
-  {
-    "title": "Pilar Sordo, psicóloga: “El tiempo real no tiene que ver con el tiempo emocional; en un segundo puede pasarte algo que modifique tu historia”",
-    "description": "En una entrevista con LA NACION, Pilar Sordo analizó la transformación de la conducta humana frente a las experiencias de vida y la importancia del discurso interno",
-    "url": "https://www.lanacion.com.ar/sociedad/pilar-sordo-psicologa-el-tiempo-real-no-tiene-que-ver-con-el-tiempo-emocional-en-un-segundo-puede-nid27092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/WECESXSGLVGEFMJ6KA7BE2W4QQ.png?auth=90b31148a187dd893c9b762b33c8079f28f3330240d736009d7c0304e9f6e2e2&smart=true&width=1375&height=774",
-    "publishedAt": "2026-09-28T21:54:00.000Z"
-  },
-  {
-    "title": "Estanislao Bachrach, sobre aprender a gestionar la frustración: “El camino del descubrimiento no llega solo, uno tiene que proponérselo”",
-    "description": "En diálogo con LA NACION, el doctor en biología molecular, reflexionó sobre su desarrollo personal y los desafíos actuales que plantea la crianza de los adolescentes para lidiar con momentos displacenteros de la vida",
-    "url": "https://www.lanacion.com.ar/sociedad/estanislao-bachrach-sobre-aprender-a-gestionar-la-frustracion-el-camino-del-descubrimiento-no-llega-nid26092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/3E4JVA7C3FDLTICUPISU3DVYIM.png?auth=438a341c7b95e4c1edfa7770185ab420e7eebf9031aef486b417ecad9c1d9619&smart=true&width=1339&height=822",
-    "publishedAt": "2026-09-28T21:53:00.000Z"
-  },
-  {
     "title": "“Juegan a las escondidas”: el enojo de Bullrich con la Rosada por la reforma electoral",
     "description": "La jefa del bloque libertario en el Senado cuestiona que la mesa política no la consulte sobre las negociaciones con los gobernadores. El malestar se profundizó tras los cambios en Discapacidad y el debate por las PASO. Leer más",
     "url": "https://www.perfil.com/noticias/politica/juegan-a-las-escondidas-el-enojo-de-bullrich-con-la-rosada-por-la-reforma-electoral.phtml",
     "image": "https://fotos.perfil.com/2026/09/18/trim/540/304/patricia-bullrich-2328893.jpg",
     "publishedAt": "2026-09-28T21:51:38.000Z"
-  },
-  {
-    "title": "Mel Robbins: “Tenés que aprender a amar a tus padres por quienes son, no por quienes deseás que sean”",
-    "description": "La especialista advirtió sobre la intención de muchos hijos de modificar a los progenitores; sugiere que la aceptación es el camino hacia vínculos más sanos",
-    "url": "https://www.lanacion.com.ar/sociedad/mel-robbins-tenes-que-aprender-a-amar-a-tus-padres-por-quienes-son-no-por-quienes-deseas-que-sean-nid23092026/",
-    "image": "https://resizer.glanacion.com/resizer/v2/FQX2JENVUZEAJJZSKCASXPKWDE.jpeg?auth=56fedbd3f7e8bca2bc127d3e206903d4271791207fcf450c73237fb5350d5a6a&smart=true&width=2000&height=1333",
-    "publishedAt": "2026-09-28T21:51:00.000Z"
   },
   {
     "title": "Máximo Kirchner volvió a poner a Cristina en carrera para 2027: “Tiene la voluntad”",
@@ -1386,43 +1407,8 @@
     "publishedAt": "2026-09-28T20:43:00.000Z"
   },
   {
-    "title": "RDC: con la crisis de vivienda en España “los precios se están elevando y las condiciones son cada vez más difíciles”",
-    "description": "En base a la explicación del periodista, Marcelo Molina, en Ronda de Corresponsales (RDC), “se calcula que el déficit de vivienda en España es de 900.000”. Leer más",
-    "url": "https://www.perfil.com/noticias/masperfil/rdc-con-la-crisis-de-vivienda-en-espana-los-precios-se-estan-elevando-y-las-condiciones-son-cada-vez-mas-dificiles.phtml",
-    "image": "https://fotos.perfil.com/2026/09/28/trim/540/304/vivienda-2335780.jpg",
-    "publishedAt": "2026-09-28T20:32:13.000Z"
-  },
-  {
-    "title": "El Gobierno intimó al Reino Unido a frenar la explotación petrolera y advirtió que acudirá al Tribunal del Mar de la ONU",
-    "description": "Argentina dio al Reino Unido dos semanas para frenar las actividades vinculadas al proyecto Sea Lion y denunció operaciones de Thales UK Limited entre Malvinas y Punta Arenas sin autorización. Si no hay respuesta, recurrirá al Tribunal del Mar.\n Leer más",
-    "url": "https://www.perfil.com/noticias/politica/el-gobierno-intimo-al-reino-unido-a-frenar-la-explotacion-petrolera-y-advirtio-que-acudira-al-tribunal-del-mar.phtml",
-    "image": "https://fotos.perfil.com/2026/09/04/trim/540/304/sea-lion-2318910.jpg",
-    "publishedAt": "2026-09-28T20:26:00.000Z"
-  },
-  {
-    "title": "Exastronauta de Artemis II, Victor Glover sobre la disputa espacial con China: “Estados Unidos será el primero que aterrice en la Luna”",
-    "description": "La misión tripulada Artemis II, que envió a cuatro astronautas a bordear la Luna a bordo de la cápsula Orion, funcionó como la prueba de fuego operativa definitiva para los sistemas de soporte vital y navegación profunda de la NASA. Leer más",
-    "url": "https://www.perfil.com/noticias/ciencia/ex-astronauta-de-artemis-ii-victor-glover-sobre-la-disputa-espacial-con-china-estados-unidos-sera-el-primero-que-aterrice-en-la-luna.phtml",
-    "image": "https://fotos.perfil.com/2026/09/28/trim/540/304/ex-astronauta-de-artemis-ii-victor-glover-2335618.jpg",
-    "publishedAt": "2026-09-28T20:24:00.000Z"
-  },
-  {
-    "title": "Juicio a Oscar González: las víctimas pidieron justicia y aseguraron que “si nunca hubiera existido, nuestra mamá seguiría viva”",
-    "description": "Las hijas de Alejandra Bengoa y Alexa Miranda dieron sus últimas palabras ante el tribunal antes del veredicto. Las tres víctimas reclamaron justicia y cuestionaron el accionar de Oscar González durante el juicio por el siniestro. Leer más",
-    "url": "https://www.perfil.com/noticias/cordoba/vivo-comienzan-los-alegatos-por-el-choque-de-altas-cumbres-la-defensa-asegura-que-no-va-a-haber-condena.phtml",
-    "image": "https://fotos.perfil.com/2026/08/12/trim/540/304/auto-siniestrado-de-oscar-gonzalez-2303445.jpg",
-    "publishedAt": "2026-09-28T20:20:00.000Z"
-  },
-  {
-    "title": "Dólar blue hoy: apuntala su tendencia alcista este lunes 28 de septiembre y cerró en $1.565",
-    "description": "La divisa norteamericana cotiza al alza, presentando una suba $5 en el marco de la primer rueda cambiaria de la semana. Leer más",
-    "url": "https://www.perfil.com/noticias/economia/a-cuanto-cotiza-el-dolar-blue-hoy-lunes-28-de-septiembre.phtml",
-    "image": "https://fotos.perfil.com/2026/09/23/trim/540/304/dolares-2332749.jpg",
-    "publishedAt": "2026-09-28T20:16:00.000Z"
-  },
-  {
-    "title": "\"Es un pollerudo\": Osvaldo Jaldo criticó a Manzur por su visita a Cristina Kirchner",
-    "description": "El gobernador tucumano consideró que el encuentro refleja la \"debilidad política\" de su ex aliado de cara a las elecciones de 2027.El actual senador nacional visitó a la expresidente en su departamento de San José 1111, donde cumple prisión domiciliaria.El trasfondo de la ruptura peronista en Tucumán.",
+    "title": "\"Es un pollerudo\": Osvaldo Jaldo criticó a Juan Manzur por su visita a Cristina Kirchner en San José 1111",
+    "description": "El gobernador de Tucumán consideró que el encuentro refleja la \"debilidad política\" de su ex aliado de cara a las elecciones de 2027.El actual senador nacional visitó a la expresidente en el departamento donde cumple prisión domiciliaria.El trasfondo de la ruptura en el peronismo tucumano.",
     "url": "https://www.clarin.com/politica/pollerudo-osvaldo-jaldo-critico-manzur-visita-cristina-kirchner_0_AcwYabUeYC.html",
     "image": "https://www.clarin.com/img/2025/08/19/pqFUtLEk8_1200x630__1.jpg",
     "publishedAt": "2026-09-28T20:08:35.000Z"
@@ -1694,13 +1680,6 @@
     "publishedAt": "2026-09-28T14:31:07.000Z"
   },
   {
-    "title": "Con dudas sobre las explicaciones de Adorni, el fiscal pidió abrir sus billeteras cripto para peritarlas",
-    "description": "En la fiscalía de Gerardo Pollicita no conformaron los argumentos con los que el exjefe de Gabinete quiso justificar su meteórico ascenso económico.Antes de tomar una decisión al respecto, requirió más detalles.",
-    "url": "https://www.clarin.com/politica/dudas-explicaciones-adorni-fiscal-pidio-medidas-patrimoniales_0_swRRkdX5ym.html",
-    "image": "https://www.clarin.com/img/2026/07/04/AuJ00huk8_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T14:30:38.000Z"
-  },
-  {
     "title": "Milei apuesta a blindar el programa económico y crece el debate sobre los estímulos para evitar la recesión",
     "description": "Milei apuesta a blindar el programa económico y crece el debate sobre los estímulos para evitar la recesión",
     "url": "https://www.cronista.com/economia-politica/milei-apuesta-a-blindar-el-programa-economico-y-crece-el-debate-sobre-los-estimulos-para-evitar-la-recesion/",
@@ -1806,13 +1785,6 @@
     "publishedAt": "2026-09-28T11:04:56.000Z"
   },
   {
-    "title": "Milei, EN VIVO: \"Las Malvinas se defienden con hechos, no palabras\", dijo el Presidente tras una nueva batería de medidas",
-    "description": "El mandatario dijo que si en dos semanas el Reino Unido no frena la explotación ilegítima en las islas, el Gobierno acudirá al Tribunal Internacional del Derecho del Mar.",
-    "url": "https://www.clarin.com/politica/javier-milei-medidas-vivo-presidente-dijo-relacion-patricia-bullrich-excelente-evito-hablar-formula-conjunta-2027_0_QYepQK40bC.html",
-    "image": "https://www.clarin.com/img/2026/09/28/31KYf9z8L_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T10:57:19.000Z"
-  },
-  {
     "title": "Súper Niño 2026 en Argentina, EN VIVO: alerta por fuertes lluvias y granizo, minuto a minuto",
     "description": "El Servicio Meteorológico Nacional ya anticipó que el fenómeno alcanzará en el país una intensidad \"fuerte o muy fuerte\". Hay riesgo alto de graves inundaciones. Fuerte granizada en Córdoba y alerta por tormentas.",
     "url": "https://www.clarin.com/sociedad/super-nino-2026-argentina-vivo-llegara-punto-maximo-provincias-esperan-fuertes-lluvias_0_vQIBNkAOyx.html",
@@ -1839,20 +1811,6 @@
     "url": "https://www.cronista.com/economia-politica/entre-la-recesion-y-el-superavit-la-disyuntiva-que-enfrenta-el-gobierno-ante-el-estancamiento-de-la-actividad/",
     "image": "https://www.cronista.com/resizer/v2/PIBS7PQ2JNDWTNIOUU4VSSWFIQ.jpg?auth=0eecf2cc041a18c4563400144a1ac9512a229e64b2dbeb7fca9cf0afd5139d1a&smart=true&width=880&height=495",
     "publishedAt": "2026-09-28T09:49:17.000Z"
-  },
-  {
-    "title": "Arrancan las indagatorias a los acusados por el Vacunatorio VIP del gobierno de Alberto Fernández",
-    "description": "Desde el 2 de octubre omenzarán a declarar ante la jueza María Eugenia Capuchetti las personas convocadas a indagatoria por el caso del Vacunatorio VIP durante la pandemia de coronavirus.Entre ellas figuran el expresidente Eduardo Duhalde, el diputado Eduardo Valdés, el excanciller Jorge Taiana y el periodista K Horacio Verbitsky.",
-    "url": "https://www.clarin.com/politica/arrancan-indagatorias-acusados-vacunatorio-vip-gobierno-alberto-fernandez_0_hI4aEosj0E.html",
-    "image": "https://www.clarin.com/img/2024/01/11/JzFj38nrt_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T09:00:41.000Z"
-  },
-  {
-    "title": "PAS, interna partidaria o voto por celular: las alternativas que evalúa el peronismo por si el Gobierno baja las PASO",
-    "description": "Sin primarias, al principal espacio opositor se le haría más difícil definir la candidatura y mantener la unidad.Ninguna opción por ahora convence. Con el agravante de que un acuerdo, entienden, debilitaría al postulante.",
-    "url": "https://www.clarin.com/politica/pas-interna-partidaria-voto-celular-alternativas-evalua-peronismo-gobierno-baja-paso_0_Nhpudtp2OW.html",
-    "image": "https://www.clarin.com/img/2025/10/23/ht_BNVD0a_1200x630__1.jpg",
-    "publishedAt": "2026-09-28T09:00:41.000Z"
   },
   {
     "title": "De la mano de Abel Pintos, buscan juntar 10 mil ladrillos en siete días para renovar un pabellón del Hospital de Niños",
