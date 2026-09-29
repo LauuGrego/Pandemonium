@@ -4,110 +4,153 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const { filterRelevantNews, removeDuplicates } = require("../js/filter.js");
 
-// SerpApi Google News Integration
+const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+// SerpApi Google News Integration (si se dispone de API Key)
 async function fetchSerpApiGoogleNews() {
   const apiKey = process.env.SERPAPI_KEY || process.env.SERAPI_KEY;
   if (!apiKey) {
-    console.warn("[INFO] SERPAPI_KEY no enviada en variables de entorno. Omitiendo SerpApi.");
+    console.info("[INFO] SERPAPI_KEY no configurada. Usando fuentes RSS directas con imágenes.");
     return [];
   }
 
   try {
     const url = `https://serpapi.com/search.json?engine=google_news&q=Argentina+noticias&gl=ar&hl=es&api_key=${apiKey}`;
-    const response = await axios.get(url, { timeout: 10000 });
+    const response = await axios.get(url, {
+      timeout: 10000,
+      headers: { "User-Agent": USER_AGENT }
+    });
     
     const newsResults = response.data.news_results || [];
     const articles = [];
 
-    newsResults.forEach((item) => {
+    const processItem = (item) => {
       if (item.title && item.link) {
+        // Solo tomar item.thumbnail si es una imagen real; nunca el icon/logo del medio
+        const image = (item.thumbnail && typeof item.thumbnail === "string" && item.thumbnail.startsWith("http"))
+          ? item.thumbnail
+          : null;
+
         articles.push({
           title: item.title,
           description: item.snippet || item.title,
           url: item.link,
-          image: item.thumbnail || (item.source && item.source.icon) || null,
-          publishedAt: parseSerpApiDate(item.date),
+          image: image,
+          publishedAt: parseDateString(item.date),
         });
       }
+    };
 
+    newsResults.forEach((item) => {
+      processItem(item);
       if (Array.isArray(item.stories)) {
-        item.stories.forEach((sub) => {
-          if (sub.title && sub.link) {
-            articles.push({
-              title: sub.title,
-              description: sub.snippet || sub.title,
-              url: sub.link,
-              image: sub.thumbnail || (sub.source && sub.source.icon) || null,
-              publishedAt: parseSerpApiDate(sub.date),
-            });
-          }
-        });
+        item.stories.forEach(processItem);
       }
     });
 
-    console.log(`[INFO] Successfully fetched ${articles.length} articles from SerpApi Google News.`);
+    console.log(`[INFO] Se obtuvieron ${articles.length} artículos desde SerpApi.`);
     return articles;
   } catch (error) {
-    console.error("[ERROR] Fetching news from SerpApi failed:", error.message);
+    console.error("[ERROR] SerpApi falló:", error.message);
     return [];
   }
 }
 
-// Google News RSS Fallback (Gratuito sin API Key)
-async function fetchGoogleNewsRss() {
-  const rssUrls = [
-    "https://news.google.com/rss?hl=es-419&gl=AR&ceid=AR:es-419",
-    "https://news.google.com/rss/search?q=Argentina+noticias&hl=es-419&gl=AR&ceid=AR:es-419"
+// Extraer URL de imagen válida desde un elemento XML RSS
+function extractImageFromXmlItem($, el) {
+  let img = $(el).find("enclosure[url]").attr("url") ||
+            $(el).find("media\\:content[url]").attr("url") ||
+            $(el).find("content[url]").attr("url") ||
+            $(el).find("media\\:thumbnail[url]").attr("url") ||
+            $(el).find("thumbnail[url]").attr("url");
+
+  if (!img) {
+    const descRaw = $(el).find("description").text() || "";
+    if (descRaw.includes("<img")) {
+      const $desc = cheerio.load(descRaw);
+      img = $desc("img").attr("src");
+    }
+  }
+
+  if (!img) {
+    const encoded = $(el).find("content\\:encoded").text() || "";
+    if (encoded.includes("<img")) {
+      const $enc = cheerio.load(encoded);
+      img = $enc("img").attr("src");
+    }
+  }
+
+  if (img && typeof img === "string") {
+    img = img.trim().replace(/&amp;/g, "&");
+    if (img.startsWith("http://") || img.startsWith("https://")) {
+      return img;
+    }
+  }
+
+  return null;
+}
+
+// Feeds RSS directos de principales medios argentinos con imágenes de alta calidad
+async function fetchArgentineMediaRss() {
+  const feeds = [
+    { name: "Infobae", url: "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml" },
+    { name: "La Nacion", url: "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml" },
+    { name: "Clarin Lo Ultimo", url: "https://www.clarin.com/rss/lo-ultimo/" },
+    { name: "Clarin Politica", url: "https://www.clarin.com/rss/politica/" },
+    { name: "Clarin Sociedad", url: "https://www.clarin.com/rss/sociedad/" },
+    { name: "Clarin Economia", url: "https://www.clarin.com/rss/economia/" },
+    { name: "Perfil", url: "https://www.perfil.com/feed" },
+    { name: "El Cronista", url: "https://www.cronista.com/files/rss/news.xml" },
+    { name: "Ole", url: "https://www.ole.com.ar/rss/ultimas-noticias/" },
   ];
-  
+
   const articles = [];
 
-  for (const url of rssUrls) {
+  for (const feed of feeds) {
     try {
-      const response = await axios.get(url, {
-        timeout: 10000,
-        headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        }
+      const response = await axios.get(feed.url, {
+        timeout: 8000,
+        headers: { "User-Agent": USER_AGENT }
       });
 
       const $ = cheerio.load(response.data, { xmlMode: true });
+      let feedItemCount = 0;
+
       $("item").each((_, el) => {
         const title = $(el).find("title").text().trim();
         const link = $(el).find("link").text().trim();
-        const pubDate = $(el).find("pubDate").text().trim();
-        const descriptionRaw = $(el).find("description").text();
-        const sourceName = $(el).find("source").text().trim();
-
-        let description = "";
-        if (descriptionRaw) {
-          const $desc = cheerio.load(descriptionRaw);
+        const pubDate = $(el).find("pubDate").text().trim() || $(el).find("dc\\:date").text().trim();
+        
+        let description = $(el).find("description").text().trim();
+        if (description.includes("<")) {
+          const $desc = cheerio.load(description);
           description = $desc.text().trim();
         }
-        if (!description || description === title) {
-          description = sourceName ? `Noticias de ${sourceName}` : "Noticias de Argentina en vivo.";
-        }
+
+        const image = extractImageFromXmlItem($, el);
 
         if (title && link) {
           articles.push({
             title: title,
-            description: description,
+            description: description || title,
             url: link,
-            image: null,
+            image: image,
             publishedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
           });
+          feedItemCount++;
         }
       });
+
+      console.log(`[INFO] ${feed.name}: ${feedItemCount} artículos cargados.`);
     } catch (err) {
-      console.warn(`[WARN] Error obteniendo RSS de ${url}:`, err.message);
+      console.warn(`[WARN] Error obteniendo RSS de ${feed.name}:`, err.message);
     }
   }
 
-  console.log(`[INFO] Se obtuvieron ${articles.length} artículos vía Google News RSS.`);
   return articles;
 }
 
-function parseSerpApiDate(dateStr) {
+function parseDateString(dateStr) {
   if (!dateStr) return new Date().toISOString();
   const parsed = new Date(dateStr);
   if (!isNaN(parsed.getTime())) return parsed.toISOString();
@@ -129,7 +172,6 @@ function parseSerpApiDate(dateStr) {
   return now.toISOString();
 }
 
-// Ordenar por fecha
 function sortByDate(articles) {
   return articles.sort(
     (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
@@ -138,22 +180,40 @@ function sortByDate(articles) {
 
 // Función principal
 async function generateNews() {
-  console.log("Fetching news from SerpApi...");
-  let allNews = await fetchSerpApiGoogleNews();
-  
-  if (allNews.length === 0) {
-    console.log("SerpApi no devolvió artículos. Ejecutando fallback de Google News RSS...");
-    allNews = await fetchGoogleNewsRss();
+  console.log("Iniciando recolección de noticias...");
+  let allNews = [];
+
+  // 1. Intentar SerpApi si está disponible
+  const serpNews = await fetchSerpApiGoogleNews();
+  if (serpNews.length > 0) {
+    allNews.push(...serpNews);
   }
 
+  // 2. Fuentes RSS directas argentinas con imágenes de las noticias
+  const mediaNews = await fetchArgentineMediaRss();
+  allNews.push(...mediaNews);
+
+  console.log(`[INFO] Total bruto recopilado: ${allNews.length} artículos.`);
+
+  // 3. Filtrar relevancia y eliminar duplicados
   const filteredNews = filterRelevantNews(allNews);
   const uniqueNews = removeDuplicates(filteredNews);
   const sortedNews = sortByDate(uniqueNews);
 
+  // 4. Asegurar que las noticias tengan su imagen real correspondiente
+  const newsWithImages = sortedNews.filter(
+    (article) => article.image && typeof article.image === "string" && article.image.startsWith("http")
+  );
+
+  console.log(`[INFO] Artículos relevantes únicos con imagen real: ${newsWithImages.length} de ${sortedNews.length}.`);
+
+  const finalNews = newsWithImages.length >= 12 ? newsWithImages : sortedNews;
+
   const outputPath = path.join(__dirname, "..", "news.json");
-  fs.writeFileSync(outputPath, JSON.stringify(sortedNews, null, 2));
-  console.log(`News generated successfully at ${outputPath} (${sortedNews.length} articles)`);
+  fs.writeFileSync(outputPath, JSON.stringify(finalNews, null, 2));
+  console.log(`News generated successfully at ${outputPath} (${finalNews.length} articles with real images)`);
 }
 
 generateNews();
+
 

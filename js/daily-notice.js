@@ -59,11 +59,17 @@ function renderNoticias(articles) {
   noticiasContainer.innerHTML = "";
 
   const row = document.createElement("div");
-  row.classList.add("row", "g-4");
+  row.classList.add("row", "g-2", "g-sm-3", "g-md-4");
 
-  articles.slice(0, 12).forEach((noticia) => {
+  // Priorizar noticias con imagen real de la noticia
+  const articlesWithImages = articles.filter(
+    (n) => n.image && typeof n.image === "string" && n.image.startsWith("http")
+  );
+  const listToRender = articlesWithImages.length >= 6 ? articlesWithImages : articles;
+
+  listToRender.slice(0, 12).forEach((noticia) => {
     const col = document.createElement("div");
-    col.classList.add("col-12", "col-md-6", "col-lg-4", "d-flex", "align-items-stretch");
+    col.classList.add("col-6", "col-md-6", "col-lg-4", "d-flex", "align-items-stretch");
 
     const card = document.createElement("div");
     card.classList.add(
@@ -75,20 +81,25 @@ function renderNoticias(articles) {
       "animate__fadeInUp"
     );
 
+    const imgWrap = document.createElement("div");
+    imgWrap.classList.add("main__noticia-img-wrap");
+
     const img = document.createElement("img");
-    img.src = noticia.image || "./images/placeholder.jpg";
+    img.src = (noticia.image && noticia.image.startsWith("http")) ? noticia.image : "./images/placeholder.jpg";
     img.setAttribute("loading", "lazy");
     img.setAttribute("decoding", "async");
+    img.setAttribute("referrerpolicy", "no-referrer");
+    img.referrerPolicy = "no-referrer";
     img.classList.add("card-img-top", "main__noticia-imagen");
-    img.alt = noticia.title || "Noticia de Pandemonium";
-    img.style.objectFit = "cover";
-    img.style.height = "200px";
+    img.alt = noticia.title || "Noticia";
 
-    // Fallback de imagen si la URL remota falla al cargar
+    // Fallback si la URL remota de la imagen falla al cargar
     img.onerror = function () {
       this.onerror = null;
       this.src = "./images/placeholder.jpg";
     };
+
+    imgWrap.appendChild(img);
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body", "d-flex", "flex-column");
@@ -110,14 +121,14 @@ function renderNoticias(articles) {
     link.href = noticia.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.classList.add("btn", "btn-outline-warning", "mt-3", "w-100");
+    link.classList.add("btn", "btn-outline-warning", "mt-auto", "w-100", "main__noticia-btn");
     link.textContent = "Leer más";
 
     cardBody.appendChild(title);
     cardBody.appendChild(description);
     cardBody.appendChild(link);
 
-    card.appendChild(img);
+    card.appendChild(imgWrap);
     card.appendChild(cardBody);
     col.appendChild(card);
     row.appendChild(col);
@@ -126,23 +137,47 @@ function renderNoticias(articles) {
   noticiasContainer.appendChild(row);
 }
 
-// Fallback cliente vía RSS-to-JSON
+// Fallback cliente vía RSS-to-JSON con fuentes de noticias con imágenes
 async function fetchRemoteFallbackNoticias() {
-  const rssUrl = "https://news.google.com/rss?hl=es-419&gl=AR&ceid=AR:es-419";
-  const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+  const fallbackUrls = [
+    "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
+    "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml"
+  ];
 
-  const res = await fetch(apiUrl);
-  if (!res.ok) throw new Error("Fallback RSS response not OK");
-  const data = await res.json();
-  if (!data.items || !Array.isArray(data.items)) return [];
+  for (const rssUrl of fallbackUrls) {
+    try {
+      const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+      const res = await fetch(apiUrl);
+      if (!res.ok) continue;
+      const data = await res.json();
+      if (!data.items || !Array.isArray(data.items)) continue;
 
-  return data.items.map((item) => ({
-    title: item.title,
-    description: item.description ? item.description.replace(/<[^>]*>?/gm, "").trim() : item.title,
-    url: item.link,
-    image: item.thumbnail || null,
-    publishedAt: item.pubDate || new Date().toISOString()
-  }));
+      const items = data.items
+        .map((item) => {
+          let image = (item.enclosure && item.enclosure.link) || item.thumbnail || null;
+          if (!image && item.description && item.description.includes("<img")) {
+            const match = item.description.match(/<img[^>]+src=["']([^"']+)["']/i);
+            if (match && match[1]) image = match[1];
+          }
+          return {
+            title: item.title,
+            description: item.description ? item.description.replace(/<[^>]*>?/gm, "").trim() : item.title,
+            url: item.link,
+            image: image,
+            publishedAt: item.pubDate || new Date().toISOString()
+          };
+        })
+        .filter((article) => article.title && article.url && article.image);
+
+      if (items.length > 0) {
+        return items;
+      }
+    } catch (e) {
+      console.warn("Fallo fallback de feed remoto:", e);
+    }
+  }
+
+  return [];
 }
 
 // Función principal para obtener noticias desde news.json
