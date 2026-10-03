@@ -6,60 +6,30 @@ const { filterRelevantNews, removeDuplicates } = require("../js/filter.js");
 
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 
-// SerpApi Google News Integration (si se dispone de API Key)
-async function fetchSerpApiGoogleNews() {
-  const apiKey = process.env.SERPAPI_KEY || process.env.SERAPI_KEY;
-  if (!apiKey) {
-    console.info("[INFO] SERPAPI_KEY no configurada. Usando fuentes RSS directas con imágenes.");
-    return [];
-  }
+// Categorías de Infobae con cuota de 2 o 3 noticias cada una (Total = 14 noticias para 7 filas x 2 columnas)
+const INFOBAE_CATEGORIES = [
+  { name: "Política", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/politica/?outputType=xml", targetCount: 3 },
+  { name: "Sociedad", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/?outputType=xml", targetCount: 3 },
+  { name: "Economía", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml", targetCount: 2 },
+  { name: "Deportes", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/deportes/?outputType=xml", targetCount: 2 },
+  { name: "Tecno", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml", targetCount: 2 },
+  { name: "Teleshow", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/teleshow/?outputType=xml", targetCount: 2 },
+];
 
-  try {
-    const url = `https://serpapi.com/search.json?engine=google_news&q=Argentina+noticias&gl=ar&hl=es&api_key=${apiKey}`;
-    const response = await axios.get(url, {
-      timeout: 10000,
-      headers: { "User-Agent": USER_AGENT }
-    });
-    
-    const newsResults = response.data.news_results || [];
-    const articles = [];
+// Fuentes de respaldo exclusivas de Infobae en caso de que alguna categoría principal tenga pocas noticias
+const BACKUP_INFOBAE_FEEDS = [
+  { name: "Salud", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/salud/?outputType=xml" },
+  { name: "Policiales", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/policiales/?outputType=xml" },
+  { name: "Cultura", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/cultura/?outputType=xml" },
+  { name: "General", url: "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml" }
+];
 
-    const processItem = (item) => {
-      if (item.title && item.link) {
-        // Solo tomar item.thumbnail si es una imagen real; nunca el icon/logo del medio
-        const image = (item.thumbnail && typeof item.thumbnail === "string" && item.thumbnail.startsWith("http"))
-          ? item.thumbnail
-          : null;
+const TOTAL_TARGET_NEWS = 14; // 7 filas x 2 columnas
 
-        articles.push({
-          title: item.title,
-          description: item.snippet || item.title,
-          url: item.link,
-          image: image,
-          publishedAt: parseDateString(item.date),
-        });
-      }
-    };
-
-    newsResults.forEach((item) => {
-      processItem(item);
-      if (Array.isArray(item.stories)) {
-        item.stories.forEach(processItem);
-      }
-    });
-
-    console.log(`[INFO] Se obtuvieron ${articles.length} artículos desde SerpApi.`);
-    return articles;
-  } catch (error) {
-    console.error("[ERROR] SerpApi falló:", error.message);
-    return [];
-  }
-}
-
-// Extraer URL de imagen válida desde un elemento XML RSS
+// Extraer URL de imagen válida desde un elemento XML RSS de Infobae
 function extractImageFromXmlItem($, el) {
-  let img = $(el).find("enclosure[url]").attr("url") ||
-            $(el).find("media\\:content[url]").attr("url") ||
+  let img = $(el).find("media\\:content[url]").attr("url") ||
+            $(el).find("enclosure[url]").attr("url") ||
             $(el).find("content[url]").attr("url") ||
             $(el).find("media\\:thumbnail[url]").attr("url") ||
             $(el).find("thumbnail[url]").attr("url");
@@ -67,16 +37,16 @@ function extractImageFromXmlItem($, el) {
   if (!img) {
     const descRaw = $(el).find("description").text() || "";
     if (descRaw.includes("<img")) {
-      const $desc = cheerio.load(descRaw);
-      img = $desc("img").attr("src");
+      const match = descRaw.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (match && match[1]) img = match[1];
     }
   }
 
   if (!img) {
     const encoded = $(el).find("content\\:encoded").text() || "";
     if (encoded.includes("<img")) {
-      const $enc = cheerio.load(encoded);
-      img = $enc("img").attr("src");
+      const match = encoded.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (match && match[1]) img = match[1];
     }
   }
 
@@ -90,130 +60,133 @@ function extractImageFromXmlItem($, el) {
   return null;
 }
 
-// Feeds RSS directos de principales medios argentinos con imágenes de alta calidad
-async function fetchArgentineMediaRss() {
-  const feeds = [
-    { name: "Infobae", url: "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml" },
-    { name: "La Nacion", url: "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml" },
-    { name: "Clarin Lo Ultimo", url: "https://www.clarin.com/rss/lo-ultimo/" },
-    { name: "Clarin Politica", url: "https://www.clarin.com/rss/politica/" },
-    { name: "Clarin Sociedad", url: "https://www.clarin.com/rss/sociedad/" },
-    { name: "Clarin Economia", url: "https://www.clarin.com/rss/economia/" },
-    { name: "Perfil", url: "https://www.perfil.com/feed" },
-    { name: "El Cronista", url: "https://www.cronista.com/files/rss/news.xml" },
-    { name: "Ole", url: "https://www.ole.com.ar/rss/ultimas-noticias/" },
-  ];
-
-  const articles = [];
-
-  for (const feed of feeds) {
-    try {
-      const response = await axios.get(feed.url, {
-        timeout: 8000,
-        headers: { "User-Agent": USER_AGENT }
-      });
-
-      const $ = cheerio.load(response.data, { xmlMode: true });
-      let feedItemCount = 0;
-
-      $("item").each((_, el) => {
-        const title = $(el).find("title").text().trim();
-        const link = $(el).find("link").text().trim();
-        const pubDate = $(el).find("pubDate").text().trim() || $(el).find("dc\\:date").text().trim();
-        
-        let description = $(el).find("description").text().trim();
-        if (description.includes("<")) {
-          const $desc = cheerio.load(description);
-          description = $desc.text().trim();
-        }
-
-        const image = extractImageFromXmlItem($, el);
-
-        if (title && link) {
-          articles.push({
-            title: title,
-            description: description || title,
-            url: link,
-            image: image,
-            publishedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-          });
-          feedItemCount++;
-        }
-      });
-
-      console.log(`[INFO] ${feed.name}: ${feedItemCount} artículos cargados.`);
-    } catch (err) {
-      console.warn(`[WARN] Error obteniendo RSS de ${feed.name}:`, err.message);
-    }
+// Limpiar descripción de etiquetas HTML o entidades
+function cleanDescription(rawDesc) {
+  if (!rawDesc) return "";
+  let text = rawDesc;
+  if (text.includes("<")) {
+    const $d = cheerio.load(text);
+    text = $d.text();
   }
-
-  return articles;
+  return text.trim().replace(/\s+/g, " ");
 }
 
-function parseDateString(dateStr) {
-  if (!dateStr) return new Date().toISOString();
-  const parsed = new Date(dateStr);
-  if (!isNaN(parsed.getTime())) return parsed.toISOString();
-  
-  const now = new Date();
-  const lower = dateStr.toLowerCase();
-  if (lower.includes("min") || lower.includes("muto")) {
-    const mins = parseInt(lower) || 10;
-    return new Date(now.getTime() - mins * 60 * 1000).toISOString();
-  }
-  if (lower.includes("hour") || lower.includes("hora")) {
-    const hours = parseInt(lower) || 1;
-    return new Date(now.getTime() - hours * 60 * 60 * 1000).toISOString();
-  }
-  if (lower.includes("day") || lower.includes("dia")) {
-    const days = parseInt(lower) || 1;
-    return new Date(now.getTime() - days * 24 * 60 * 60 * 1000).toISOString();
-  }
-  return now.toISOString();
-}
+// Obtener y parsear artículos de un feed RSS de Infobae
+async function fetchInfobaeFeed(categoryName, feedUrl) {
+  try {
+    const response = await axios.get(feedUrl, {
+      timeout: 8000,
+      headers: { "User-Agent": USER_AGENT }
+    });
 
-function sortByDate(articles) {
-  return articles.sort(
-    (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
-  );
+    const $ = cheerio.load(response.data, { xmlMode: true });
+    const articles = [];
+
+    $("item").each((_, el) => {
+      const title = $(el).find("title").text().trim();
+      const link = $(el).find("link").text().trim();
+      const pubDate = $(el).find("pubDate").text().trim() || $(el).find("dc\\:date").text().trim();
+      const rawDesc = $(el).find("description").text().trim();
+      const description = cleanDescription(rawDesc);
+      const image = extractImageFromXmlItem($, el);
+
+      // Infobae: solo agregar noticias válidas con enlace e imagen
+      if (title && link && link.includes("infobae.com")) {
+        articles.push({
+          title,
+          description: description || title,
+          url: link,
+          image: image || null,
+          category: categoryName,
+          publishedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString()
+        });
+      }
+    });
+
+    return articles;
+  } catch (err) {
+    console.warn(`[WARN] Error obteniendo RSS de Infobae [${categoryName}]:`, err.message);
+    return [];
+  }
 }
 
 // Función principal
 async function generateNews() {
-  console.log("Iniciando recolección de noticias...");
-  let allNews = [];
+  console.log("Iniciando recolección de noticias exclusivas de Infobae...");
+  const selectedNews = [];
+  const leftoverNews = [];
 
-  // 1. Intentar SerpApi si está disponible
-  const serpNews = await fetchSerpApiGoogleNews();
-  if (serpNews.length > 0) {
-    allNews.push(...serpNews);
+  // 1. Recolectar noticias por categoría principal (2 o 3 por cada una)
+  for (const cat of INFOBAE_CATEGORIES) {
+    console.log(`[INFO] Consultando Infobae ${cat.name} (Meta: ${cat.targetCount})...`);
+    const rawArticles = await fetchInfobaeFeed(cat.name, cat.url);
+
+    // Filtrar relevancia geográfica y duplicados
+    const filtered = filterRelevantNews(rawArticles);
+    const unique = removeDuplicates(filtered);
+
+    // Priorizar aquellas con imagen real
+    const withImage = unique.filter(
+      (a) => a.image && typeof a.image === "string" && a.image.startsWith("http")
+    );
+    const candidates = withImage.length >= cat.targetCount ? withImage : unique;
+
+    // Ordenar por fecha descendente
+    candidates.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+    const picked = candidates.slice(0, cat.targetCount);
+    selectedNews.push(...picked);
+
+    // Guardar sobrantes por si necesitamos rellenar
+    const leftovers = candidates.slice(cat.targetCount);
+    leftoverNews.push(...leftovers);
+
+    console.log(`[INFO] Infobae ${cat.name}: ${picked.length} seleccionadas de ${rawArticles.length} disponibles.`);
   }
 
-  // 2. Fuentes RSS directas argentinas con imágenes de las noticias
-  const mediaNews = await fetchArgentineMediaRss();
-  allNews.push(...mediaNews);
+  // 2. Si alguna categoría tuvo menos noticias de las requeridas, completar hasta 14
+  if (selectedNews.length < TOTAL_TARGET_NEWS && leftoverNews.length > 0) {
+    console.log(`[INFO] Rellenando desde noticias sobrantes para alcanzar ${TOTAL_TARGET_NEWS}...`);
+    for (const item of leftoverNews) {
+      if (selectedNews.length >= TOTAL_TARGET_NEWS) break;
+      if (!selectedNews.some((a) => a.url === item.url)) {
+        selectedNews.push(item);
+      }
+    }
+  }
 
-  console.log(`[INFO] Total bruto recopilado: ${allNews.length} artículos.`);
+  // 3. Si aún faltan para alcanzar 14, consultar feeds de respaldo de Infobae
+  if (selectedNews.length < TOTAL_TARGET_NEWS) {
+    console.log(`[INFO] Consultando feeds de respaldo de Infobae...`);
+    for (const backup of BACKUP_INFOBAE_FEEDS) {
+      if (selectedNews.length >= TOTAL_TARGET_NEWS) break;
+      const backupArticles = await fetchInfobaeFeed(backup.name, backup.url);
+      const filteredBackup = filterRelevantNews(backupArticles);
+      const uniqueBackup = removeDuplicates(filteredBackup);
 
-  // 3. Filtrar relevancia y eliminar duplicados
-  const filteredNews = filterRelevantNews(allNews);
-  const uniqueNews = removeDuplicates(filteredNews);
-  const sortedNews = sortByDate(uniqueNews);
+      for (const item of uniqueBackup) {
+        if (selectedNews.length >= TOTAL_TARGET_NEWS) break;
+        if (!selectedNews.some((a) => a.url === item.url)) {
+          selectedNews.push(item);
+        }
+      }
+    }
+  }
 
-  // 4. Asegurar que las noticias tengan su imagen real correspondiente
-  const newsWithImages = sortedNews.filter(
-    (article) => article.image && typeof article.image === "string" && article.image.startsWith("http")
-  );
+  // 4. Asegurar exactamente 14 noticias (7 filas x 2 columnas)
+  const finalNews = selectedNews.slice(0, TOTAL_TARGET_NEWS);
 
-  console.log(`[INFO] Artículos relevantes únicos con imagen real: ${newsWithImages.length} de ${sortedNews.length}.`);
-
-  const finalNews = newsWithImages.length >= 12 ? newsWithImages : sortedNews;
+  console.log(`\n======================================================`);
+  console.log(`[ÉXITO] Total de noticias recopiladas de Infobae: ${finalNews.length}`);
+  console.log(`Estructura: 7 filas de 2 columnas`);
+  console.log(`======================================================`);
+  finalNews.forEach((a, i) => {
+    console.log(`${(i + 1).toString().padStart(2, " ")}. [${a.category.padEnd(9, " ")}] ${a.title.substring(0, 70)}...`);
+  });
 
   const outputPath = path.join(__dirname, "..", "news.json");
-  fs.writeFileSync(outputPath, JSON.stringify(finalNews, null, 2));
-  console.log(`News generated successfully at ${outputPath} (${finalNews.length} articles with real images)`);
+  fs.writeFileSync(outputPath, JSON.stringify(finalNews, null, 2), "utf-8");
+  console.log(`\nArchivo guardado en: ${outputPath}`);
 }
 
 generateNews();
-
-
