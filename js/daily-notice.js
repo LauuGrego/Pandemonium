@@ -1,4 +1,10 @@
-// Contenedor de noticias
+/**
+ * PANDEMONIUM RADIO — MÓDULO DE NOTICIAS DE INFOBAE
+ * Renderizado de noticias mediante grilla responsiva pura de Bootstrap 5.3:
+ * row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4
+ * Filtrado dinámico, sanitización, manejo de errores y estados de carga.
+ */
+
 const noticiasContainer = document.getElementById("noticias-container");
 
 // Utilidades de filtrado compartidas desde js/filter.js
@@ -23,10 +29,10 @@ const CATEGORY_COLORS = {
   "Salud": "#06b6d4",
   "Policiales": "#f97316",
   "Cultura": "#a855f7",
-  "General": "#d4af37"
+  "General": "#F04B35"
 };
 
-// Formateador de tiempo relativo
+// Formateador de tiempo relativo seguro
 function formatTimeAgo(isoDate) {
   if (!isoDate) return "";
   try {
@@ -43,52 +49,71 @@ function formatTimeAgo(isoDate) {
   }
 }
 
-// Estado en memoria para filtrado
+// Estado en memoria
 let currentNewsArticles = [];
 let currentCategoryFilter = "Todas";
 
-// Función para renderizar el estado "No hay noticias"
+// Estado Vacío (Sin noticias)
 function renderEmptyState() {
   if (!noticiasContainer) return;
-  noticiasContainer.innerHTML = `
-    <div class="text-center py-5 animate__animated animate__fadeIn">
-      <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
-      <p class="main__text mb-3">No hay noticias disponibles de Infobae en este momento.</p>
-      <button class="btn btn-outline-warning" id="refresh-news-btn">
-        <i class="fas fa-sync-alt me-2"></i>Actualizar
-      </button>
-    </div>
-  `;
-  attachRefreshListener();
+  noticiasContainer.innerHTML = "";
+
+  const wrap = document.createElement("div");
+  wrap.className = "text-center py-5";
+
+  const icon = document.createElement("i");
+  icon.className = "fas fa-newspaper fa-3x text-muted mb-3";
+  icon.setAttribute("aria-hidden", "true");
+
+  const msg = document.createElement("p");
+  msg.className = "text-muted mb-3";
+  msg.textContent = "No hay noticias disponibles en esta sección en este momento.";
+
+  const btn = document.createElement("button");
+  btn.className = "btn news-filter-btn active";
+  btn.id = "refresh-news-btn";
+  btn.innerHTML = '<i class="fas fa-sync-alt me-2" aria-hidden="true"></i>Actualizar';
+  btn.addEventListener("click", () => fetchNoticias());
+
+  wrap.appendChild(icon);
+  wrap.appendChild(msg);
+  wrap.appendChild(btn);
+  noticiasContainer.appendChild(wrap);
 }
 
-// Función para renderizar el estado de Error
+// Estado de Error
 function renderErrorState() {
   if (!noticiasContainer) return;
-  noticiasContainer.innerHTML = `
-    <div class="text-center py-5 animate__animated animate__fadeIn">
-      <i class="fas fa-exclamation-circle fa-3x text-danger mb-3"></i>
-      <p class="main__text text-danger mb-3">Error al cargar las noticias. Por favor, reintenta.</p>
-      <button class="btn btn-outline-warning" id="refresh-news-btn">
-        <i class="fas fa-sync-alt me-2"></i>Reintentar
-      </button>
-    </div>
-  `;
-  attachRefreshListener();
+  noticiasContainer.innerHTML = "";
+
+  const wrap = document.createElement("div");
+  wrap.className = "text-center py-5";
+
+  const icon = document.createElement("i");
+  icon.className = "fas fa-exclamation-triangle fa-3x text-danger mb-3";
+  icon.setAttribute("aria-hidden", "true");
+
+  const msg = document.createElement("p");
+  msg.className = "text-danger mb-3";
+  msg.textContent = "No se pudieron sincronizar las noticias en este momento.";
+
+  const btn = document.createElement("button");
+  btn.className = "btn news-filter-btn active";
+  btn.id = "retry-news-btn";
+  btn.innerHTML = '<i class="fas fa-sync-alt me-2" aria-hidden="true"></i>Reintentar';
+  btn.addEventListener("click", () => {
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Reintentando...';
+    fetchNoticias();
+  });
+
+  wrap.appendChild(icon);
+  wrap.appendChild(msg);
+  wrap.appendChild(btn);
+  noticiasContainer.appendChild(wrap);
 }
 
-function attachRefreshListener() {
-  const btn = document.getElementById("refresh-news-btn");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Cargando...';
-      fetchNoticias();
-    });
-  }
-}
-
-// Función para renderizar las noticias en 7 filas de 2 columnas (14 noticias en total)
+// Renderizado de Noticias con Grid de Bootstrap 5.3
 function renderNoticias(articles, activeCategory = currentCategoryFilter) {
   if (!noticiasContainer) return;
   currentNewsArticles = articles;
@@ -101,7 +126,7 @@ function renderNoticias(articles, activeCategory = currentCategoryFilter) {
   );
   const pool = articlesWithImages.length >= 6 ? articlesWithImages : articles;
 
-  // Extraer lista de categorías únicas disponibles
+  // Extraer categorías únicas disponibles
   const availableCategories = ["Todas"];
   pool.forEach((a) => {
     if (a.category && !availableCategories.includes(a.category)) {
@@ -109,22 +134,30 @@ function renderNoticias(articles, activeCategory = currentCategoryFilter) {
     }
   });
 
-  // Pestañas / Filtros por categoría
+  // Filtros de Categoría con Píldoras Accesibles
   if (availableCategories.length > 2) {
-    const filterNav = document.createElement("div");
-    filterNav.classList.add("news-filter-nav", "d-flex", "justify-content-center", "flex-wrap", "gap-2", "mb-4");
+    const filterNav = document.createElement("nav");
+    filterNav.className = "news-filter-nav mb-4";
+    filterNav.setAttribute("aria-label", "Filtro de categorías de noticias");
 
     availableCategories.forEach((cat) => {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.classList.add("btn", "news-filter-btn");
+      btn.className = "news-filter-btn";
       if (cat === activeCategory) {
         btn.classList.add("active");
+        btn.setAttribute("aria-current", "page");
       }
 
       const count = cat === "Todas" ? pool.length : pool.filter((a) => a.category === cat).length;
-      btn.innerHTML = `${cat} <span class="badge rounded-pill bg-dark ms-1 opacity-75">${count}</span>`;
-      btn.setAttribute("aria-label", `Filtrar noticias por ${cat}`);
+      btn.textContent = `${cat} `;
+
+      const badge = document.createElement("span");
+      badge.className = "news-category-count-badge ms-1";
+      badge.textContent = count;
+      btn.appendChild(badge);
+
+      btn.setAttribute("aria-label", `Mostrar ${count} noticias de ${cat}`);
 
       btn.addEventListener("click", () => {
         renderNoticias(articles, cat);
@@ -141,37 +174,39 @@ function renderNoticias(articles, activeCategory = currentCategoryFilter) {
     ? pool
     : pool.filter((a) => a.category === activeCategory);
 
-  // Exactamente hasta 14 noticias (7 filas x 2 columnas)
-  const listToRender = filteredList.slice(0, 14);
+  if (filteredList.length === 0) {
+    renderEmptyState();
+    return;
+  }
 
+  // Límite de noticias por página
+  const listToRender = filteredList.slice(0, 15);
+
+  // Grilla de Bootstrap requerida: 1 columna en móvil, 2 en tablet, 3 en escritorio
   const row = document.createElement("div");
-  row.classList.add("row", "g-2", "g-sm-3", "g-md-4");
+  row.className = "row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4";
 
   listToRender.forEach((noticia) => {
-    // 2 columnas siempre (col-6 en mobile, col-md-6 en tablet/desktop)
     const col = document.createElement("div");
-    col.classList.add("col-6", "col-md-6", "d-flex", "align-items-stretch");
+    col.className = "col d-flex align-items-stretch";
 
-    const card = document.createElement("div");
-    card.classList.add(
-      "card",
-      "h-100",
-      "w-100",
-      "main__noticia-card",
-      "animate__animated",
-      "animate__fadeInUp"
-    );
+    const card = document.createElement("article");
+    card.className = "main__noticia-card w-100 d-flex flex-column";
 
+    // Contenedor de Imagen y Badge de Categoría
     const imgWrap = document.createElement("div");
-    imgWrap.classList.add("main__noticia-img-wrap");
+    imgWrap.className = "main__noticia-img-wrap";
 
-    // Badge flotante de categoría con color distintivo
     const categoryName = noticia.category || "Infobae";
-    const accentColor = CATEGORY_COLORS[categoryName] || "#d4af37";
+    const accentColor = CATEGORY_COLORS[categoryName] || "#F04B35";
 
     const badge = document.createElement("span");
-    badge.classList.add("main__noticia-category-badge");
-    badge.innerHTML = `<span class="main__noticia-dot" style="background-color: ${accentColor}"></span>${categoryName}`;
+    badge.className = "main__noticia-category-badge";
+    const dot = document.createElement("span");
+    dot.className = "main__noticia-dot";
+    dot.style.backgroundColor = accentColor;
+    badge.appendChild(dot);
+    badge.appendChild(document.createTextNode(categoryName));
     imgWrap.appendChild(badge);
 
     const img = document.createElement("img");
@@ -180,64 +215,62 @@ function renderNoticias(articles, activeCategory = currentCategoryFilter) {
     img.setAttribute("decoding", "async");
     img.setAttribute("referrerpolicy", "no-referrer");
     img.referrerPolicy = "no-referrer";
-    img.classList.add("card-img-top", "main__noticia-imagen");
-    img.alt = noticia.title || "Noticia de Infobae";
+    img.className = "img-fluid main__noticia-imagen";
+    img.alt = noticia.title ? noticia.title : "Noticia de actualidad";
 
-    // Fallback si la URL remota de la imagen falla al cargar
+    // Fallback si la imagen falla al cargar
     img.onerror = function () {
       this.onerror = null;
       this.src = "./images/placeholder.jpg";
     };
 
     imgWrap.appendChild(img);
+    card.appendChild(imgWrap);
 
+    // Cuerpo de la Tarjeta
     const cardBody = document.createElement("div");
-    cardBody.classList.add("card-body", "d-flex", "flex-column");
+    cardBody.className = "p-3 d-flex flex-column flex-grow-1";
 
-    // Metadatos: Fuente Infobae y tiempo de publicación
+    // Metadatos: Fuente + Tiempo relativo
     const metaWrap = document.createElement("div");
-    metaWrap.classList.add("main__noticia-meta", "d-flex", "justify-content-between", "align-items-center", "mb-1", "mb-md-2");
+    metaWrap.className = "main__noticia-meta d-flex justify-content-between align-items-center mb-2";
 
     const sourceTag = document.createElement("span");
-    sourceTag.classList.add("main__noticia-source-tag");
-    sourceTag.innerHTML = `<i class="fas fa-bolt me-1 text-warning"></i>Infobae`;
+    sourceTag.className = "main__noticia-source-tag";
+    sourceTag.innerHTML = '<i class="fas fa-bolt me-1 text-danger" aria-hidden="true"></i>Infobae';
+    metaWrap.appendChild(sourceTag);
 
-    const timeTag = document.createElement("span");
-    timeTag.classList.add("main__noticia-time");
     const timeAgoStr = formatTimeAgo(noticia.publishedAt);
     if (timeAgoStr) {
-      timeTag.innerHTML = `<i class="far fa-clock me-1"></i>${timeAgoStr}`;
+      const timeTag = document.createElement("span");
+      timeTag.className = "main__noticia-time";
+      timeTag.textContent = timeAgoStr;
+      metaWrap.appendChild(timeTag);
     }
-
-    metaWrap.appendChild(sourceTag);
-    if (timeAgoStr) metaWrap.appendChild(timeTag);
     cardBody.appendChild(metaWrap);
 
-    const title = document.createElement("h5");
-    title.classList.add("card-title", "main__noticia-titulo");
-    title.textContent = noticia.title;
+    // Título seguro mediante textContent
+    const title = document.createElement("h3");
+    title.className = "main__noticia-titulo";
+    title.textContent = noticia.title || "Sin título";
+    cardBody.appendChild(title);
 
+    // Resumen / Descripción segura mediante textContent
     const description = document.createElement("p");
-    description.classList.add(
-      "card-text",
-      "main__noticia-descripcion",
-      "flex-grow-1"
-    );
-    description.textContent =
-      noticia.description || "Descripción no disponible.";
+    description.className = "main__noticia-descripcion flex-grow-1";
+    description.textContent = noticia.description || "Hacé clic en el enlace para leer el artículo completo.";
+    cardBody.appendChild(description);
 
+    // Enlace con target seguro
     const link = document.createElement("a");
-    link.href = noticia.url;
+    link.href = noticia.url || "#";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.classList.add("btn", "btn-outline-warning", "mt-auto", "w-100", "main__noticia-btn");
-    link.innerHTML = `Leer más <i class="fas fa-external-link-alt ms-1 small"></i>`;
-
-    cardBody.appendChild(title);
-    cardBody.appendChild(description);
+    link.className = "main__noticia-btn text-center mt-auto w-100";
+    link.innerHTML = 'Leer nota completa <i class="fas fa-arrow-up-right-from-square ms-1 small" aria-hidden="true"></i>';
+    link.setAttribute("aria-label", `Leer nota completa: ${noticia.title || ''}`);
     cardBody.appendChild(link);
 
-    card.appendChild(imgWrap);
     card.appendChild(cardBody);
     col.appendChild(card);
     row.appendChild(col);
@@ -246,15 +279,14 @@ function renderNoticias(articles, activeCategory = currentCategoryFilter) {
   noticiasContainer.appendChild(row);
 }
 
-// Fallback cliente vía RSS-to-JSON con fuentes de Infobae por categoría
+// Fallback remoto en caso de que news.json local no esté disponible
 async function fetchRemoteFallbackNoticias() {
   const fallbackFeeds = [
     { category: "Política", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/politica/?outputType=xml", count: 3 },
     { category: "Sociedad", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/?outputType=xml", count: 3 },
-    { category: "Economía", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml", count: 2 },
-    { category: "Deportes", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/deportes/?outputType=xml", count: 2 },
-    { category: "Tecno", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml", count: 2 },
-    { category: "Teleshow", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/teleshow/?outputType=xml", count: 2 },
+    { category: "Economía", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml", count: 3 },
+    { category: "Deportes", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/deportes/?outputType=xml", count: 3 },
+    { category: "Tecno", url: "https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml", count: 3 }
   ];
 
   const allFallbackArticles = [];
@@ -286,40 +318,42 @@ async function fetchRemoteFallbackNoticias() {
         .filter((article) => article.title && article.url && article.url.includes("infobae.com"));
 
       allFallbackArticles.push(...items.slice(0, feed.count));
-      if (allFallbackArticles.length >= 14) break;
+      if (allFallbackArticles.length >= 15) break;
     } catch (e) {
-      console.warn(`Fallo fallback de Infobae [${feed.category}]:`, e);
+      console.warn(`Aviso en fallback de Infobae [${feed.category}]:`, e);
     }
   }
 
   return allFallbackArticles;
 }
 
-// Función principal para obtener noticias desde news.json
+// Carga principal de noticias
 async function fetchNoticias() {
   if (!noticiasContainer) return;
 
   try {
     if (noticiasContainer.children.length === 0 || !noticiasContainer.querySelector(".row")) {
-      noticiasContainer.innerHTML =
-        '<p class="main__text text-center py-5"><i class="fas fa-spinner fa-spin me-2"></i>Cargando noticias de Infobae...</p>';
+      noticiasContainer.innerHTML = `
+        <div class="text-center py-5">
+          <div class="spinner-border text-danger mb-3" role="status" aria-hidden="true"></div>
+          <p class="text-muted">Cargando noticias de Infobae en vivo...</p>
+        </div>
+      `;
     }
 
     let rawArticles = [];
 
     try {
-      // Petición al archivo estático news.json (generado por CI / script)
       const response = await fetch("news.json?t=" + Date.now(), { cache: "no-cache" });
       if (response.ok) {
         rawArticles = await response.json();
       }
     } catch (e) {
-      console.warn("Fallo lectura de news.json local, ejecutando fallback remoto...", e);
+      console.warn("Lectura de news.json local omitida, recurriendo a fallback:", e);
     }
 
     const { filterRelevantNews, removeDuplicates } = getFilterFunctions();
 
-    // Solo conservar noticias que pertenezcan a Infobae
     const infobaeOnly = rawArticles.filter(
       (a) => a.url && a.url.includes("infobae.com")
     );
@@ -327,24 +361,22 @@ async function fetchNoticias() {
     let uniqueArticles = removeDuplicates(infobaeOnly.length > 0 ? infobaeOnly : rawArticles);
     let filteredArticles = filterRelevantNews(uniqueArticles);
 
-    // Si news.json devolvió 0 artículos, intentamos el fallback remoto de Infobae
     if (filteredArticles.length === 0) {
       try {
         const fallbackArticles = await fetchRemoteFallbackNoticias();
         uniqueArticles = removeDuplicates(fallbackArticles);
         filteredArticles = filterRelevantNews(uniqueArticles);
       } catch (fallbackErr) {
-        console.warn("Fallo el fallback remoto RSS:", fallbackErr);
+        console.warn("Fallback remoto no disponible:", fallbackErr);
       }
     }
 
-    // Asegurar completar hasta 14 noticias si el filtro fue muy estricto
-    if (filteredArticles.length < 14 && uniqueArticles.length >= 14) {
+    if (filteredArticles.length < 15 && uniqueArticles.length >= 15) {
       for (const article of uniqueArticles) {
         if (!filteredArticles.includes(article)) {
           filteredArticles.push(article);
         }
-        if (filteredArticles.length >= 14) break;
+        if (filteredArticles.length >= 15) break;
       }
     }
 
@@ -362,5 +394,5 @@ async function fetchNoticias() {
 // Carga inicial
 fetchNoticias();
 
-// Actualización periódica cada 10 minutos (600.000 ms)
+// Actualización cada 10 minutos
 setInterval(fetchNoticias, 600000);

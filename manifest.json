@@ -1,10 +1,11 @@
 {
-  "name": "Pandemonium - La Mejor Radio Online",
+  "name": "Pandemonium Radio — La Música Que El Algoritmo Te Esconde",
   "short_name": "Pandemonium",
-  "description": "Tu portal de sonidos y noticias en vivo. Escucha la mejor radio online en directo.",
+  "description": "Radio online independiente de Rock, Indie, Metal, Reggae y noticias de Argentina y el mundo.",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#0d0d0d",
+  "background_color": "#0A0A0A",
   "theme_color": "#121212",
   "orientation": "portrait-primary",
   "icons": [
