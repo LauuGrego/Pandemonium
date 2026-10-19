@@ -341,15 +341,28 @@ async function fetchNoticias() {
       `;
     }
 
-    let rawArticles = [];
+    const GITHUB_RAW_URL = "https://raw.githubusercontent.com/LauuGrego/Pandemonium/main/news.json?t=" + Date.now();
+    const LOCAL_URL = "news.json?t=" + Date.now();
 
     try {
-      const response = await fetch("news.json?t=" + Date.now(), { cache: "no-cache" });
+      // Priorizar la fuente directa de GitHub donde la Action actualiza 2 veces al día
+      let response = await fetch(GITHUB_RAW_URL, { cache: "no-cache" });
+      if (!response.ok) {
+        // Fallback a archivo local si GitHub Raw no responde
+        response = await fetch(LOCAL_URL, { cache: "no-cache" });
+      }
       if (response.ok) {
         rawArticles = await response.json();
       }
     } catch (e) {
-      console.warn("Lectura de news.json local omitida, recurriendo a fallback:", e);
+      try {
+        const localResp = await fetch(LOCAL_URL, { cache: "no-cache" });
+        if (localResp.ok) {
+          rawArticles = await localResp.json();
+        }
+      } catch (errLocal) {
+        console.warn("Fallo lectura de news.json remoto y local, recurriendo a fallback RSS:", errLocal);
+      }
     }
 
     const { filterRelevantNews, removeDuplicates } = getFilterFunctions();
